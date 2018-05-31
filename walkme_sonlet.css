@@ -1,0 +1,68 @@
+/* WalkME custom css used in Sonlet WalkMe account*/
+
+/*Walkme player menu customization*/
+
+.walkme-menu.walkme-penguin {
+    font-family: 'Muli', sans-serif !important;
+}
+
+#walkme-menu.walkme-penguin .walkme-out-wrapper {
+    border-radius: 4px !important;
+}
+
+#walkme-menu {
+    background-color: #fff !important;
+    font-family: 'Muli', sans-serif !important;
+}
+
+#walkme-main {
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    border-left: #999 1px solid !important;
+    border: #999 1px solid !important;
+    box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* These styles are messing stuff up right now so let's just remove them
+#walkme-title {
+    margin: 15px !important;
+}
+
+#walkme-tabs-wrapper {
+    margin: 15px !important;
+}
+
+#walkme-tabs {
+    border: #d0d0d0 1px solid !important;
+}
+
+.walkme-menu.walkme-penguin .walkme-search-box, .walkme-menu.walkme-penguin * .walkme-search-box {
+    width: 330px !important;
+}
+
+#walkme-151595-tab-content > div:nth-child(2) {
+    width: 100% !important;
+}
+*/
+#walkme-menu.walkme-penguin .walkme-in-wrapper {
+    border-radius: 4px !important;
+    background-color: #fff !important;
+    border: solid !important;
+    border-width: 1px !important;
+    border-color: #999 !important;
+    box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+#walkme-menu.walkme-penguin .walkme-title {
+    color: #ec2f9a !important;
+    font-family: 'Muli', sans-serif !important;
+}
+
+#walkme-menu.walkme-penguin .walkme-deployable-name {
+    font-family: 'Muli', sans-serif !important;
+}
+
+#walkme-menu.walkme-penguin .walkme-powered-by, #walkme-menu.walkme-penguin .walkme-powered-by-logo {
+    color: #fff !important;
+}
+
