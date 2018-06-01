@@ -1,0 +1,90 @@
+<style>
+    .btn-amazon {
+        background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+        color: #111;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+    
+    .btn-knowledge-base {
+        background-color: #82dacc;
+        color: #111;
+    }
+    
+    .btn-sonlet {
+        background-color: #f7c8e3;
+        color: #111;
+    }
+    
+    
+</style>
+
+{% assign current_date = 'now' | date: '%s' %}
+{% assign start_date = customer.created_at %} {% assign future_date = start_date | plus: 1209600 %}
+<br>
+Hi {% if customer.first_name != blank %} {{ customer.first_name | capitalize }}{% else %}there{% endif %},<br><br>
+
+With just  
+{{ future_date | minus: current_date | divided_by: 86400 }}
+days left in your Sonlet free trial, it's time to get up and running with shipping labels, so you can easily get your items to your customers right from the comfort of your home. Below is a helpful list of resources, including a link to compare the various shipping labels providers.
+<br><br>
+
+If you have any questions, you can respond directly to this email, and we'll get right back to you.
+
+<br><br><br>
+
+Warm Regards, 
+
+<br><br><br>
+
+<b>The Sonlet Team</b>
+
+<br><br><br><br>
+
+<div style="font-size: 28px; text-align: center">Shipping Resources</div>
+<br><br>
+
+<span style="font-size:28px;">First,</span>&nbsp; purchase a scale for weighing items you send via USPS first class mail. We recommend the Accuteck scale, which is easily purchased on Amazon.com. First class is the least expensive way to send packages to your customers, but the items must weigh less than 1 pound (15.99 ounces).
+<br><br>
+<div style="text-align: center;">
+    <a href="https://www.amazon.com/gp/product/B00SMHWZ42/ref=as_li_tl?ie=UTF8&tag=directangular-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00SMHWZ42&linkId=8a58882f678ddd74239c921466515604" target="_blank"><div class="btn btn-amazon">Shop Accuteck scale</div></a>
+</div>
+
+<br><br>
+<span style="font-size:28px;">Second,</span>&nbsp; purchase shipping supplies like envelopes, boxes, and packaging material. These helpful knowledge base articles make it easy to know which supplies to purchase based on the type of packages you are sending. 
+<br><br>
+
+<div style="text-align: center;">
+    <a href="https://support.sonlet.com/support/solutions/articles/16000076914-packaging-for-priority-mail" target="_blank"><div class="btn btn-knowledge-base">Priority shipping supplies</div></a>
+    <br>
+    <a href="https://support.sonlet.com/support/solutions/articles/16000079278-packaging-for-first-class-mail" target="_blank"><div class="btn btn-knowledge-base">First class shipping supplies</div></a>
+</div>
+
+<br><br>
+<span style="font-size:28px;">Third,</span>&nbsp; get set up with a shipping label provider.  At $9.99 for unlimited labels and commercial plus postage rates, Sonlet is the lowest advertised price for shipping labels for Sonlet users and doesn't require any additional setup. 
+<br><br>
+
+<div style="text-align: center;">
+    <a href="https://sonlet.com/billing/addons/"><div class="btn btn-sonlet">Subscribe to unlimited labels</div></a>
+    <br>
+    <span style="font-size: 14px; color: #999; width: 80%; display: inline-block;">Not ready for unlimited? No problem.  Use the <a href="https://sonlet.com/billing/addons/" target="_blank">Pay Per Label plan</a> and download Priority labels free of charge -- you just pay for the postage by adding Sonlet bucks to your account. Or compare all shipping labels providers <a href="https://blog.sonlet.com/2018/05/unlimited-shipping-labels.html" target="_blank">here</a>.</span> 
+</div>
+
+<br>
+
+<br><br>
+<span style="font-size:28px;">Fourth,</span>&nbsp; purchase a label printer, so you can easily print labels out from home.  We recommend the Dymo XL, which you can purchase directly from Amazon below.  Alternatively, you can also use your existing ink jet or laser printer and purchase half page labels.
+<br><br>
+
+<div style="text-align: center;">
+    <a href="https://www.amazon.com/gp/product/B002M1LGJ4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B002M1LGJ4&linkCode=as2&tag=directangular-20&linkId=ff7f0bd6f44bceb2cae1b690370a9a67" target="_blank"><div class="btn btn-amazon">Shop Dymo XL</div></a>
+    <br>
+    <a href="https://www.amazon.com/gp/product/B001PF1BSE/ref=as_li_tl?ie=UTF8&tag=directangular-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B001PF1BSE&linkId=ef4f0409d9300dcb25a152de6cc560ee" target="_blank"><div class="btn btn-amazon">Shop half-page labels</div></a>
+</div>
+<br><br><br>
+<hr>
