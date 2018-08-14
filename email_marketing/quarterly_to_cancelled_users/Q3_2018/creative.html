@@ -1,6 +1,8 @@
 <html>
     <body style="background-color: #f2f2f2; color: #333333; ">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Clicker+Script');
+        
         .step-container {
             margin-top: 20px;
         }
@@ -19,7 +21,8 @@
         }
         
         h2 {
-            font-family: cursive;
+            font-family: 'Clicker Script', cursive;
+            font-size: 40px;
         }
         
         .product-thumb{
@@ -32,10 +35,19 @@
             width: 100%; 
         }
         
-        .promote-container img {
-            width: 20%;
+        #promote-container .logo-img {
             margin: 3px;
-            height: auto;
+            width: 20%;
+            display: inline-block;
+        }
+        
+        .logo-img img{
+            width: 80%;
+            margin 0 auto;
+        }
+        
+        #facebook {
+            width: 80%;
         }
     </style>
     <div id="email-container" style="max-width: 500px; margin: 0 auto; text-align: center; background-color: #fff; padding: 0px 10px;">
@@ -60,15 +72,15 @@
                 <div id="step-1-description" class="hiw-description">Just open a shop, add a title, and add your favorite products.  Match your style or open a shop for a holiday or movie release!</div>
                 <div id="products-dresses" class="products-thumbs">
                     <div class="product-thumb">
-                        <img src="https://wyattgrantham.com/marketing/Images/dds_maxi.jpg">
+                        <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Olive-Shirt-Dress-1_grande.jpg">
                         <h5>Great styles</h5>
                     </div>
                     <div class="product-thumb">
-                        <img src="https://wyattgrantham.com/marketing/Images/dds_maxi.jpg">
+                        <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Block-Printed-Wrap-Dress-3_grande.jpg">
                         <h5>Fabulous brands</h5>
                     </div>
                     <div class="product-thumb">
-                        <img src="https://wyattgrantham.com/marketing/Images/dds_maxi.jpg">
+                        <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Floral-Dress-3_grande.jpg">
                         <h5>More accessories</h5>
                     </div>
                 </div>
@@ -78,17 +90,25 @@
                 <div id="number-2" class="big-number">2</div>
                 <div id="step-2-title" class="hiw-title">Promote your shop</div>
                 <div id="step-2-description" class="hiw-description">Post your entire shop to your Facebook VIP Group or post a link to your shop on Sonlet.com.  Show off some pics of your favorite styles or products, and have fun selling fashion!</div>
-                <div id="promote-container">
-                    <img id="facebook" src="https://wyattgrantham.com/marketing/Images/facebook.png">
-                    <img id="instagram" src="https://wyattgrantham.com/marketing/Images/instagram.png">
-                    <img id="pinterest" src="https://wyattgrantham.com/marketing/Images/pinterest.png">
-                    <img id="pinterest" src="https://wyattgrantham.com/marketing/Images/logo_sonlet_300.png">
+                <div id="promote-container" style="margin-top: 20px;">
+                    <div id="facebook-container" class="logo-img"><img id="facebook" src="/Images/facebook.png"></div>
+                    <div id="facebook-container" class="logo-img"><img id="pinterest" src="/Images/pinterest.png"></div>
+                    <div id="facebook-container" class="logo-img"><img id="instagram" src="/Images/instagram.png"></div>
+                    <div id="facebook-container" class="logo-img"><img id="sonlet" src="/Images/logo_sonlet_300.png"></div>
                 </div>
             </div>
             <div id="step-3-container" class="step-container">
                 <div id="number-3" class="big-number">3</div>
                 <div id="step-3-title" class="hiw-title">Make money</div>
                 <div id="step-3-description" class="hiw-description">You earn 35% of everything your customers purchase AND you don't have to do anything else... No tracking inventory, No tracking orders, No shipping stuff... We do everything else!</div>
+                
+                <div id="the-good-stuff">
+                    <div>35% Commissions</div>
+                    <div>Easy Returns</div>
+                    <div>No Inventory</div>
+                </div>
+                
+                 <a id="shops-cta" href="#" style="padding: 10px 20px; border-radius: 4px; font-size: 24px; background-color: #0bbe30; color: #fff; margin-top: 30px; display: inline-block;">Open a Shop</a>
             </div>
         
         </div>
@@ -98,7 +118,11 @@
             <div id="headshot-container" style="display: block; background-image: url(https://wyattgrantham.com/marketing/Images/sonnie_plus_family.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; 100%; height: 300px; margin-left: -10px; margin-right: -10px; ">
             </div>
             <div id="sonnie-says-text">
-                <blockquote>I know what it's like to run a traditional clothing boutique, buying a ton of inventory, tracking it, and working your butt off to sell stuff that some people just don't want.  We  wanted to provide a way for great retailers to sell amazing product without all the hassle and risk of buying inventory.  Sonlet Shops is amazing! We've teamed up with suppliers from the biggest retailers across the nation, and they've agreed to handle all the hard stuff. NO MORE INVENTORY!  NO MORE ORDERS! NO MORE INVOICING! I can just sell the stylest that I love and make just as much as I was making before.  Even better, I get my garage and my spare bedroom back!  We're so excited to share Sonlet Shops with all of the wonderful ladies that have come on this journey with us as clothing boutique owners, and we know that Sonlet Shops will bring the excitement and passion that we all used to feel about selling back into our lives, without having to empty our bank accounts or putting our family finances at risk!</blockquote>
+                <span style="font-size: 50px;">"</span>
+                <blockquote style="margin-top: -20px;">I know what it's like to run a traditional clothing boutique, buying a ton of inventory, tracking it, and working your butt off to sell stuff that some people just don't want.  We  wanted to provide a way for great retailers to sell amazing product without all the hassle and risk of buying inventory.  We teamed up with suppliers from the biggest retailers across the nation, and they've agreed to handle all the hard stuff. NO MORE INVENTORY!  NO MORE ORDERS! NO MORE INVOICING! Just sell the styles that you love wearing and make as much or more than you were making before!  Keep your garage, keep the spare bedroom!  I'm so excited to share Sonlet Shops with all of you wonderful ladies that started this journey with me as boutique owners, and I know that Sonlet Shops will bring the excitement and passion that we all used to feel about selling, without having to empty our bank accounts or put our family finances at risk!</blockquote>
+                <span style="font-family: 'Clicker Script', cursive; font-size: 24px;">Sonnie Humpherys</span>
+                <br>
+                <span>Boutique Owner, Sonlet President &amp; Cofounder</span>
             </div>
         </div>
     </div>
