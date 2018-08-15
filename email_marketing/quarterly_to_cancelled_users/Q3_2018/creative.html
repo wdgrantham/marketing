@@ -1,5 +1,5 @@
 <html>
-    <body style="background-color: #f2f2f2; color: #333333; ">
+    <body style="background-color: #f2f2f2; color: #6b6b6b; ">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Clicker+Script');
         
@@ -13,6 +13,7 @@
         
         .hiw-title {
             font-size: 20px;
+            color: #111
         }
         
         .hiw-description {
@@ -23,6 +24,7 @@
         h2 {
             font-family: 'Clicker Script', cursive;
             font-size: 40px;
+            color: #111; 
         }
         
         .product-thumb{
@@ -49,16 +51,62 @@
         #facebook {
             width: 80%;
         }
+        
+        #the-good-stuff {
+            padding-left: 0;
+        }
+        
+        #the-good-stuff li {
+            display: inline-block;
+            width: 30%; 
+            list-style: none;
+            padding-left: none;
+            text-transform: uppercase;
+            border: solid;
+            border-width: 1px;
+            border-color: #999;
+            border-radius: 4px;
+            padding: 10px 5px;
+            min-height: 60px;
+            vertical-align: top;
+            margin-top: 5px;
+            
+        }
+        
+        #the-good-stuff li a {
+            font-size: 10px;
+            text-transform: none;
+        }
+        #video a {
+            border: solid; 
+            border-width: 2px;
+            padding: 20px 24px 15px 30px;
+            border-radius: 4px;
+        }
+        #video a:link {
+            text-decoration: none;
+            color: #e72d9e;
+        }
+        
+        #video a:hover {
+            border-color: #fff;
+            color: #fff;
+            background-color: #e72d9e;
+            
+        }
+        
+    
+        
     </style>
     <div id="email-container" style="max-width: 500px; margin: 0 auto; text-align: center; background-color: #fff; padding: 0px 10px;">
-        <div id="hero-background" style="background-image: url(https://wyattgrantham.com/marketing/Images/NottingHill.jpg); background-position: top center; background-size: contain; background-repeat: no-repeat; text-align: center; background-color: #fff; margin-left: -10px; margin-right: -10px; height: 200px;">
+        <div id="hero-background" style="background-image: url(/Images/shops_banner_2.jpg); background-position: top center; background-size: cover; background-repeat: no-repeat; text-align: center; background-color: #fff; margin-left: -10px; margin-right: -10px; height: 200px;">
             <div style="background-color: #ffffff80; width: 100%; height: 100%;">
                 <img id="sonlet-shops-logo" src="https://wyattgrantham.com/marketing/Images/logo_sonlet_shops.png" width="65%" height="auto" style="">
             </div>
             
         </div>
         <div id="hero-description" style="text-align: center; margin-top: -10px; margin-bottom: 60px;">
-            <p id="shops-tagline" style="font-size: 24px; color: black; margin-top: -10px; ">Open an online clothing boutique</p>
+            <p id="shops-tagline" style="font-size: 24px; color: black; margin-top: 20px; ">Open an online clothing boutique</p>
             <p id="hero-description-text">Make 35% selling amazing products from the brands you love, and don't carry a single piece of inventory!</p>
             <a id="shops-cta" href="#" style="padding: 10px 20px; border-radius: 4px; font-size: 24px; background-color: #0bbe30; color: #fff; margin-top: 30px; display: inline-block;">Open a Shop</a>
             
@@ -66,10 +114,18 @@
         
         <div id="how-it-works-container" style="display:  block;">
             <h2>How it Works</h2>
+            <!--To do: Add a Video-->
+            <p id="video" style="font-size: 40px; ">
+                <a href="#" target="_blank">&#9654;</a>
+                <br>
+                <span style="font-size: 12px; margin-top: 40px;">Check out how easy it is to setup a Sonlet Shop</span>
+            </p>
+            
+            
             <div id="step-1-container" class="step-container">
                 <div id="number-1" class="big-number">1</div>
                 <div id="step-1-title" class="hiw-title">Pick your favorite products</div>
-                <div id="step-1-description" class="hiw-description">Just open a shop, add a title, and add your favorite products.  Match your style or open a shop for a holiday or movie release!</div>
+                <div id="step-1-description" class="hiw-description">Just open a shop, add a title, and add your favorite products.  Match your style or open a shop for a holiday or movie release! Buy items at wholesale so you can show off your shop right in your instagram or social feed!</div>
                 <div id="products-dresses" class="products-thumbs">
                     <div class="product-thumb">
                         <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Olive-Shirt-Dress-1_grande.jpg">
@@ -102,27 +158,39 @@
                 <div id="step-3-title" class="hiw-title">Make money</div>
                 <div id="step-3-description" class="hiw-description">You earn 35% of everything your customers purchase AND you don't have to do anything else... No tracking inventory, No tracking orders, No shipping stuff... We do everything else!</div>
                 
-                <div id="the-good-stuff">
-                    <div>35% Commissions</div>
-                    <div>Easy Returns</div>
-                    <div>No Inventory</div>
-                </div>
+                <ul id="the-good-stuff">
+                    <li>
+                        No <br> Upfront <br> Purchase
+                    </li>
+                    <li>
+                        35% <br>Commissions<br><br>
+                    </li>
+                    <li>
+                        Easy 
+                        <br> 
+                        Returns
+                        <br>
+                        <a href="#">Read our super simple return process</a>
+                    </li>
+                    
+                </ul>
                 
-                 <a id="shops-cta" href="#" style="padding: 10px 20px; border-radius: 4px; font-size: 24px; background-color: #0bbe30; color: #fff; margin-top: 30px; display: inline-block;">Open a Shop</a>
+                 <a id="shops-cta" href="#" style="padding: 10px 20px; border-radius: 4px; font-size: 24px; background-color: #0bbe30; color: #fff; margin-top: 30px; display: inline-block; margin-top: 50px;">Open a Shop</a>
             </div>
         
         </div>
         
-        <div id="sonnie-says" style="display: block; margin-top: 50px; ">
+        <div id="sonnie-says" style="display: block; margin-top: 50px; padding-bottom: 50px;">
             <h2>Start a new journey with us!</h2>
             <div id="headshot-container" style="display: block; background-image: url(https://wyattgrantham.com/marketing/Images/sonnie_plus_family.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; 100%; height: 300px; margin-left: -10px; margin-right: -10px; ">
             </div>
             <div id="sonnie-says-text">
                 <span style="font-size: 50px;">"</span>
-                <blockquote style="margin-top: -20px;">I know what it's like to run a traditional clothing boutique, buying a ton of inventory, tracking it, and working your butt off to sell stuff that some people just don't want.  We  wanted to provide a way for great retailers to sell amazing product without all the hassle and risk of buying inventory.  We teamed up with suppliers from the biggest retailers across the nation, and they've agreed to handle all the hard stuff. NO MORE INVENTORY!  NO MORE ORDERS! NO MORE INVOICING! Just sell the styles that you love wearing and make as much or more than you were making before!  Keep your garage, keep the spare bedroom!  I'm so excited to share Sonlet Shops with all of you wonderful ladies that started this journey with me as boutique owners, and I know that Sonlet Shops will bring the excitement and passion that we all used to feel about selling, without having to empty our bank accounts or put our family finances at risk!</blockquote>
-                <span style="font-family: 'Clicker Script', cursive; font-size: 24px;">Sonnie Humpherys</span>
+                <blockquote style="margin-top: -20px; background-color: #f5f5f5; padding: 10px;">I know what it's like to run a traditional clothing boutique, buying a ton of inventory, tracking it, and working your tail off just to move the stuff that won't sell.  We  wanted to provide a way for great retailers to sell amazing product without all the hassle and risk of buying inventory.  We teamed up with suppliers from the biggest retailers across the nation, and they've agreed to handle all the hard stuff. NO MORE INVENTORY!  NO MORE ORDERS! NO MORE INVOICING! Just sell the styles that you love wearing and make as much or more than you were making before!  Keep your garage, keep the spare bedroom!  I'm so excited to share Sonlet Shops with all of you wonderful ladies that started this journey with me as boutique owners, and I know that Sonlet Shops will bring the excitement and passion that we all used to feel about selling, without having to empty our bank accounts or put our family finances at risk!</blockquote>
+                <span style="font-family: 'Clicker Script', cursive; color: #111;">Much</span><span style="color: #e72d9e; font-size: 20px;"> ♥</span>,<br><br>
+                <span style="font-family: 'Clicker Script', cursive; font-size: 24px; color: #111;">Sonnie Humpherys</span>
                 <br>
-                <span>Boutique Owner, Sonlet President &amp; Cofounder</span>
+                <span style="font-size: 12px;">Boutique Owner, Sonlet President &amp; Cofounder</span>
             </div>
         </div>
     </div>
