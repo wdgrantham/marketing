@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script');
+
+body {
+    background-color: #f2f2f2; 
+    color: #6b6b6b; 
+    text-align: center;
+    
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#page-container {
+    margin: 0 auto; 
+    text-align: center; 
+    background-color: #f2f2f2; 
+    padding: 0px 10px;
+}
+
+#page-hero-container {
+    background-color: #f2f2f2; 
+}
+
+#hero-background {
+    background-image: url(/Images/shops_banner_3_gray.png); 
+    background-position:  center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: #484848; 
+    margin-left: -10px; 
+    margin-right: -10px; 
+    height: 60%;
+}
+
+#hero-overlay {
+    background-color:; 
+    width: 100%; 
+    height: 100%;
+}
+
+#sonlet-shops-logo {
+    width: 0%;
+    height: auto;
+    
+}
+
+.shops-cta {
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    font-size: 24px; 
+    background-color: #0bbe30; 
+    color: #fff; 
+    margin-top: 30px; 
+    display: inline-block;
+}
+
+#hero-overlay a {
+    margin-top: 17%;
+}
+
+#hero-tagline {
+    margin-top:  ;
+    color: #111;
+    font-size: 60px; 
+    font-family: 'Clicker Script', cursive;
+    text-align: left;
+}
+
+
+
+#hero-description {
+    text-align: left; 
+    margin-top: 40px; 
+    margin-bottom: 60px;
+    font-size: 20px;
+    display: block;
+    
+}
+
+#hero-description-text { 
+    margin: 0 auto;
+    text-align: left;
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    
+}
+
+#hero-cta a {
+    margin-top: 75px;
+    vertical-align: top;
+}
+
+.step-container {
+    background-color: #fff;
+    padding: 30px;
+}
+
+#hiw-container {
+    margin-bottom: 150px;
+}
+
+#hiw-header p{
+    font-size: 20px;
+}
+
+#video {
+    margin-top: 60px;
+    height: 250px;
+    background-color: #fff; 
+    font-size: 40px;
+}
+
+#video a {
+    border: solid; 
+    border-width: 2px;
+    padding: 10px 24px 10px 30px;
+    border-radius: 4px;
+    position: absolute; 
+    margin-top: 80px;
+    margin-left: -45px;
+}
+#video a:link {
+    text-decoration: none;
+    color: #e72d9e;
+}
+
+#video a:hover {
+    border-color: #fff;
+    color: #fff;
+    background-color: #e72d9e;
+
+}
+
+.big-number {
+    font-size: 30px;
+    padding-top: ;
+
+}
+
+.hiw-title {
+    font-size: 30px;
+    color: #111
+}
+
+.hiw-description {
+    margin-top: 10px; 
+    font-size: 13px;
+}
+
+h2 {
+    font-family: 'Clicker Script', cursive;
+    font-size: 60px;
+    color: #111; 
+    margin-top: 80px;
+}
+
+#step-1-container {
+    margin-bottom: 150px;
+}
+
+#step-1-text {
+    max-width: 400px; 
+    margin-bottom: -200px; 
+    margin-left: 4%;
+    z-index: 10;
+    position: absolute;
+    text-align: left;
+}
+
+#products-dresses {
+    min-height: 450px;
+}
+
+.products-thumbs {
+    padding-top: 20px;
+}
+.product-thumb{
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+    margin-top: 50px;
+}
+
+.product-thumb img {
+    width: 100%; 
+}
+
+.product-thumb p {
+    font-size: 24px;
+    font-weight: 700;
+    
+    display: block;
+    background-color: #c1c1c1; 
+    margin-top: 0px;
+    padding: 10px 10px;
+    font-family: 'Clicker Script', cursive; 
+}
+
+#step-2-container {
+    margin-bottom: 150px;
+}
+
+#promote-container {
+    margin-top: 200px;
+}
+
+#promote-container .logo-img {
+    width: 24%;
+    display: inline-block;
+    min-width: 150px;
+}
+
+.logo-img img{
+    width: 80%;
+    margin 0 auto;
+}
+
+#facebook {
+    width: 80%;
+}
+
+#step-2-text {
+    margin-right: 110px;
+    margin-top: -370px;
+    
+}
+
+#tgs-container {
+    margin-top: 150px;
+}
+
+#step-3-container{
+    margin-bottom: 100px;
+}
+
+#step-3-text {
+    margin-left: 4%;
+    position: absolute;
+    max-width:  400px; 
+}
+
+#the-good-stuff {
+    padding-left: 0;
+}
+
+#the-good-stuff li {
+    display: inline-block;
+    width: 30%; 
+    list-style: none;
+    padding-left: none;
+    text-transform: uppercase;
+    min-height: 100px;
+    vertical-align: top;
+    margin-top: 5px;
+    font-size: 24px;
+
+}
+
+#the-good-stuff li img {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+#the-good-stuff li a {
+    font-size: 16px;
+    text-transform: none;
+}
+
+#sonnie-says {
+    background-color: #d9d9d9; 
+    margin: 0 auto;
+    margin-bottom: 150px;
+    padding-bottom: 60px;
+}
+
+#sonnie-says h2 {
+    margin-bottom: 60px;
+    
+}
+
+#headshot-container {
+    display: block; 
+    background-image: url(https://wyattgrantham.com/marketing/Images/sonnie_plus_family.jpg); 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 300px; 
+    margin-bottom: 40px;
+}
+
+#sonnie-says-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#sonnie-says-text blockquote {
+    margin-top: -20px; 
+    background-color: #fff; 
+    padding: 30px;
+}
+
+#sonnie-says-text p {
+    font-family: 'Clicker Script', cursive; 
+    font-size: 24px;
+    color: #111;
+}
+
+
+/* The new nav styles */
+
+sonlet-branding {
+    #e72d9e;
+}
+
+/* All the stuff from main.css that is relevant to the navigation */
+
+#the-nav-row a {
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #333a49;
+}
+
+#the-nav-row a.btn {
+    font-size: inherit !important;
+}
+
+#the-nav-row a:focus {
+    border: 1px solid #333a49;
+
+}
+
+.navbar-right {
+    float: right!important;
+    margin-right: 0px;
+}
+
+.navbar-nav {
+    margin: 0;
+}
+
+#navbrand {
+    color: #ec2f9a;
+}
+
+#navbrand:hover {
+    border: none;
+}
+
+#the-nav-row a:hover {
+        -webkit-transition: all .5s ease;
+         -moz-transition: all .5s ease;
+           -o-transition: all .5s ease;
+          -ms-transition: all .5s ease;
+              transition: all .5s ease;
+    border: 1px solid #333a49;
+
+}
+
+#the-nav-row {
+    margin-bottom: ;
+    background-color: transparent;
+    padding: 0; 
+}
+
+#the-nav-actions-row .navbar-nav>.active>a, #the-nav-actions-row .navbar-nav>.active>a:focus, #the-nav-actions-row .navbar-nav>.active>a:hover {
+    background-color: transparent;
+    border-radius: 0px;
+    border-bottom: #ec2f9a 3px solid;
+
+}
+
+#the-nav-actions-row {
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 15px;
+    -webkit-box-shadow: 0px 20px 31px -10px rgba(158,156,158,1);
+    -moz-box-shadow: 0px 20px 31px -10px rgba(158,156,158,1);
+    box-shadow: 5px 0px 30px rgba(158,156,158,1);
+}
+
+#the-nav-logo {
+    padding-bottom: 20px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+}
+
+#the-nav-logo-two {
+    width: 75px;
+    margin-top: -20px;
+}
+
+.loginlogo {
+    padding-top: 20px;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.claimed-items-container {
+    font-size: 10px;
+    padding-left: 10px;
+}
+/* remove the dropdownmargin class /
+.dropdownmargin {
+    margin-top: 10px !important;
+}
+/* / remove the dropdownmargin class */
+
+.claimed-count {
+    color: #e72d9e;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.mobile-claim-count-area {
+    background: #e72d9e;
+    color: #fff;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+.mobile-claim-count-area .claimed-count {
+    color: #fff;
+    font-size: 1.6em;
+}
+
+#the-user-menu-dropdown {
+    padding-left: 5px;
+    font-size: 13px !important;
+}
+
+#the-nav-row #HW_badge_cont {
+    top: 18px;
+    width: 65px;
+    font-size: 12px;
+}
+
+#the-nav-row #HW_badge {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    left: auto;
+}
+
+
+@media screen and (max-width: 991px)  {
+    .navbar-nav>li>.dropdown-menu {
+            margin-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            padding: 10px !important;
+        }
+}
+
+@media screen and (max-width: 900px)  {
+    #the-nav-actions-row .navbar-nav>.active>a, #the-nav-actions-row .navbar-nav>.active>a:focus, #the-nav-actions-row .navbar-nav>.active>a:hover {
+        border-bottom: black 1px solid;
+    }
+
+    #the-nav-logo {
+        display: none;
+    }
+
+    .navbar-fixed-top .navbar-collapse {
+        max-height: 550px;
+    }
+
+    #the-nav-row a {
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-device-width: 1000px) {
+    #the-nav-actions-row {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-device-width: 991px) {
+    
+    }
+}
+
+/* ipad-specific styles from http://stephen.io/mediaqueries/ */
+
+/* iPad in portrait & landscape */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    the-nav-row a {
+        font-size: 12px;
+    }
+}
+
+@media only screen
+and (min-width : 768px)
+and (max-width : 1100px)  {
+    the-nav-row a {
+        font-size: 12px;
+    }
+}
+
+/* very brief horribly small font period of time */
+@media only screen
+and (min-width : 768px)
+and (max-width : 830px)  {
+    the-nav-row a {
+        font-size: 9px;
+    }
+}
+
+/* End of all the stuff from main.css */
+
+#the-nav-actions-row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#str-navbar-collapse {
+    margin-left: 76px;
+    margin-right: -10px;
+}
+
+#str-navbar-collapse ul {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+#str-navbar-collapse a, #sonlet-subnav ul li a {
+    padding-top: 11px; 
+    padding-bottom: 11px;
+}
+
+#sonlet-navbar-brand-mobile {
+    background-image: url(/Images/logo_sonlet_horizontal.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 145px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    height: 63px;
+}
+
+#sonlet-mobile-nav-button {
+    border: none;
+}
+
+#the-nav-logo-anchor {
+    position: fixed;
+    height: 89px;
+    width: 90px;
+    float: left;
+    background-image: url(/Images/logo_sonlet_300_white.png);
+    background-color: #a9a9a9 !important;
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-right: 0px;
+    margin-left: -15px;
+    margin-bottom: 0px;
+    left: 15px;
+    top: 0px;
+    border: transparent !important;
+    box-shadow: 1px 1px 3px 0px rgba(158,156,158,1)
+}
+
+#sonlet-subnav {
+    display: block;
+    background-color: #f5f5f5;
+    margin-left: 0px;
+    width: 100%;
+    float: left;
+    margin-right: 90px;
+    padding-right: 0px;
+    box-shadow: 0px 1px 0px 0px #d9d9d9 inset;
+    position: sticky;
+    position: -webkit-sticky; /* Safari*/
+    top: 0;
+}
+
+#sonlet-claimed-items {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+#sonlet-shopping-cart button {
+    background-color: #f5f5f5; 
+    margin-top: 1px !important;
+    color: #919191;
+    display: block;
+}
+
+#sonlet-shopping-cart span {
+    font-size: 24px;
+    color: #919191;
+}
+
+#sonlet-shopping-cart span:hover, #sonlet-shopping-cart button:hover .glyphicon {
+    color: #111;
+}
+
+#sonlet-shopping-cart button:hover {
+    border-color: #999;
+    border: solid;
+    border-width: 1px;
+}
+
+#sonlet-subnav ul li a {
+    color: #999;
+    font-size: 15px;
+}
+
+#sonlet-navbar-right {
+    height: 0px;
+}
+
+#sonlet-navbar-right li button {
+    margin-top: 6px;
+}
+
+.iclaimed-items-container {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.btn-pink {
+    margin-top: 0px;
+}
+
+#iclaimed-items-text, .iclaimed-items-text {
+    display: inline;
+}
+
+#sonlet-navbar-brand-mobile {
+    font-size: 18px !important;
+}
+
+#sonlet-shopping-cart-mobile a,  .claimed-items-container a {
+    font-size: 17px;
+}
+
+#claimed-items-container-mobile, #sonlet-shopping-cart-mobile {
+    text-align: center;
+}
+
+#claimed-items-count-mobile {
+    font-size: 17px;
+}
+
+@media screen and (min-width: 992px) {
+   
+    }
+    
+}
+
+@media screen 
+    and (max-width: 991px) 
+    and (min-width: 768px) {
+    #sonlet-subnav ul li a {
+        font-size: 12px;
+    }
+    
+    #the-nav-row a {
+        font-size: 12px;
+    }
+      
+}
+
+@media screen
+    and (max-width: 768px) {
+        
+}
+
+@media screen 
+    and (max-width: 768px) {
+        #str-navbar-collapse {
+            margin-left: -15px;
+        }
+        
+        #sonlet-navbar-right {
+            float: left !important;
+            height: auto;
+        }
+        
+        #the-nav-actions-row {
+            padding-top: 10px;
+            padding-bottom: 8px;
+        }
+}
+
+
+
+

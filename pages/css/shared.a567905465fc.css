@@ -1,0 +1,102 @@
+.custom-carousel .carousel-inner .item {
+    /* TODO: figure out fixed height truncation issue */
+    /* height: 250px; */
+}
+
+.custom-carousel .carousel-inner .item figure {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+
+.custom-carousel .carousel-inner .item img {
+    display: block;
+    margin: auto;
+}
+
+#party-items-container .custom-carousel .carousel-inner .item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.custom-carousel .carousel-inner .item.large {
+    height: 350px;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+    text-shadow: 0px 3px 3px #222;
+}
+
+.invitem-image {
+    box-shadow: #a0a0a0 0 0 20px;
+    padding: 5px;
+}
+
+.invitem-image-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.invitem-image-thumbnail {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 120px;
+    height: 100px;
+}
+
+.invitem-image-thumbnail img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.invitem-image-thumbnail .remove {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    transition: all .15s;
+}
+
+.invitem-image-thumbnail:hover .remove {
+    opacity: 1;
+}
+
+.is-draggable {
+    border: 1px dashed gray;
+    margin: 0.5rem 1rem;
+    background-color: white;
+    cursor: move;
+}
+
+@media (min-width: 990px) {
+    .pad-sides {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 989px) {
+    .pad-sides {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+div.selected {
+    background-color: #08C;
+    color: #fff;
+}

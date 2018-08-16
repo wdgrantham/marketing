@@ -1,0 +1,359 @@
+<html>
+    
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!--The styles from STR Base-->
+    <link href="css/main.e2ed95bddb83.css" rel="stylesheet">
+    <link href="css/social.2ba491793da5.css" rel="stylesheet">
+    <link href="css/str-notify.df447194e205.css" rel="stylesheet">
+    <link href="css/loading.9102066dc4b1.css" rel="stylesheet">
+    <link href="css/typeahead.f865ad2b33ff.css" rel="stylesheet">
+    <link href="css/bootstrap-social.48379ffd5976.css" rel="stylesheet">
+    <link href="css/shared.a567905465fc.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="css/shops.css" rel="stylesheet">
+    
+</head>
+
+    <body style="">
+    
+    <div id="page-hero-container" class="container-fluid" style="">
+        <!--The New Nav -->
+        <div class="row">
+        <div class="col-md-12" id="the-nav-row">
+          <nav class="navbar navbar-default navbar-fixed-top" id="the-nav-actions-row">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <a href="https://sonlet.com/" class="visible-xs navbar-brand" id="sonlet-navbar-brand-mobile"></a>
+                <div id="StrMobileNotifications"></div>
+                <button id="sonlet-mobile-nav-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#str-navbar-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="str-navbar-collapse">
+                <a class="hidden-xs"  href="https://sonlet.com/" id="the-nav-logo-anchor"></a>
+            
+                <ul class="nav navbar-nav" role="tablist" id="sonlet-nav-tabs">
+
+                    <li><a href="#" id="buy-nav-link" class="sonlet-nav-link">Buy</a></li>
+                    
+                    <li class="hidden-xs"><a href="#" id="sell-nav-link" class="sonlet-nav-link">Sell</a></li>
+                    
+                    <li class="hidden visible-xs dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="sell-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sell <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdownmargin" aria-labelledby="sell-menu-dropdown">
+                          <li class=""><a href="#">Dashboard</a></li>
+                          <li class=""><a href="#">Inventory</a></li>
+                          <li class=""><a href="#">Listings</a></li>
+                          <li class=""><a href="#">Parties</a></li>
+                          <li class=""><a href="#">Sales</a></li>
+                          <li class=""><a href="#">Shipping</a></li>
+                        </ul>
+                    
+                    </li>
+
+                  <li><a href="#" id="social-nav-link" class="sonlet-nav-link">Social</a></li>
+                    
+                  <li><a href="#" id="resources-nav-link" onclick="displayNav('sonlet-resources-subnav-list')" class="sonlet-nav-link">Resources</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right" id="sonlet-navbar-right">
+
+                    <li class="whatsnew hidden-xs"><span id="HW_badge_cont" class="HW_visible"><span id="HW_badge" class="HW_softHidden" data-count-unseen=""></span></span></li>
+
+
+                    <!--Claimed-items-li-->
+                      <li class="hidden-xs hidden-sm">
+                        <!--claimed-items-container-->
+                        <div class="iclaimed-items-container">
+                          <div class="iclaimed-items-text">You have <span class="iclaimed-count">2</span> claimed items.</div>
+                          <a href="https://sonlet.com/done_shopping/" class="btn btn-pink btn-sm">Done shopping</a>
+                        </div><!--/claimed-items-container-->
+                      </li><!--/ Claimed-items-container-li-->
+
+
+
+
+                    <li id="StrNotifications"><div data-reactroot="" class="StrNotificationsRoot"><div class="strNotificationBubble"><span class="badge alert-info">6</span></div></div></li>
+                    
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="the-user-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        username <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu dropdownmargin">
+                        <li class="col-xs-5 col-sm-12 col-md-12">
+                          <a href="https://sonlet.com/profile/">
+                            Profile
+
+                          </a>
+                        </li>
+                        <li class="col-xs-7 col-sm-12 col-md-12"><a href="https://sonlet.com/notifications/"><span class="badge alert-info"></span> Notifications</a></li>
+
+
+                          <li class="col-xs-5 col-md-12"><a href="https://sonlet.com/customers/">Customers</a></li>
+                          <li class="col-xs-7 col-sm-12 col-md-12"><a target="_blank" href="https://headwayapp.co/shoptheroe-updates">What's New</a></li>
+                          <li class="col-xs-7 col-sm-12 col-md-12"><a href="https://sonlet.com/roadmap/">Feature Requests</a></li>
+                          <li class="col-xs-5 col-sm-12 col-md-12"><a href="https://sonlet.com/status/">System Status</a></li>
+                          <li class="col-xs-5 col-sm-12 col-md-12"><a href="https://sonlet.com/attributes/">Attributes</a></li>
+
+                        <li role="separator" class="divider col-xs-12"></li>
+
+                          <li class="col-xs-6 col-sm-12 col-md-12"><a href="https://sonlet.com/unicorn/">Admin</a></li>
+
+                        <li class="col-xs-6 col-sm-12 col-md-12"><a href="https://sonlet.com/accounts/logout/">Logout</a></li>
+                      </ul>
+                    </li>
+                    <!--Add a placeholder for the Sonlet shopping cart-->
+                    <li class="hidden-xs" id="sonlet-shopping-cart">
+                        <button type="button" class="btn btn-link" aria-label="Left Align">
+                          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                          3 items
+                        </button>
+                    </li><!--/Sonlet shopping cart-->
+
+                </ul>
+              
+                <!-- Sonlet subnavbar -->
+                  <nav class="hidden-xs" id="sonlet-subnav">
+                      <ul class="nav navbar-nav sonlet-subnav-list" role="tabpanel" id="sonlet-buy-subnav-list">
+                          <li class=""><a href="#">Home</a></li>
+                          <li class=""><a href="#">Liked Items</a></li>
+                      </ul><!--Buy subnavbar -->
+                      
+                      <ul class="nav navbar-nav sonlet-subnav-list hidden" role="tabpanel" id="sonlet-sell-subnav-list">
+                          <li class=""><a href="#">Home</a></li>
+                          <li class=""><a href="#">Inventory</a></li>
+                          <li class=""><a href="#">Listings</a></li>
+                          <li class=""><a href="#">Parties</a></li>
+                          <li class=""><a href="#">Sales</a></li>
+                          <li class=""><a href="#">Shipping</a></li>
+                      </ul><!--Sell subnavbar -->
+                      
+                      <ul class="nav navbar-nav sonlet-subnav-list hidden" role="tabpanel" id="sonlet-social-subnav-list">
+                          <li class=""><a href="#">Social Feed</a></li>
+                          <li class=""><a href="#">Social Profile</a></li>
+                      </ul><!--Social subnavbar -->
+                      
+                      <ul class="nav navbar-nav sonlet-subnav-list hidden" role="tabpanel" id="sonlet-resources-subnav-list">
+                          <li class=""><a href="#">Blog</a></li>
+                          <li class=""><a href="#">Knowledge base</a></li>
+                          <li class=""><a href="#"><i class="fa fa-facebook"></i> Users Group</a></li>
+                          <li class=""><a href="#">Support</a></li>
+                          <li class=""><a href="#">Apps</a></li>
+                      </ul><!--Sell subnavbar -->
+                      <!--Remove claimed items from the subnav -->
+                      <ul class="nav navbar-nav navbar-right hidden visible-sm" id="sonlet-claimed-items">
+                          <li class="">
+                            <!--claimed-items-container-->
+                            <div class="iclaimed-items-container">
+                              <div id="iclaimed-items-text">You have <span class="claimed-count">2</span> claimed items.</div>
+                              <a href="https://sonlet.com/done_shopping/" class="btn btn-pink btn-sm">Done shopping</a>
+                            </div><!--/claimed-items-container-->
+                          </li>
+                      </ul><!--/Remove claimed items from the subnav -->
+                  </nav><!--/Sonlet subnavbar -->
+              </div><!-- /#str-navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+        </div><!-- /#the-nav-row -->
+      </div>
+
+      
+        
+          <div class="row mobile-claim-count-area hidden-sm hidden-md hidden-lg">
+            <!--Add a placeholder for the Sonlet shopping cart-->
+            <div class="col-xs-6" id="sonlet-shopping-cart-mobile">
+                <a type="button" class="btn btn-white btn-outline" aria-label="Left Align">
+                   <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 3 items
+                </a>
+            </div><!--/Sonlet shopping cart-->
+            <div class="col-sm-12">
+              <div id="claimed-items-container-mobile" class="claimed-items-container">
+                <a href="https://sonlet.com/done_shopping/" class="btn btn-sm btn-white btn-outline">Done shopping  <span id="claimed-items-count-mobile" class="claimed-count">2</span></a>
+              </div>
+            </div>
+          </div>
+        
+      
+
+    </div>
+        
+     <div class="container-fluid">
+         <div class="row" id="hero-background">
+            <div id="hero-description" class="col-xs-12 col-md-6 col-md-offset-2" style="text-align: left;">
+                <p id="hero-tagline">Open an online boutique</p>
+                <p id="hero-description-text">Make 35% selling products from the brands you love <br>without carrying a single piece of inventory!</p>
+                
+             </div>
+             <div id="hero-cta" class="col-xs-12 col-md-2">
+                <a id="shops-cta" href="#" style="" class="pull-left shops-cta">Get Started</a>
+             </div>
+        </div>
+     </div>
+
+    <div id="page-container" class="container-fluid">
+        <div id="hiw-container" style="display:  block;" class="row">
+            <div id="hiw-header" class="col-xs-12 col-md-4 col-md-offset-2 pull-left text-right">
+                <h2>How it Works</h2>
+                <p style="">Check out how easy it is to setup a Sonlet Shop</p>
+            </div>
+            <!--To do: Add a Video-->
+            <div id="video" class="col-xs-12 col-md-4">
+                <a href="#" target="_blank">&#9654;</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="step-1-container">
+        <div class="row">
+            <div id="step-1-text" class="step-container col-xs-12 col-md-4">
+                <div id="number-1" class="big-number">Step 1</div>
+                <div id="step-1-title" class="hiw-title">Pick your favorite products</div>
+                <div id="step-1-description" class="hiw-description">Just open a shop, add a title, and add your favorite products.  Match your style or open a shop for a holiday or movie release! Buy items at wholesale so you can show off your shop right in your instagram or social feed!</div>
+
+            </div>
+            <div id="products-dresses" class="products-thumbs col-xs-12 col-md-8 col-md-offset-4">
+                <div class="product-thumb">
+                    <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Olive-Shirt-Dress-1_grande.jpg">
+                    <p>Great styles</p>
+                </div>
+                <div class="product-thumb">
+                    <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Block-Printed-Wrap-Dress-3_grande.jpg">
+                    <p>Fabulous brands</p>
+                </div>
+                <div class="product-thumb">
+                    <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Floral-Dress-3_grande.jpg">
+                    <p>More accessories</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+            
+    
+    <div class="container" id="step-2-container">
+        <div class="row">
+            
+            <div id="promote-container" class="col-md-8 col-xs-12" style="">
+                <div id="facebook-container" class="logo-img"><img id="facebook" src="https://wyattgrantham.com/marketing/Images/facebook.png"></div>
+                <div id="facebook-container" class="logo-img"><img id="pinterest" src="https://wyattgrantham.com/marketing/Images/pinterest.png"></div>
+                <div id="facebook-container" class="logo-img"><img id="sonlet" src="/Images/favicon_sonlet.png"></div>
+                <div id="facebook-container" class="logo-img"><img id="instagram" src="https://wyattgrantham.com/marketing/Images/instagram.png"></div>
+                
+            </div>
+            
+            <div id="step-2-text" class="step-container col-xs-12 col-md-4 pull-right text-left">
+                <div id="number-2" class="big-number">Step 2</div>
+                <div id="step-2-title" class="hiw-title">Promote your shop</div>
+                <div id="step-2-description" class="hiw-description">Post your entire shop to your Facebook VIP Group or post a link to your shop on Sonlet.com.  Show off some pics of your favorite styles or products, and have fun selling fashion!</div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="step-3-container">
+        <div class="row">
+            <div id="step-3-text" class="step-container col-xs-12 col-md-4  text-left">
+                <div id="number-3" class="big-number">Step 3</div>
+                <div id="step-3-title" class="hiw-title">Make money</div>
+                <div id="step-3-description" class="hiw-description">You earn 35% of everything your customers purchase AND you don't have to do anything else... No tracking inventory, No tracking orders, No shipping stuff... We do everything else!</div>
+            </div>
+            <div id="tgs-container" class="col-md-8 pull-right">
+                <ul id="the-good-stuff">
+                    <li>
+                        <img src="/Images/flexed-biceps.png">
+                        <br>
+                        No Upfront Purchase
+                    </li>
+                    <li>
+                        <img src="/Images/money-mouth-face.png"><br>
+                        35% <br>Commissions
+                    </li>
+                    <li>
+                        <img src="/Images/twisted-rightwards-arrows.png"><br>
+                        Easy Returns
+                        <br>
+                        <a href="#">Read more</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col-xs-12">
+                <a class="shops-cta" href="#">Open a Shop</a>
+            </div>
+        </div>        
+    </div>
+            
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sonnie-says" class="col-xs-12">
+            <h2>Start a new journey with us!</h2>
+            <div id="headshot-container" style="">
+            </div>
+            <div id="sonnie-says-text">
+                <span style="font-size: 50px;">"</span>
+                <blockquote style="">I know what it's like to run a traditional clothing boutique, buying a ton of inventory, tracking it, and working your tail off to sell stuff that your customers might not like.  We  wanted to provide a way for great retailers to sell amazing product without all the hassle and risk of buying inventory.  We teamed up with suppliers from the biggest retailers across the nation, and they've agreed to handle all the hard stuff. NO MORE INVENTORY!  NO MORE ORDERS! NO MORE INVOICING! Just sell the styles that you love wearing and make as much or more than you were making before!  Keep your garage, keep the spare bedroom!  I'm so excited to share Sonlet Shops with all of you wonderful ladies that started this journey with me as boutique owners, and I know that Sonlet Shops will bring the excitement and passion that we all used to feel about selling, without having to empty our bank accounts or put our family finances at risk!</blockquote>
+                <p style="">
+                    Much
+                    <span style="color: #e72d9e;"> ♥</span>,
+                </p>
+                <p style="font-family: 'Clicker Script', cursive; font-size: 24px; color: #111;">Sonnie Humpherys</p>
+                <p style="font-size: 12px; font-family: inherit; color: inherit; margin-top: -20px;">Boutique Owner, Sonlet President &amp; Cofounder</p>
+            </div>
+        </div>
+    </div>
+        </div>
+       
+    <script>
+      
+      document.getElementById('buy-nav-link').addEventListener("click", function() {
+          displayNav ('sonlet-buy-subnav-list'); });
+      
+      document.getElementById('sell-nav-link').addEventListener("click", function() {
+          displayNav ('sonlet-sell-subnav-list'); });
+      
+      document.getElementById('social-nav-link').addEventListener("click", function() {
+          displayNav ('sonlet-social-subnav-list'); });
+      
+      document.getElementById('resources-nav-link').addEventListener("click", function() {
+          displayNav ('sonlet-resources-subnav-list'); });
+      
+      function displayNav (navId) {
+          
+          var navLists = document.getElementsByClassName('sonlet-subnav-list');
+          for (var i = 0; i < 4; i++) {
+              navLists[i].classList.add("hidden");
+          };
+          
+          var showNav = document.getElementById(navId);
+          showNav.classList.remove("hidden");
+          
+      };
+      
+      //window.onscroll = function() {onscrollHideNav()};
+      
+      function onscrollHideNav () {
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 ) {
+              document.getElementById("sonlet-subnav").className = "hidden";
+          } else {
+              document.getElementById("sonlet-subnav").className = "";
+          }
+
+      };
+      
+     
+      
+  </script>
+        
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    </body>
+
+    
+</html>

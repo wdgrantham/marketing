@@ -1,0 +1,290 @@
+img.SocialProfileImage, img.SocialProfileImageSmall {
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 7px 7px 0;
+}
+
+img.SocialProfileImage {
+    width: 200px;
+    height: 200px;
+}
+
+img.SocialProfileImageSmall {
+    width: 50px;
+    height: 50px;
+}
+
+/*
+FASHION FEED STYLES
+
+The HTML structure and styles for the Sonlet Fashion Feed (abbreviated as
+"ff") are based off of the basic structure of Instagram as a starting
+point.  Instagram because it's a popular social media channel that is
+intended to highlight the media (pictures and video) rather than the text
+(comments and post description).  The fashion feed needs to emphasize user
+pictures and media rather than long text that has gone out of vogue in
+recent years.
+
+The document uses camelCase rather than using the popular abbreviates and
+dashes method that our bootstrap base styles are based one, primarily to
+make it easy to distinguish between the bootstrap CSS styles and classes
+(e.g. .col-xs-12) that inform the base containter, row, and column grid
+styles and ff classes that modify or add to these styles.
+
+Every class and ID used in this document uses the abbreviated "ff" to begin
+each class or ID, so that during debugging and other styles can be easily
+identified in the respective style sheets.
+*/
+.ffBackgroundGray {
+    background-color: #fafafa;
+    border-color: #ddd;
+    border-right: none;
+    border-left: none;
+}
+
+.ffWidget {
+    padding: 10px;
+}
+
+.ffFilter {
+    margin-right: 12px;
+}
+
+.ffAnchorColor {
+    color: #333a49;
+}
+
+.ffCardDropdown {
+    position: relative;
+}
+
+.ffBackgroundWhite {
+    background-color: #fff !important;
+    box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.ffFeedContainer {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.ffContainer {
+    background-color: #f2f2f2;
+}
+
+.ffArticleContainer {
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.ffArticleRow {
+    border: solid;
+    border-width: 1px;
+    border-color: #e6e6e6;
+}
+
+.ffArticleHeader {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background-color: #fff;
+}
+
+.ffArticleHeaderUser {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: lowercase;
+
+}
+
+.ffArticleMediaImage {
+    width: 100%;
+}
+
+.ffArticleActions {
+    padding: 0px 16px;
+    background-color: #fff;
+}
+
+.ffArticleActionBar {
+    margin-top: 8px;
+
+}
+
+.ffArticleActionIconAnchor {
+    margin-right: 4px;
+    color: #333a49;
+    cursor: pointer;
+}
+
+.ffLiked {
+    color: #ed4956;
+}
+
+.ffArticleActionIcon {
+    font-size: 25px;
+}
+
+.ffArticleActionIconRight {
+
+}
+
+.ffArticleViews {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.ffArticleComments {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.ffArticleComments ul {
+    list-style-type: none;
+
+}
+
+.ffComment {
+    margin-top: 4px;
+}
+
+.ffArticleDate {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    margin: 15px 0;
+}
+
+.ffArticleCommentForm {
+    border-top: solid;
+    border-color: #999;
+    border-width: 1px;
+}
+
+.ffArticleCommentTextarea {
+    border: none !important;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.ffArticleCommentButton {
+
+}
+
+.ffNoPadding {
+    padding: 0 !important;
+    margin: 0 !iimportant;
+}
+
+.ffNoPaddingBottom {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.ffNoPaddingTop {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.ffMarginLeft {
+    margin-left: 20px;
+}
+
+.ffMarginTop {
+    margin-top: 20px;
+}
+
+table.ffQuickStatsTable td+td {
+    text-align: right;
+}
+
+.ffBPost {
+    margin-left: 10px;
+}
+
+.blog-author-name {
+    font-size: 12px;
+}
+
+.CardBody {
+    font-size: 14px;
+    border-bottom: solid 1px #e6e6e6;
+    padding-bottom: 5px;
+}
+
+.ffCommentInput {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.ffCommentInput__input {
+    border-radius: 1em;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.ffCommentInput__input:focus {
+    border-color: #66afe9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    outline: 0;
+}
+
+.ffCommentInput__suggestions {
+    margin-top: 30px !important;
+    background-color: #fafafa !important;
+}
+
+.ffCommentInput__suggestions__item {
+    padding: 5px 15px;
+}
+
+.ffCommentInput__suggestions__item:not(:last-child) {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.ffCommentInput__suggestions__item--focused {
+    background-color: #fbd1de;
+}
+
+.ffUserPopover .arrow {
+    display: none;
+}
+
+.ffLinkPreview {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.ffLinkPreview * {
+    word-wrap: break-word;
+}
+
+.ffPostImages {
+    text-align: center;
+}
+
+.ffPostImages .imageA {
+    width: 100%;
+}
+
+.ffPostImages img {
+    max-width: 100%;
+}
+
+.ffPostImages.many img {
+    max-width: 100%;
+    max-height: 275px;
+}
+
+.SocialText {
+    font-size: 18px;
+    word-wrap: break-word;
+    color: black;
+}
