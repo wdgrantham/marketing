@@ -29,7 +29,7 @@ ul {
 }
 
 #hero-background {
-    background-image: url(/Images/shops_banner_3_gray.png); 
+    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_gray.png); 
     background-position:  center; 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -551,7 +551,7 @@ and (max-width : 830px)  {
 }
 
 #sonlet-navbar-brand-mobile {
-    background-image: url(/Images/logo_sonlet_horizontal.png);
+    background-image: url(https:wyattgrantham.com/Images/logo_sonlet_horizontal.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -570,7 +570,7 @@ and (max-width : 830px)  {
     height: 89px;
     width: 90px;
     float: left;
-    background-image: url(/Images/logo_sonlet_300_white.png);
+    background-image: url(https://wyattgrantham.com/marketing/Images/logo_sonlet_300_white.png);
     background-color: #a9a9a9 !important;
     background-position: center;
     background-size: 90%;
