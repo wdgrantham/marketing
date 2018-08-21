@@ -66,7 +66,6 @@ ul {
 }
 
 #hero-tagline {
-    margin-top:  ;
     color: #111;
     font-size: 60px; 
     font-family: 'Clicker Script', cursive;
@@ -88,7 +87,7 @@ ul {
     margin: 0 auto;
     text-align: left;
     font-size: 16px;
-    padding-top: 40px;
+   
     padding-bottom: 40px;
     
     
@@ -168,7 +167,7 @@ h2 {
 }
 
 #step-1-text {
-    max-width: 400px; 
+    
     margin-bottom: -200px; 
     margin-left: 4%;
     z-index: 10;
@@ -197,7 +196,6 @@ h2 {
 .product-thumb p {
     font-size: 24px;
     font-weight: 700;
-    
     display: block;
     background-color: #c1c1c1; 
     margin-top: 0px;
@@ -206,36 +204,38 @@ h2 {
 }
 
 #step-2-container {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 #promote-container {
-    margin-top: 200px;
-}
-
-#promote-container .logo-img {
-    width: 24%;
-    display: inline-block;
-    min-width: 150px;
-}
-
-.logo-img img{
-    width: 80%;
-    margin 0 auto;
-}
-
-#facebook {
-    width: 80%;
-}
-
-#step-2-text {
-    margin-right: 110px;
-    margin-top: -370px;
+    background: url(/Images/smart_phone.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4%;
     
 }
 
-#tgs-container {
-    margin-top: 150px;
+#promote-container .message-container img {
+    width: 60%;
+    display: block;
+}
+
+.message-container {
+    width: 100%;
+    display: block;
+    background-color: red;
+}
+
+#step-2-text {
+    
+    
+}
+
+#tgs-container img {
+    width: 100%;
+    margin-bottom: 150px;
+    
 }
 
 #step-3-container{
@@ -243,37 +243,13 @@ h2 {
 }
 
 #step-3-text {
-    margin-left: 4%;
+    z-index: 10;
+    margin-top: 150px;
     position: absolute;
-    max-width:  400px; 
+    max-width: 500px;
 }
 
-#the-good-stuff {
-    padding-left: 0;
-}
 
-#the-good-stuff li {
-    display: inline-block;
-    width: 30%; 
-    list-style: none;
-    padding-left: none;
-    text-transform: uppercase;
-    min-height: 100px;
-    vertical-align: top;
-    margin-top: 5px;
-    font-size: 24px;
-
-}
-
-#the-good-stuff li img {
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-#the-good-stuff li a {
-    font-size: 16px;
-    text-transform: none;
-}
 
 #sonnie-says {
     background-color: #d9d9d9; 
@@ -313,6 +289,70 @@ h2 {
     font-size: 24px;
     color: #111;
 }
+
+@media only screen and (max-width: 992px ) {
+    #hero-tagline {
+        font-size: 44px;
+    }
+    #hiw-container {
+        margin-bottom: 40px;
+    }
+    
+    #hiw-header {
+        text-align: center;
+    }
+    
+    #step-1-container {
+        margin-bottom: 100px;
+    }
+    
+    #step-1-text {
+        position: relative; 
+        margin-left: 0px;
+        margin-bottom: 0px;
+        max-width: none;
+        z-index: none;
+    }
+    
+    #products-dresses {
+        padding-left: 0px;
+        padding-right: 0px;
+        min-height: 0px;
+    }
+    
+    .product-thumb {
+        margin: 0px;
+        width: 32%
+    }
+    
+    .product-thumb p {
+        font-size: 16px;
+    }
+    
+    #step-2-container {
+        margin-bottom: 100px;
+    }
+    
+    #step-3-container {
+        
+    }
+    
+    #step-3-text {
+        position: relative; 
+        margin-top: 0px;
+        max-width: none;
+    }
+    
+    #tgs-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    #tgs-container img {
+        margin-bottom: 0px;
+    }
+}
+
 
 
 /* The new nav styles */
