@@ -29,7 +29,7 @@ ul {
 }
 
 #hero-background {
-    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_gray.png); 
+    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg); 
     background-position:  center; 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -59,10 +59,7 @@ ul {
     color: #fff; 
     margin-top: 30px; 
     display: inline-block;
-}
-
-#hero-overlay a {
-    margin-top: 17%;
+    border: none;
 }
 
 #hero-tagline {
@@ -71,8 +68,6 @@ ul {
     font-family: 'Clicker Script', cursive;
     text-align: left;
 }
-
-
 
 #hero-description {
     text-align: left; 
@@ -87,20 +82,18 @@ ul {
     margin: 0 auto;
     text-align: left;
     font-size: 16px;
-   
     padding-bottom: 40px;
-    
     
 }
 
 #hero-cta button {
     margin-top: 75px;
-    vertical-align: top;
 }
 
 .step-container {
     background-color: #fff;
     padding: 30px;
+    box-shadow: 5px 0px 30px rgba(158,156,158,1);
 }
 
 #hiw-container {
@@ -126,6 +119,8 @@ ul {
     position: absolute; 
     margin-top: 80px;
     margin-left: -45px;
+    color: #e72d9e;
+    border-color: #e72d9e;
 }
 #video a:link {
     text-decoration: none;
@@ -168,8 +163,8 @@ h2 {
 
 #step-1-text {
     
-    margin-bottom: -200px; 
-    margin-left: 4%;
+    left: 8%;
+    margin-left: 2%;
     z-index: 10;
     position: absolute;
     text-align: left;
@@ -282,6 +277,7 @@ h2 {
     margin-top: -20px; 
     background-color: #fff; 
     padding: 30px;
+    box-shadow: 5px 0px 30px rgba(158,156,158,1);
 }
 
 #sonnie-says-text p {
@@ -307,7 +303,8 @@ h2 {
     }
     
     #step-1-text {
-        position: relative; 
+        position: relative;
+        left: 0px;
         margin-left: 0px;
         margin-bottom: 0px;
         max-width: none;
