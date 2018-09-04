@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Clicker+Script');
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script|Montserrat|Muli|Quicksand|Satisfy');
+/* variables */
+:root {
+    --body-bg-color-1: #f2f2f2;
+    --body-bg-color-2: #fff;
+    --hero-image-color: url(https://wyattgrantham.com/marketing/Images/shops_banner_3.jpg);
+    --cursive-font: 'Clicker Script', cursive;
+    --sans-font: 'Muli', sans-serif;
+    --btn-color: #0bbe30;
+}
+
+
+
+
 
 body {
     background-color: #f2f2f2; 
@@ -17,6 +30,133 @@ ul {
     padding-bottom: 20px;
 }
 
+.background-white {
+    background-color: var(--body-bg-color-2);
+}
+
+.background-gray {
+    background-color: var(--body-bg-color-1);
+}
+
+.font-sans-1 {
+    font-family: 'Muli', sans-serif;
+}
+
+.font-sans-2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.font-sans-3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-cursive-1 {
+    font-family: 'Clicker Script', cursive;
+}
+
+.font-cursive-2 {
+    font-family: 'Satisfy', cursive;
+}
+
+.btn-color-1 {
+    background-color: #0bbe30;
+}
+
+.btn-color-2 {
+    background-color: red;
+}
+
+.btn-color-3 {
+    background-color: blue;
+}
+
+#style-selector {
+    position: fixed; 
+    top: 120px;
+    left: 15px;
+    z-index: 1000;
+}
+
+#open-styles {
+    background-color: #111; 
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+
+}
+
+#open-styles:hover {
+    background-color: #f5f5f5; 
+    color: #111;
+    border: solid;
+    border-width: 1px;
+    border-color: #111;
+}
+
+#style-selector ul {
+    background-color: #fff; 
+    list-style: none;
+    position: fixed;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 8px;
+    text-align: left;
+    z-index: 1000;
+}
+
+#style-selector ul li {
+    margin-top: 10px;
+}
+
+.style-label {
+    display: inline-block; 
+    margin-right: 40px;
+    min-width: 200px;
+}
+
+.color-swatch {
+    display: inline-block;
+    min-height: 50px;
+    min-width: 50px;
+    color: #111;
+    word-wrap: break-word;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 50%;
+    border: solid; 
+    border-width: 1px;
+    border-color: #999;
+}
+
+.font-sample {
+    display: inline-block;
+    color: #111; 
+    font-size: 15px; 
+    min-height: 20px;
+    padding: 0px 10px;
+    border: dashed;
+    border-width: 1px;
+    border-color: #111; 
+}
+
+.color-swatch:hover, .font-sample:hover {
+    box-shadow: 5px 0px 30px rgba(158,156,158,1);
+}
+
+.color-swatch span {
+    display: inline-block;
+    padding-top: 18px;
+}
+
+.font-sample span {
+    display: inline-block;
+}
+
+/*End of the Style Selector*/
+
+
 #page-container {
     margin: 0 auto; 
     text-align: center; 
@@ -29,7 +169,7 @@ ul {
 }
 
 #hero-background {
-    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg); 
+    background-image: var(--hero-image-color); 
     background-position:  center; 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -65,7 +205,7 @@ ul {
 #hero-tagline {
     color: #111;
     font-size: 60px; 
-    font-family: 'Clicker Script', cursive;
+    font-family: var(--cursive-font);
     text-align: left;
 }
 
@@ -151,7 +291,7 @@ ul {
 }
 
 h2 {
-    font-family: 'Clicker Script', cursive;
+    font-family: var(--cursive-font);
     font-size: 60px;
     color: #111; 
     margin-top: 80px;
@@ -195,7 +335,7 @@ h2 {
     background-color: #c1c1c1; 
     margin-top: 0px;
     padding: 10px 10px;
-    font-family: 'Clicker Script', cursive; 
+    font-family: var(--cursive-font); 
 }
 
 #step-2-container {
@@ -260,11 +400,11 @@ h2 {
 
 #headshot-container {
     display: block; 
-    background-image: url(https://wyattgrantham.com/marketing/Images/sonnie_plus_family.jpg); 
+    background-image:; 
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center; 
-    height: 300px; 
+    height: ; 
     margin-bottom: 40px;
 }
 

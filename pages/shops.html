@@ -18,7 +18,39 @@
 </head>
 
     <body style="">
-    
+    <div id="style-selector">
+        <a id="open-styles">
+            Edit Styles
+        </a>
+        <ul>
+            <li><small>Select from the styles below to customize the css of this page </small><hr></li>
+            <li>
+                <div class="style-label">Background color:</div>
+                <a href="#" class="color-swatch background-white style-selector" css-var-name="--body-bg-color-1" new-css-var-value="#fff"><span>White</span></a>
+                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--body-bg-color-1" new-css-var-value="#f2f2f2"><span>Gray</span></a>
+            </li>
+            <li>
+                <div class="style-label">Hero image color:</div>
+                <a href="#" class="color-swatch background-white style-selector" css-var-name="--hero-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3.jpg)"><span>Color</span></a>
+                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--hero-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_gray.png)"><span>Gray</span></a>
+                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--hero-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg)"><span>Muted</span></a>
+                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--here-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_custom.jpg)"><span>Custom</span></a>
+            </li>
+            <li>
+                <div class="style-label">Cursive heading font:</div>
+                <a href="#" class="font-sample background-white style-selector" css-var-name="--cursive-font" new-css-var-value="'Clicker Script', cursive;"><span class="font-cursive-1">Clicker Script</span></a>
+                <a href="#" class="font-sample background-white style-selector" css-var-name="--cursive-font" new-css-var-value="'Satisfy', cursive;"><span class="font-cursive-2">Satisfy</span></a>
+            </li>
+            <li>
+                <div class="style-label">Sans-serif Font:</div>
+                <a href="#" class="font-sample background-white style-selector" css-var-name="--sans-font"><span class="font-sans-1" new-css-var-value="'Muli', sans-serif;">Muli</span></a>
+                <a href="#" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Quicksand', sans-serif;"><span class="font-sans-2">Quicksand</span></a>
+                <a href="#" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Montserrat', sans-serif;"><span class="font-sans-3">Montserrat</span></a>
+            </li>
+        </ul>
+    </div>
+        
+        
     <div id="page-hero-container" class="container-fluid" style="">
         <!--The New Nav -->
         <div class="row">
@@ -339,6 +371,8 @@
      
       
   </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -421,6 +455,8 @@
     }
 
   </script>
+        
+        <script src="js/style-selector.js"></script>
     
     </body>
 
