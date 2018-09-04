@@ -19,33 +19,36 @@
 
     <body style="">
     <div id="style-selector">
-        <a id="open-styles">
-            Edit Styles
+        <a id="open-styles" style="transform: rotate(270deg);" class="style-selector-toggle">
+            <i class="fa fa-pencil"></i>&nbsp;Edit Styles
         </a>
-        <ul>
-            <li><small>Select from the styles below to customize the css of this page </small><hr></li>
+        <ul id="canvas" class="">
+            <a href="#" onclick="return false;" id="btn-close" class="style-selector-toggle">X</a>
+            <li><i class="fa fa-pencil"></i>&nbsp;Edit Styles</li>
+            <li><small>Customize the way this page looks using the options below</small><hr></li>
             <li>
-                <div class="style-label">Background color:</div>
-                <a href="#" class="color-swatch background-white style-selector" css-var-name="--body-bg-color-1" new-css-var-value="#fff"><span>White</span></a>
-                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--body-bg-color-1" new-css-var-value="#f2f2f2"><span>Gray</span></a>
+                <div class="style-label">Hero image:</div>
+                <a href="#" onclick="return false;" class="background-sample hero-image-1 style-selector" css-var-name="--hero-image" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg)"><span>Muted</span></a>
+                <a href="#" onclick="return false;" class="background-sample hero-image-2 style-selector" css-var-name="--hero-image" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3.jpg)"><span>Color</span></a>
+                <a href="#" onclick="return false;" class="background-sample hero-image-3 style-selector" css-var-name="--hero-image" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_gray.png)"><span>Gray</span></a>
+                <a href="#" onclick="return false;" class="background-sample hero-image-4 style-selector" css-var-name="--hero-image" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_custom.jpg)"><span>Custom</span></a>
             </li>
             <li>
-                <div class="style-label">Hero image color:</div>
-                <a href="#" class="color-swatch background-white style-selector" css-var-name="--hero-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3.jpg)"><span>Color</span></a>
-                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--hero-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_gray.png)"><span>Gray</span></a>
-                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--hero-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg)"><span>Muted</span></a>
-                <a href="#" class="color-swatch background-gray style-selector" css-var-name="--here-image-color" new-css-var-value="url(https://wyattgrantham.com/marketing/Images/shops_banner_3_custom.jpg)"><span>Custom</span></a>
+                <div class="style-label">Button color:</div>
+                <a href="#" onclick="return false;" class="color-swatch btn-color-1 style-selector" css-var-name="--btn-color" new-css-var-value="#0bbe30"><span>Green</span></a>
+                <a href="#" onclick="return false;" class="color-swatch btn-color-2 style-selector" css-var-name="--btn-color" new-css-var-value="rgb(230,50,155)"><span>Pink</span></a>
+                <a href="#" onclick="return false;" class="color-swatch btn-color-3 style-selector" css-var-name="--btn-color" new-css-var-value="rgb(17,149,255)"><span>Blue</span></a>
             </li>
             <li>
-                <div class="style-label">Cursive heading font:</div>
-                <a href="#" class="font-sample background-white style-selector" css-var-name="--cursive-font" new-css-var-value="'Clicker Script', cursive;"><span class="font-cursive-1">Clicker Script</span></a>
-                <a href="#" class="font-sample background-white style-selector" css-var-name="--cursive-font" new-css-var-value="'Satisfy', cursive;"><span class="font-cursive-2">Satisfy</span></a>
+                <div class="style-label">Headings font:</div>
+                <a href="#" onclick="return false;" class="font-sample background-white style-selector" css-var-name="--cursive-font" new-css-var-value="'Clicker Script', cursive"><span class="font-cursive-1">Clicker Script</span></a>
+                <a href="#" onclick="return false;" class="font-sample background-white style-selector" css-var-name="--cursive-font" new-css-var-value="'Satisfy', cursive"><span class="font-cursive-2">Satisfy</span></a>
             </li>
             <li>
-                <div class="style-label">Sans-serif Font:</div>
-                <a href="#" class="font-sample background-white style-selector" css-var-name="--sans-font"><span class="font-sans-1" new-css-var-value="'Muli', sans-serif;">Muli</span></a>
-                <a href="#" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Quicksand', sans-serif;"><span class="font-sans-2">Quicksand</span></a>
-                <a href="#" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Montserrat', sans-serif;"><span class="font-sans-3">Montserrat</span></a>
+                <div class="style-label">Paragraph font:</div>
+                <a href="#" onclick="return false;" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Muli', sans-serif"><span class="font-sans-1">Muli</span></a>
+                <a href="#" onclick="return false;" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Quicksand', sans-serif"><span class="font-sans-2">Quicksand</span></a>
+                <a href="#" onclick="return false;" class="font-sample background-white style-selector" css-var-name="--sans-font" new-css-var-value="'Montserrat', sans-serif"><span class="font-sans-3">Montserrat</span></a>
             </li>
         </ul>
     </div>
@@ -250,8 +253,8 @@
         <div class="row">
             <div id="step-1-text" class="step-container col-xs-12 col-md-4">
                 <div id="number-1" class="big-number">Step 1</div>
-                <div id="step-1-title" class="hiw-title">Pick your favorite products</div>
-                <div id="step-1-description" class="hiw-description">Just open a shop, add a title, and add your favorite products.  Match your style or open a shop for a special occasion!</div>
+                <div id="step-1-title" class="hiw-title">Create a shop &amp; add some products</div>
+                <div id="step-1-description" class="hiw-description">Just one click, add a title, and pick your favorite products.  Match your style or open a shop for a special occasion!</div>
 
             </div>
             <div id="products-dresses" class="products-thumbs col-xs-12 col-md-8 col-md-offset-4">
@@ -264,7 +267,7 @@
                     <p>Fabulous brands</p>
                 </div>
                 <div class="product-thumb">
-                    <img src="https://wyattgrantham.com/marketing/Images/Lovestitch-Floral-Dress-3_grande.jpg">
+                    <img src="https://wyattgrantham.com/marketing/Images/accessories.png">
                     <p>More accessories</p>
                 </div>
             </div>
@@ -279,7 +282,7 @@
             <div id="step-2-text" class="step-container col-xs-12 col-md-6 text-left col-md-push-6">
                 <div id="number-2" class="big-number">Step 2</div>
                 <div id="step-2-title" class="hiw-title">Promote your shop</div>
-                <div id="step-2-description" class="hiw-description">Post your entire shop to your Facebook VIP Group or post a link to your shop on Sonlet.com.  Show off some pics of your favorite styles or products, and have fun selling fashion!</div>
+                <div id="step-2-description" class="hiw-description">Share links to your shop or to specific products directly through Facebook and Sonlet.com.  You earn 35% of everything your customers purchase!!!</div>
             </div>
             
             <div id="promote-container" class="col-md-6 col-xs-12 col-md-pull-6" style="">
@@ -309,8 +312,11 @@
             
             <div id="step-3-text" class="step-container col-xs-12 col-md-5 col-md-offset-1  text-left">
                 <div id="number-3" class="big-number">Step 3</div>
-                <div id="step-3-title" class="hiw-title">Enjoy the perks of owning your business</div>
-                <div id="step-3-description" class="hiw-description">Earn 35% of everything your customers purchase, no upfront purchases, and easy returns PLUS you don't have to do anything else... No tracking inventory, No tracking orders, No shipping stuff... So you can go to the beach, hangout with your family, go get a pedicure... WHATEVER YOU WANT!!!</div>
+                <div id="step-3-title" class="hiw-title">Help customers look amazing!</div>
+                <div id="step-3-description" class="hiw-description"> 
+                    Set up your return policy and help your customers find their perfect look.  
+                    <br><br>
+                    NO tracking inventory, NO tracking orders, NO shipping...</div>
             </div>
             <div id="tgs-container" class=" col-xs-12 col-md-6 col-md-offset-6">
                 <img class="img-responsive" src="https://wyattgrantham.com/marketing/Images/beach_with_phone.gif" alt="A woman lounging on the beach in a fashionable swimsuit and sunglasses with her cell phone">
@@ -330,7 +336,7 @@
             <div id="headshot-container" style="">
             </div>
             <div id="sonnie-says-text">
-                <span style="font-size: 50px;">"</span>
+                <span id="big-quote-1">"</span>
                 <blockquote style="">I know what it's like to run a traditional clothing boutique, buying a ton of inventory, tracking it, and working your tail off to sell stuff that your customers might not like.  We  wanted to provide a way for great retailers to sell amazing product without all the hassle and risk of buying inventory.  We teamed up with suppliers from the biggest retailers across the nation, and they've agreed to handle all the hard stuff. NO MORE INVENTORY!  NO MORE ORDERS! NO MORE INVOICING! Just sell the styles that you love wearing and make as much or more than you were making before!  Keep your garage, keep the spare bedroom!  I'm so excited to share Sonlet Shops with all of you wonderful ladies that started this journey with me as boutique owners, and I know that Sonlet Shops will bring the excitement and passion that we all used to feel about selling, without having to empty our bank accounts or put our family finances at risk!</blockquote>
                 <p style="">
                     Much

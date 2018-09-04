@@ -3,7 +3,7 @@
 :root {
     --body-bg-color-1: #f2f2f2;
     --body-bg-color-2: #fff;
-    --hero-image-color: url(https://wyattgrantham.com/marketing/Images/shops_banner_3.jpg);
+    --hero-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg);
     --cursive-font: 'Clicker Script', cursive;
     --sans-font: 'Muli', sans-serif;
     --btn-color: #0bbe30;
@@ -17,12 +17,14 @@ body {
     background-color: #f2f2f2; 
     color: #6b6b6b; 
     text-align: center;
+    font-family: var(--sans-font);
     
 }
 
 p {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: var(--sans-font)
 }
 
 ul {
@@ -40,6 +42,22 @@ ul {
 
 .font-sans-1 {
     font-family: 'Muli', sans-serif;
+}
+
+.hero-image-1 {
+    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg);
+}
+
+.hero-image-2 {
+    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3.jpg);
+}
+
+.hero-image-3 {
+    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_gray.png);
+}
+
+.hero-image-4 {
+    background-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_custom.jpg);
 }
 
 .font-sans-2 {
@@ -63,34 +81,42 @@ ul {
 }
 
 .btn-color-2 {
-    background-color: red;
+    background-color: rgb(230,50,155);
 }
 
 .btn-color-3 {
-    background-color: blue;
+    background-color: rgb(17,149,255);
 }
 
 #style-selector {
     position: fixed; 
-    top: 120px;
-    left: 15px;
+    top: 150px;
+    left: 0px;
     z-index: 1000;
 }
 
 #open-styles {
-    background-color: #111; 
+    background-color: #585858; 
     color: #fff;
     padding: 10px;
     z-index: 1000;
+    cursor: pointer;
+    transform: rotate(90deg);
+    display: inline-block;
+    margin-left: -35px;
+}
 
+#open-styles.opened {
+   display: none;
+    
 }
 
 #open-styles:hover {
     background-color: #f5f5f5; 
-    color: #111;
+    color: #585858;
     border: solid;
     border-width: 1px;
-    border-color: #111;
+    border-color: #585858;
 }
 
 #style-selector ul {
@@ -103,7 +129,31 @@ ul {
     padding-bottom: 30px;
     margin-top: 8px;
     text-align: left;
+    box-shadow: 5px 0px 30px rgba(158,156,158,1); 
     z-index: 1000;
+    display: none;
+}
+
+#style-selector ul.opened {
+    display: inline-block;
+}
+
+#btn-close {
+    float: right;
+    color: #111; 
+    display: inline-block;
+    margin-top: -15px;
+    margin-right: -9px;
+    padding: 5px 12px;;
+    border-radius: 50%;
+}
+
+#btn-close:hover {
+    background-color: #f2f2f2;
+}
+
+#btn-close:active {
+    text-decoration: none;
 }
 
 #style-selector ul li {
@@ -113,7 +163,26 @@ ul {
 .style-label {
     display: inline-block; 
     margin-right: 40px;
-    min-width: 200px;
+    min-width: 100px;
+    min-height: 50px;
+    font-size: 13px;
+}
+
+.background-sample {
+    display: inline-block;
+    min-height: 50px;
+    min-width: 50px;
+    color: #111;
+    word-wrap: break-word;
+    font-size: 10px;
+    text-align: center;
+    border: solid; 
+    border-width: 1px;
+    border-color: #999;
+    background-position:  center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: #484848;
 }
 
 .color-swatch {
@@ -141,13 +210,17 @@ ul {
     border-color: #111; 
 }
 
-.color-swatch:hover, .font-sample:hover {
+.color-swatch:hover, .font-sample:hover, .background-sample:hover {
     box-shadow: 5px 0px 30px rgba(158,156,158,1);
 }
 
-.color-swatch span {
+.color-swatch span, .background-sample span {
     display: inline-block;
     padding-top: 18px;
+}
+
+.background-sample span {
+    padding-top: 10px;
 }
 
 .font-sample span {
@@ -169,7 +242,7 @@ ul {
 }
 
 #hero-background {
-    background-image: var(--hero-image-color); 
+    background-image: var(--hero-image); 
     background-position:  center; 
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -195,7 +268,7 @@ ul {
     padding: 10px 20px; 
     border-radius: 4px; 
     font-size: 24px; 
-    background-color: #0bbe30; 
+    background-color: var(--btn-color); 
     color: #fff; 
     margin-top: 30px; 
     display: inline-block;
@@ -223,6 +296,7 @@ ul {
     text-align: left;
     font-size: 16px;
     padding-bottom: 40px;
+    font-family: var(--sans-font);
     
 }
 
@@ -275,24 +349,27 @@ ul {
 }
 
 .big-number {
-    font-size: 30px;
-    padding-top: ;
+    font-size: 20px;
+    font-family: var(--sans-font);
+    display: inline-block;
 
 }
 
 .hiw-title {
     font-size: 30px;
-    color: #111
+    color: #111;
+    font-family: var(--sans-font);
 }
 
 .hiw-description {
     margin-top: 10px; 
     font-size: 13px;
+    font-family: var(--sans-font)
 }
 
 h2 {
     font-family: var(--cursive-font);
-    font-size: 60px;
+    font-size: 40px;
     color: #111; 
     margin-top: 80px;
 }
@@ -335,7 +412,8 @@ h2 {
     background-color: #c1c1c1; 
     margin-top: 0px;
     padding: 10px 10px;
-    font-family: var(--cursive-font); 
+    font-family: var(--cursive-font);
+    color: #111;
 }
 
 #step-2-container {
@@ -411,6 +489,14 @@ h2 {
 #sonnie-says-text {
     max-width: 800px;
     margin: 0 auto;
+    font-family: var(--sans-font);
+}
+
+#big-quote-1 {
+    font-size: 50px;
+    float: left;
+    margin-top: -40px;
+    font-family: cursive;
 }
 
 #sonnie-says-text blockquote {
@@ -418,6 +504,7 @@ h2 {
     background-color: #fff; 
     padding: 30px;
     box-shadow: 5px 0px 30px rgba(158,156,158,1);
+    font-family: var(--sans-font);
 }
 
 #sonnie-says-text p {
@@ -728,7 +815,7 @@ and (max-width : 830px)  {
 }
 
 #sonlet-navbar-brand-mobile {
-    background-image: url(https:wyattgrantham.com/Images/logo_sonlet_horizontal.png);
+    background-image: url(https:wyattgrantham.com/marketing/Images/logo_sonlet_horizontal.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;

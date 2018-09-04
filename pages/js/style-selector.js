@@ -1,35 +1,38 @@
-function setCssVar(cssSelector, cssValue, cssVar, newCssVar) {
-    let getElem = document.querySelector(cssSelector);
-    //console.log(getElem);
-    let elemStyles = getComputedStyle(getElem);
-    let getElemStyle = elemStyles.getPropertyValue(cssValue);
-    let root = document.querySelector(':root');
-    let rootStyles = getComputedStyle(root);
-    let getRootStyle = rootStyles.getPropertyValue(cssVar);
-    console.log(getRootStyle);
-    root.style.setProperty(cssVar, newCssVar)
-    console.log(getRootStyle);
-}
+let styleSelector = document.getElementsByClassName("style-selector");
+
+let styleSelectorToggle = document.getElementsByClassName("style-selector-toggle");
+
+let openStyleSelector = function(){
     
-setCssVar('.font-cursive-1','font-family','--cursive-font', '"Muli", sans-serif')
+    let styleSelectorCanvas = document.getElementById('canvas');
 
-var styleSelector = document.getElementsByClassName("style-selector");
+    let openStylesBtn = document.getElementById('open-styles');
+    
+    if (styleSelectorCanvas.classList.contains('opened')) {
+        openStylesBtn.classList.remove('opened');
+        styleSelectorCanvas.classList.remove('opened');
+        console.log('You removed the opened class');
+    } else {
+        openStylesBtn.classList.add('opened');
+        styleSelectorCanvas.classList.add('opened');
+        console.log('You added the opened class');
+    };
+    
+};
 
-var myFunction = function() {
+let changeCssVar = function() {
     let cssVarValue = this.getAttribute("css-var-name");
     let newCssVarValue = this.getAttribute("new-css-var-value");
     let root = document.querySelector(':root')
     let rootStyles = getComputedStyle(root);
     root.style.setProperty(cssVarValue, newCssVarValue);
-    alert(cssVarValue + newCssVarValue);
+    console.log('Changed the CSS Variable ' + cssVarValue + ' to ' + newCssVarValue);
 };
 
 for (var i = 0; i < styleSelector.length; i++) {
-    styleSelector[i].addEventListener('click', myFunction, false);
-}
+    styleSelector[i].addEventListener('click', changeCssVar, false);
+};
 
-
-
-//let selectClass = document.querySelector('.font-cursive-1');
-//let classStyles = getComputedStyle(selectClass);
-//console.log(classStyles.fontFamily);
+for (var j = 0; j < styleSelectorToggle.length; j++) {
+    styleSelectorToggle[j].addEventListener('click', openStyleSelector, false);
+};
