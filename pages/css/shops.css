@@ -5,11 +5,11 @@
     --body-bg-color-2: #fff;
     --hero-image: url(https://wyattgrantham.com/marketing/Images/shops_banner_3_muted.jpg);
     --cursive-font: 'Clicker Script', cursive;
-    --sans-font: 'Muli', sans-serif;
-    --btn-color: #0bbe30;
+    --sans-font: 'Quicksand', sans-serif;
+    --btn-color: rgb(17,149,255);
 }
 
-
+:#
 
 
 
@@ -87,7 +87,7 @@ ul {
 .btn-color-3 {
     background-color: rgb(17,149,255);
 }
-
+/* Style Selector Styles*/
 #style-selector {
     position: fixed; 
     top: 150px;
@@ -230,15 +230,11 @@ ul {
 /*End of the Style Selector*/
 
 
-#page-container {
+#shops-page-content {
     margin: 0 auto; 
     text-align: center; 
     background-color: #f2f2f2; 
     padding: 0px 10px;
-}
-
-#page-hero-container {
-    background-color: #f2f2f2; 
 }
 
 #hero-background {
@@ -252,23 +248,11 @@ ul {
     height: 60%;
 }
 
-#hero-overlay {
-    background-color:; 
-    width: 100%; 
-    height: 100%;
-}
-
-#sonlet-shops-logo {
-    width: 0%;
-    height: auto;
-    
-}
-
 .shops-cta {
     padding: 10px 20px; 
     border-radius: 4px; 
     font-size: 24px; 
-    background-color: var(--btn-color); 
+    background-color: var(--btn-color, rgb(17,149,255)); 
     color: #fff; 
     margin-top: 30px; 
     display: inline-block;
@@ -278,7 +262,7 @@ ul {
 #hero-tagline {
     color: #111;
     font-size: 60px; 
-    font-family: var(--cursive-font);
+    font-family: var(--cursive-font, 'Clicker Script', cursive);
     text-align: left;
 }
 
@@ -288,7 +272,6 @@ ul {
     margin-bottom: 60px;
     font-size: 20px;
     display: block;
-    
 }
 
 #hero-description-text { 
@@ -296,7 +279,7 @@ ul {
     text-align: left;
     font-size: 16px;
     padding-bottom: 40px;
-    font-family: var(--sans-font);
+    font-family: var(--sans-font, 'Quicksand', sans-serif;);
     
 }
 
@@ -310,68 +293,18 @@ ul {
     box-shadow: 5px 0px 30px rgba(158,156,158,1);
 }
 
-#hiw-container {
-    margin-bottom: 150px;
-}
-
-#hiw-header p{
-    font-size: 20px;
-}
-
-#video {
-    margin-top: 60px;
-    height: 250px;
-    background-color: #fff; 
-    font-size: 40px;
-}
-
-#video a {
-    border: solid; 
-    border-width: 2px;
-    padding: 10px 24px 10px 30px;
-    border-radius: 4px;
-    position: absolute; 
-    margin-top: 80px;
-    margin-left: -45px;
-    color: #e72d9e;
-    border-color: #e72d9e;
-}
-#video a:link {
-    text-decoration: none;
-    color: #e72d9e;
-}
-
-#video a:hover {
-    border-color: #fff;
-    color: #fff;
-    background-color: #e72d9e;
-
-}
-
 .big-number {
     font-size: 20px;
-    font-family: var(--sans-font);
+    font-family: var(--sans-font, 'Quicksand', sans-serif;);
     display: inline-block;
-
-}
-
-.hiw-title {
-    font-size: 30px;
-    color: #111;
-    font-family: var(--sans-font);
-}
-
-.hiw-description {
-    margin-top: 10px; 
-    font-size: 13px;
-    font-family: var(--sans-font)
 }
 
 h2 {
-    font-family: var(--cursive-font);
+    font-family: var(--cursive-font, 'Clicker Script', cursive);
     font-size: 40px;
     color: #111; 
     margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 #step-1-container {
@@ -379,26 +312,21 @@ h2 {
 }
 
 #step-1-text {
-    
-    left: 8%;
-    margin-left: 2%;
+    margin-left: 6.5%;
     z-index: 10;
-    position: absolute;
     text-align: left;
 }
 
-#products-dresses {
-    min-height: 450px;
+#products-pictures {
+    margin-top: -8%;
+    margin-left: 26.5%;
+    padding-top: 60px;
 }
 
-.products-thumbs {
-    padding-top: 20px;
-}
 .product-thumb{
     display: inline-block;
     width: 30%;
     margin: 5px;
-    margin-top: 50px;
 }
 
 .product-thumb img {
@@ -406,18 +334,24 @@ h2 {
 }
 
 .product-thumb p {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 700;
     display: block;
-    background-color: #c1c1c1; 
+    background-color: #c1d1d1; 
     margin-top: 0px;
     padding: 10px 10px;
-    font-family: var(--cursive-font);
+    font-family: var(--cursive-font, 'Clicker Script', cursive);
     color: #111;
+    z-index: 1;
+}
+
+#move-it-right {
+    z-index: 1;
 }
 
 #step-2-container {
     margin-bottom: 50px;
+    padding-top: 100px;
 }
 
 #promote-container {
@@ -426,7 +360,9 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     padding: 4%;
-    
+    display: inline-block; 
+    margin-left: -7%;
+    margin-top: -30%
 }
 
 #promote-container .message-container img {
@@ -441,8 +377,13 @@ h2 {
 }
 
 #step-2-text {
+    margin-left: 26.5%; 
     
-    
+}
+
+#tgs-container {
+    margin-top: -45%;
+    margin-bottom:-5%;
 }
 
 #tgs-container img {
@@ -458,11 +399,8 @@ h2 {
 #step-3-text {
     z-index: 10;
     margin-top: 150px;
-    position: absolute;
-    max-width: 500px;
+    margin-left: 6.5%;
 }
-
-
 
 #sonnie-says {
     background-color: #d9d9d9; 
@@ -473,30 +411,12 @@ h2 {
 
 #sonnie-says h2 {
     margin-bottom: 60px;
-    
-}
-
-#headshot-container {
-    display: block; 
-    background-image:; 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    height: ; 
-    margin-bottom: 40px;
 }
 
 #sonnie-says-text {
     max-width: 800px;
     margin: 0 auto;
-    font-family: var(--sans-font);
-}
-
-#big-quote-1 {
-    font-size: 50px;
-    float: left;
-    margin-top: -40px;
-    font-family: cursive;
+    font-family: var(--sans-font, 'Quicksand', sans-serif;);
 }
 
 #sonnie-says-text blockquote {
@@ -504,7 +424,7 @@ h2 {
     background-color: #fff; 
     padding: 30px;
     box-shadow: 5px 0px 30px rgba(158,156,158,1);
-    font-family: var(--sans-font);
+    font-family: var(--sans-font, 'Quicksand', sans-serif;);
 }
 
 #sonnie-says-text p {
@@ -517,16 +437,9 @@ h2 {
     #hero-tagline {
         font-size: 44px;
     }
-    #hiw-container {
-        margin-bottom: 40px;
-    }
-    
-    #hiw-header {
-        text-align: center;
-    }
     
     #step-1-container {
-        margin-bottom: 100px;
+        margin-bottom: 0px;
     }
     
     #step-1-text {
@@ -538,10 +451,11 @@ h2 {
         z-index: none;
     }
     
-    #products-dresses {
-        padding-left: 0px;
-        padding-right: 0px;
+    #products-pictures {
+        margin: 0px;
         min-height: 0px;
+        margin-top: -60px;
+        margin-left: 0px;
     }
     
     .product-thumb {
@@ -550,30 +464,35 @@ h2 {
     }
     
     .product-thumb p {
-        font-size: 16px;
+        font-size: 14px;
     }
     
     #step-2-container {
         margin-bottom: 100px;
     }
     
-    #step-3-container {
-        
+    #step-2-text {
+        margin-left: 0px;
+    }
+    
+    #promote-container {
+        margin-top: 0px;
+        margin-left: 0px;
     }
     
     #step-3-text {
-        position: relative; 
         margin-top: 0px;
         max-width: none;
+        margin-left: 0px;
     }
     
     #tgs-container {
-        padding-left: 0px;
-        padding-right: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
     }
     
     #tgs-container img {
-        margin-bottom: 0px;
+        margin-bottom: 60px;
     }
 }
 
