@@ -1,0 +1,13 @@
+
+/* remove the wasted space at the top due to the search box widget*/
+.widget-container {
+  margin: none; 
+}
+
+.main {
+  margin-top: 0px;
+}
+
+#sidebar {
+  margin: 0px;
+}
