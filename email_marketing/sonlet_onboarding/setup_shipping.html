@@ -1,0 +1,81 @@
+<style type="text/css">
+    .btn-amazon {
+        background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+        color: #111;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+    
+    .btn-knowledge-base {
+        background-color: #82dacc;
+        color: #111;
+    }
+    
+    .btn-sonlet {
+        background-color: #f7c8e3;
+        color: #111;
+    }
+    
+    
+</style>
+<div style="padding: 10px; background-color: white; border-radius: 4px;">
+  {% assign current_date = 'now' | date: '%s' %}
+  {% assign start_date = customer.created_at %} {% assign future_date = start_date | plus: 1209600 %}
+  Hi {% if customer.first_name != blank %} {{ customer.first_name | capitalize }}{% else %}there{% endif %},<br><br>
+
+  With just  
+  {{ future_date | minus: current_date | divided_by: 86400 }}
+  days left in your Sonlet free trial, we want to make sure that you know that <b>Sonlet is the least expensive place to create shipping labels online</b>. Sonlet shipping labels allow you to easily get items to and from your customers right from the comfort of your home.  Below is a helpful list of resources to get started.
+  <br><br>
+
+  If you have any questions, you can respond directly to this email, and we'll get right back to you.
+
+  <br><br><br>
+
+  Warm Regards, 
+
+  <br><br><br>
+
+  <b>The Sonlet Team</b>
+</div>
+
+
+<br><br><br><br>
+
+<div style="font-size: 28px; text-align: center">Shipping Resources</div>
+<br><br>
+
+<span style="font-size:28px;">First,</span>&nbsp; purchase a scale for weighing items you send via USPS first class mail. We recommend the Accuteck scale, which is easily purchased on Amazon.com. First class is the least expensive way to send packages to your customers, but the items must weigh less than 1 pound (15.99 ounces).
+<br><br>
+<div style="text-align: center;">
+    <a class="btn btn-amazon" target="_blank" href="https://www.amazon.com/gp/product/B00SMHWZ42/ref=as_li_tl?ie=UTF8&amp;tag=directangular-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00SMHWZ42&amp;linkId=8a58882f678ddd74239c921466515604">Shop Accuteck scale</a>
+</div>
+
+<br><br>
+<span style="font-size:28px;">Second,</span>&nbsp; purchase shipping supplies like envelopes, boxes, and packaging material. These helpful knowledge base articles make it easy to know which supplies to purchase based on the type of packages you are sending. 
+<br><br>
+
+<div style="text-align: center;">
+    <a class="btn btn-knowledge-base" target="_blank" href="https://support.sonlet.com/support/solutions/articles/16000076914-packaging-for-priority-mail">Priority shipping supplies</a>
+    <br>
+    <a class="btn btn-knowledge-base" target="_blank" href="https://support.sonlet.com/support/solutions/articles/16000079278-packaging-for-first-class-mail">First class shipping supplies</a>
+</div>
+
+<br>
+
+<br><br>
+<span style="font-size:28px;">Third,</span>&nbsp; purchase a label printer, so you can easily print labels out from home.  We recommend the Dymo XL, which you can purchase directly from Amazon below.  Alternatively, you can also use your existing ink jet or laser printer and purchase half page labels.
+<br><br>
+
+<div style="text-align: center;">
+    <a class="btn btn-amazon" target="_blank" href="https://www.amazon.com/gp/product/B002M1LGJ4/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B002M1LGJ4&amp;linkCode=as2&amp;tag=directangular-20&amp;linkId=ff7f0bd6f44bceb2cae1b690370a9a67">Shop Dymo XL</a>
+    <br>
+    <a class="btn btn-amazon" target="_blank" href="https://www.amazon.com/gp/product/B001PF1BSE/ref=as_li_tl?ie=UTF8&amp;tag=directangular-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B001PF1BSE&amp;linkId=ef4f0409d9300dcb25a152de6cc560ee">Shop half-page labels</a>
+</div>
+<br><br><br>
+<hr>
