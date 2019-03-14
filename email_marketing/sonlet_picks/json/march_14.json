@@ -1,7 +1,7 @@
 {
-  "hero_img_url":"https://wyattgrantham.com/marketing/Images/190314_ss_hero.png",
+  "hero_img_url":"https://wyattgrantham.com/marketing/Images/190314_ss_hero_2.png",
   "ltr_date":"April 12",
-  "browse_shortlink":"",
+  "browse_shortlink":"https://sonlet.com/shops/b/T5zksuFf/",
   "name_product_1":"Torn To Shreds Sweater",
   "name_product_2":"Sharkbite Tunic",
   "name_product_3":"Velvet Pullover",
@@ -15,8 +15,9 @@
   "img_product_5":"https://cdn.shopify.com/s/files/1/0015/8534/8681/products/et11301_19_400x.jpg?v=1544479638",
   "img_product_6":"https://cdn.shopify.com/s/files/1/0015/8534/8681/products/et11203_13_400x.jpg?v=1544479537",
   "img_promo":"https://wyattgrantham.com/marketing/Images/190314_ss_cta.png",
-  "promo_html":"Sell or buy any item from a Sonlet Shop before 3/21/19 and receive a free item for a friend.  As soon as an item is purchased from any of your shops (including your \"Just For Me\" shop) and we'll automatically send you an email confirming that you can order any item for a friend.  Simply respond to the email with your friends details and we'll purchase the item for your friend or just send us their Shops order number and we'll refund the purchase back to their credit card.",
+  "promo_html":"Sell or buy any item from a Sonlet Shop before 3/21/19 and receive a free item for a friend.  As soon as an item is purchased from any of your shops (including your \"Just For Me\" shop), we'll automatically send you an email confirming that you can order any item of equal or lesser value for a friend.  Simply respond to the email with your friends details and we'll purchase the item or  send us their order number and we'll refund the purchase back to their credit card.",
+  "img_training":"https://wyattgrantham.com/marketing/Images/ss_training.png",
   "training_url":"https://support.sonlet.com/support/solutions/articles/16000089177-how-to-shop-on-a-sonlet-shop-",
   "img_training_video":"https://wyattgrantham.com/marketing/Images/how_to_ss.png",
-  "name_training_video":"How to Shop on a Sonlet Shop",
+  "name_training_video":"HOW TO SHOP ON A SONLET SHOP",
 }
