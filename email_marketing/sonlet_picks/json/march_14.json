@@ -1,4 +1,4 @@
-{
+{'data': {
   "hero_img_url":"https://wyattgrantham.com/marketing/Images/190314_ss_hero_2.png",
   "ltr_date":"April 12",
   "browse_shortlink":"https://sonlet.com/shops/b/T5zksuFf/",
@@ -15,9 +15,9 @@
   "img_product_5":"https://cdn.shopify.com/s/files/1/0015/8534/8681/products/et11301_19_400x.jpg?v=1544479638",
   "img_product_6":"https://cdn.shopify.com/s/files/1/0015/8534/8681/products/et11203_13_400x.jpg?v=1544479537",
   "img_promo":"https://wyattgrantham.com/marketing/Images/190314_ss_cta.png",
-  "promo_html":"Sell or buy any item from a Sonlet Shop before 3/21/19 and receive a free item for a friend.  As soon as an item is purchased from any of your shops (including your \"Just For Me\" shop), we'll automatically send you an email confirming that you can order any item of equal or lesser value for a friend.  Simply respond to the email with your friends details and we'll purchase the item or  send us their order number and we'll refund the purchase back to their credit card.",
+  "promo_html":'Use our \"<i>Sell</i> One Get One\" promo to offer your shoppers a prize for free!<br><br>We want to help you promote your Sonlet Shop boutique! When your account logs any sale between now and March 21st, you\'re eligible for a free item to give away. (We\'ll immediately email you when you get a sale.)  Your free item can be anything of equal or lesser value to the highest priced item purchased. <i>Pro tip:</i> giveaway contests cannot require a purchase to enter, but purchasing can increase the odds of winning. Need help deciding on a great promo...? Have questions...? <a href=\"mailto:support@sonlet.com?subject=Run%20a%20shops%20promo&body=Can%20you%20please%20help%20me%20run%20a%20giveaway%20contest%3f\">Talk to our team!</a>',
   "img_training":"https://wyattgrantham.com/marketing/Images/ss_training.png",
   "training_url":"https://support.sonlet.com/support/solutions/articles/16000089177-how-to-shop-on-a-sonlet-shop-",
   "img_training_video":"https://wyattgrantham.com/marketing/Images/how_to_ss.png",
   "name_training_video":"HOW TO SHOP ON A SONLET SHOP",
-}
+}}
