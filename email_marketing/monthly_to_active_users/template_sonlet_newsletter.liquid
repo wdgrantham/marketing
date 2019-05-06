@@ -1,0 +1,160 @@
+<!--Attribute update: next_newsletter-->
+
+{% comment %}
+{% assign xids = customer.newsletter_items_delivered | split: "," %}
+{%capture nids%}
+  {%assign blog_count = 0%}
+  {%for aid in trigger.article_ids%}
+    {% assign print = 'True' %}
+    {% for xid in xids %}
+        {% if aid == xid %}
+            {% assign print = 'False' %}
+        {%endif%}
+    {% endfor %}
+    {% if print == 'True' %}
+      {% if trigger.articles.[aid].type == "headway-update" %}
+        {{aid}},
+      {% endif %}
+      {% if trigger.articles.[aid].type == "wp-blog" %}
+        {% if blog_count < 4 %}
+          {% assign blog_count = blog_count | plus: 1 %}{{aid}},
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {%endfor%}      
+  
+  ^^^ That wouldn't work because attribute updates couldn't search the dictionary... so I used the size of the ID to determine whether an article ID was a WordPress or a Headway article instead of the more straight forward approach to just check the article type in the dictionary. Here's the new code: (Note that the first assignment is just for debugging and development. Also, this code has to be compiled to avoid problems with white space screwing up liquid.)
+  {%endcomment%}
+          
+  {% assign newsletter_items_delivered = '716,26,694,99176' %}
+  {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
+  {%capture aids %}
+    {%assign blog_count = 0%}
+    {% for aid in trigger.article_ids %}
+      {% assign print = 'True' %}
+      {%for xid in xids %}
+        {% if aid == xid %}{%assign print = "False" %}{% endif %}
+      {%endfor%}
+      {% if print == "True" %}
+        {%capture nid %}{{aid}}{%endcapture%}
+        {% capture nid_size %}{{nid | size}}{%endcapture%}
+        {% if nid_size < 5 %}
+          {% if blog_count < 4 %}
+            {% assign blog_count = blog_count | plus: 1%}{{nid}},
+          {%endif%}
+        {%endif%}
+      {%endif%}
+    {%endfor%}
+  {% endcapture %}
+  {% assign newsletter_items_delivered = '716,26,694,99176' %}
+  {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
+  {%capture hids %}
+    {%assign blog_count = 0%}
+    {% for aid in trigger.article_ids %}
+      {% assign print = 'True' %}
+      {%for xid in xids %}
+        {% if aid == xid %}{%assign print = "False" %}{% endif %}
+      {%endfor%}
+      {% if print == "True" %}
+        {%capture nid %}{{aid}}{%endcapture%}
+        {% capture nid_size %}{{nid | size}}{%endcapture%}
+        {% if nid_size >= 5 %}
+          {% if blog_count < 4 %}
+            {% assign blog_count = blog_count | plus: 1%}{{nid}},
+          {%endif%}
+        {%endif%}
+      {%endif%}
+    {%endfor%}
+  {% endcapture %}
+  {% capture tids %}{{hids | split: ',' | sort | join: ',' }},{{aids | split: ',' | sort | join: ',' }}{%endcapture%}
+  {% capture s %}{{ tids | split: ',' | first }}{% endcapture %}
+  {% capture p %}{{tids | split: ',' | size | minus: 1}}{% endcapture %}
+  s|{{ s }}~p|{{ p }}~ids|{{tids | split: ',' | join: ','}}
+
+<!--End attribute update: next_newsletter-->
+
+<!--Email subject -->
+
+{%capture s%}{{customer.next_newsletter | split: '~' | first | split: '|' | last }}{%endcapture%}{{trigger.articles.[s].title}}
+<!--End Email subject -->
+
+<!--Email Pre Header-->
+
+{% capture p %}{{ customer.next_newsletter | split: '~' | last | split: '|' | last }}{% endcapture %}Plus {{ p | split: ',' | size | minus: 1 }} more updates from Sonlet!
+
+<!-- End Emmail Pre Header -->
+
+<!-- Email Body -->
+
+{% assign next_newsletter = 's|63441~p|6~ids|63441,69978,87666,87686,131,135,260,384' %}
+{% assign nids = next_newsletter | split: "~" | last | split: '|' | last | split: ','%}
+
+<table>
+{% assign hw_print_count = 0 %}
+{% for nid in nids %}
+      {% if trigger.articles.[nid].type == "headway-update" %}
+        {% assign hw_print_count = hw_print_count | plus:1 %}
+        {% if hw_print_count == 1 %}
+          <tr><td><h3 style="text-align: center; font-size: 26px; font-weight: 700; color: #111;">Features &amp; enhancements</h3></td></tr>
+          
+        {% endif %}
+        <tr>
+            <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+                <a href="{{trigger.articles.[nid].link}}" style="text-align: center;">
+                    {% if trigger.articles.[nid].images[0] %}
+                    <img src="{{trigger.articles.[nid].images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                    {%endif%}
+                    <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{trigger.articles.[nid].title}}</h5>
+                    <p style="text-align: center; font-size: 16px; color: black;">{{trigger.articles.[nid].summary}}</p>
+                    <a href="{{trigger.articles.[nid].link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+                </a>
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+      {% if hw_print_count > 0 and forloop.last %}
+        </table>
+      {% endif %}
+  {% endif %}
+{% endfor %}
+</table>
+<table>
+{% assign wp_print_count = 0 %}
+{% for nid in nids %}
+    {% if trigger.articles.[nid].type =="wp-blog" %}
+        {% assign wp_print_count = wp_print_count | plus: 1 %}
+        {% if wp_print_count == 1 %}
+          <tr><td><h3 style="text-align: center; font-size: 26px; font-weight: 700; color: #111;">From the Sonlet Blog</h3></td></tr>
+          
+        {% endif %}
+        <tr>
+          <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+              <a href="{{trigger.articles.[nid].link}}" style="text-align: center;">
+                  {% if trigger.articles.[nid].images[0] %}
+                  <img src="{{trigger.articles.[nid].images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                  {%endif%}
+                  <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{trigger.articles.[nid].title}}</h5>
+                  {% if trigger.articles.[nid].excerpt %}
+                  <p style="text-align: center; font-size: 16px; color: black;">{{trigger.articles.[nid].excerpt}}</p>
+                  {% else %}
+                  <p style="text-align: center; font-size: 16px; color: black;">{{trigger.articles.[nid].summary}}</p>
+                  {% endif %}
+                  <a class="cta" href="{{trigger.articles.[nid].link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+              </a>
+          </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+      {% if wp_print_count > 0 and forloop.last %}
+        </table>
+      {% endif %}
+    {% endif %}
+{%endfor%}
+</table>
+
+<!--End Email Body-->
+
+<!--Attribute Update: newsletter_items_delivered-->
+
+{% capture nids %}{{customer.next_newsletter | split: '~' | last | split: '|' | last}}{% endcapture %}
+{%if customer.newsletter_items_delivered%}{{customer.newsletter_items_delivered}},{%endif%}{{nids | split: ',' | join: ','}}
+
+<!--End Attribute Update: newsletter_items_delivered-->

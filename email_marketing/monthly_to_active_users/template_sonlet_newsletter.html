@@ -1,0 +1,133 @@
+<!--Email subject -->
+{% assign print_count = 0 %}
+{% assign xids = customer.newsletter_items_delivered | split: "," %}
+{% for article in trigger.articles %}
+{% assign print = 'True' %}
+    {% for xid in xids %}
+        {% if article.id == xid %}
+            {% assign print = 'False' %}
+        {%endif%}
+    {% endfor %}
+{% if print == 'True' %}
+  {% assign print_count = print_count | plus: 1 %}
+  {% if print_count == 1 %}
+    {{article.title}}
+  {% endif %}
+{% endif %}
+{% endfor %}
+<!--End Email subject -->
+
+<!--Email Pre Header-->
+{% assign print_count = 0 %}
+{% assign blog_count = 0 %}
+{% assign xids = customer.newsletter_items_delivered | split: "," %}
+{% for article in trigger.articles %}
+{% assign print = 'True' %}
+    {% for xid in xids %}
+        {% if article.id == xid %}
+            {% assign print = 'False' %}
+        {%endif%}
+    {% endfor %}
+{% if print == 'True' %}
+  {% if article.type == "headway-update" %}
+    {% assign print_count = print_count | plus: 1 %}
+  {% endif %}
+  {% if article.type == "wp-blog" %}
+    {% assign blog_count = blog_count | plus: 1 %}
+    {% if blog_count < 4 %}{% assign print_count = print_count | plus: 1 %}{% endif %}
+  {% endif %}
+{% endif %}
+{% endfor %}
+{{print_count}}
+<!-- End Emmail Pre Header -->
+
+<!-- Email Body -->
+{% assign xids = customer.newsletter_items_delivered | split: "," %}
+{% assign hw_print_count = 0 %}
+{% for article in trigger.articles %}
+    {% assign print = 'True' %}
+    {% for xid in xids %}
+        {% if article.id == xid %}
+            {% assign print = 'False' %}
+        {%endif%}
+    {% endfor %}
+    {% if print == 'True' %}
+      {% if article.type == "headway-update" %}
+        {% assign hw_print_count = hw_print_count | plus:1 %}
+        {% if hw_print_count == 1 %}
+          <h3 style="text-align: center; font-size: 26px; font-weight: 700; color: #111;">Features &amp; enhancements</h3>
+          <table>
+        {% endif %}
+        <tr>
+            <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+                <a href="{{article.link}}" style="text-align: center;">
+                    {% if article.images[0] %}
+                    <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                    {%endif%}
+                    <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{article.title}}</h5>
+                    <p style="text-align: center; font-size: 16px; color: black;">{{article.summary}}</p>
+                    <a href="{{article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+                </a>
+
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+      {% endif %}
+      {% if hw_print_count > 0 and forloop.last %}
+        </table>
+      {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign article_count = 0 %}
+{% assign wp_print_count = 0 %}
+{% assign xids = customer.newsletter_items_delivered | split: "," %}
+{% for article in trigger.articles %}
+    {% assign print = 'True' %}
+    {% for xid in xids %}
+        {% if article.id == xid %}
+            {% assign print = 'False' %}
+        {%endif%}
+    {% endfor %}
+    {% if print == 'True' %}
+      {% if article.type =="wp-blog" and article_count < 4 %}
+        {% assign wp_print_count = wp_print_count | plus: 1 %}
+        {% if wp_print_count == 1 %}
+          <h3 style="text-align: center; font-size: 26px; font-weight: 700; color: #111;">From the Sonlet Blog</h3>
+          <table>
+        {% endif %}
+        <tr>
+          <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+              <a href="{{article.link}}" style="text-align: center;">
+                  {% if article.images[0] %}
+                  <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                  {%endif%}
+                  <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{article.title}}</h5>
+                  {% if article.excerpt %}
+                  <p style="text-align: center; font-size: 16px; color: black;">{{article.excerpt}}</p>
+                  {% else %}
+                  <p style="text-align: center; font-size: 16px; color: black;">{{article.summary}}</p>
+                  {% endif %}
+                  <a class="cta" href="{{article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+              </a>
+
+          </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+        {% assign article_count = article_count | plus: 1 %}
+      {% endif %}
+      {% if wp_print_count > 0 and forloop.last %}
+        </table>
+      {% endif %}
+    {% endif %}
+{% endfor %}
+<!--End Email Body-->
+
+<!--Attribute Update: newsletter_items_delivered-->
+{%capture n_ids%}
+  {%assign article_no = 0%}
+  {%for article in trigger.articles%}
+    {%if article.type =="headway-update"%}{{article.id}},{%endif%}
+    {%if article_no < 4 %}{{article.id}},{%endif%}
+    {%assign article_no = article_no | plus: 1%}{%endfor%}{%endcapture%}
+{{n_ids | split: ',' | join: ','}}
