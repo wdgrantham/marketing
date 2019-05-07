@@ -27,46 +27,50 @@
   {%endcomment%}
           
   {% assign newsletter_items_delivered = '716,26,694,99176' %}
-  {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
-  {%capture aids %}
-    {%assign blog_count = 0%}
-    {% for aid in trigger.article_ids %}
-      {% assign print = 'True' %}
-      {%for xid in xids %}
-        {% if aid == xid %}{%assign print = "False" %}{% endif %}
-      {%endfor%}
-      {% if print == "True" %}
-        {%capture nid %}{{aid}}{%endcapture%}
-        {% capture nid_size %}{{nid | size}}{%endcapture%}
-        {% if nid_size < 5 %}
-          {% if blog_count < 4 %}
-            {% assign blog_count = blog_count | plus: 1%}{{nid}},
+  {% if trigger.featured_article.featured_ids %}
+    {% capture tids %}{{trigger.featured_aritcle.featured_ids | join: ',' }}{%endcapture%}
+  {% else %}
+    {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
+    {%capture aids %}
+      {%assign blog_count = 0%}
+      {% for aid in trigger.article_ids %}
+        {% assign print = 'True' %}
+        {%for xid in xids %}
+          {% if aid == xid %}{%assign print = "False" %}{% endif %}
+        {%endfor%}
+        {% if print == "True" %}
+          {%capture nid %}{{aid}}{%endcapture%}
+          {% capture nid_size %}{{nid | size}}{%endcapture%}
+          {% if nid_size < 5 %}
+            {% if blog_count < 4 %}
+              {% assign blog_count = blog_count | plus: 1%}{{nid}},
+            {%endif%}
           {%endif%}
         {%endif%}
-      {%endif%}
-    {%endfor%}
-  {% endcapture %}
-  {% assign newsletter_items_delivered = '716,26,694,99176' %}
-  {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
-  {%capture hids %}
-    {%assign blog_count = 0%}
-    {% for aid in trigger.article_ids %}
-      {% assign print = 'True' %}
-      {%for xid in xids %}
-        {% if aid == xid %}{%assign print = "False" %}{% endif %}
       {%endfor%}
-      {% if print == "True" %}
-        {%capture nid %}{{aid}}{%endcapture%}
-        {% capture nid_size %}{{nid | size}}{%endcapture%}
-        {% if nid_size >= 5 %}
-          {% if blog_count < 4 %}
-            {% assign blog_count = blog_count | plus: 1%}{{nid}},
+    {% endcapture %}
+    {% assign newsletter_items_delivered = '716,26,694,99176' %}
+    {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
+    {%capture hids %}
+      {%assign blog_count = 0%}
+      {% for aid in trigger.article_ids %}
+        {% assign print = 'True' %}
+        {%for xid in xids %}
+          {% if aid == xid %}{%assign print = "False" %}{% endif %}
+        {%endfor%}
+        {% if print == "True" %}
+          {%capture nid %}{{aid}}{%endcapture%}
+          {% capture nid_size %}{{nid | size}}{%endcapture%}
+          {% if nid_size >= 5 %}
+            {% if blog_count < 4 %}
+              {% assign blog_count = blog_count | plus: 1%}{{nid}},
+            {%endif%}
           {%endif%}
         {%endif%}
-      {%endif%}
-    {%endfor%}
-  {% endcapture %}
-  {% capture tids %}{{hids | split: ',' | sort | join: ',' }},{{aids | split: ',' | sort | join: ',' }}{%endcapture%}
+      {%endfor%}
+    {% endcapture %}
+    {% capture tids %}{{hids | split: ',' | sort | join: ',' }},{{aids | split: ',' | sort | join: ',' }}{%endcapture%}
+  {% endif %}
   {% capture s %}{{ tids | split: ',' | first }}{% endcapture %}
   {% capture p %}{{tids | split: ',' | size | minus: 1}}{% endcapture %}
   s|{{ s }}~p|{{ p }}~ids|{{tids | split: ',' | join: ','}}
@@ -89,6 +93,29 @@
 {% assign next_newsletter = 's|63441~p|6~ids|63441,69978,87666,87686,131,135,260,384' %}
 {% assign nids = next_newsletter | split: "~" | last | split: '|' | last | split: ','%}
 
+{% if trigger.featured_article %}
+<table>
+          <tr>
+            <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+                {% if trigger.featured_article.link %}<a href="{{trigger.featured_article.link}}" style="text-align: center;">{%endif%}
+                    {% if trigger.featured_article.image %}
+                    <img src="{{ trigger.featured_article.image }}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                    {%endif%}
+                    {% if trigger.featured_article.title %}
+                    <h2 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{ trigger.featured_article.title }}</h2> {%endif%}
+                    {% if trigger.featured_article.text %}
+                    <p style="text-align: center; font-size: 16px; color: black; font-style: italic; font-weight: 100;">{{ trigger.featured_article.text }}</p>
+                    {% endif %}
+                    {% if trigger.featured_article.link %}
+                    <a href="{{trigger.featured_article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+                </a>{%endif%}
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+          
+</table>
+{% endif%}
+          
 <table>
 {% assign hw_print_count = 0 %}
 {% for nid in nids %}

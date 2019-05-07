@@ -7,6 +7,10 @@ import datetime
 import requests
 import re
 from HTMLParser import HTMLParser
+import operator
+from operator import itemgetter
+import random
+import htmlentitydefs
 
 class MLStripper(HTMLParser):
     def __init__(self):
@@ -127,6 +131,31 @@ def get_articles_dict(articles_json):
     a_objects.append(article)
   return dict(zip(a_ids, a_objects))
 
+# Removes HTML or XML character references and entities from a text string.
+# @param text The HTML (or XML) source text.
+# @return The plain text, as a Unicode string, if necessary.
+def unescape(text):
+    def fixup(m):
+        text = m.group(0)
+        if text[:2] == "&#":
+            # character reference
+            try:
+                if text[:3] == "&#x":
+                    return unichr(int(text[3:-1], 16))
+                else:
+                    return unichr(int(text[2:-1]))
+            except ValueError:
+                pass
+        else:
+            # named entity
+            try:
+                text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+            except KeyError:
+                pass
+        return text # leave as is
+    return re.sub("&#?\w+;", fixup, text)
+#print unescape('Women&#8217;s Pockets are Inferior. &#8211; An article from pudding.cool')
+
 #Gets posts from wordpress API https://developer.wordpress.org/rest-api/reference/posts/#list-posts
 def get_wordpress(blog_url):
   posts_url = blog_url + '/wp-json/wp/v2/posts'
@@ -151,7 +180,8 @@ def get_wordpress(blog_url):
     if is_approved(article_tags):
       article_id = article['id']
       date_time = dt_2_e(article['date'].encode('utf-8'))
-      title = article['title']['rendered'].encode('utf-8')
+      title = unescape(article['title']['rendered'])
+      print title
       link = article['link'].encode('utf-8')
       text = article['content']['rendered'].encode('utf-8')
       excerpt = strip_tags(article['excerpt']['rendered'].encode('utf-8'))
@@ -189,8 +219,8 @@ def get_squarespace(blog_url):
     if is_approved(article_tags):
       article_id = article['id'][-5:]
       date_time = article['publishOn']
-      title = article['title'].encode('utf-8')
-      #print title
+      title = unescape(article['title'])
+      print title
       link = blog_url.split('?')[0] + str(article['fullUrl'].encode('utf-8'))
       text = article['body'].encode('utf-8')
       summary = get_summary(text)
@@ -207,13 +237,47 @@ def get_squarespace(blog_url):
   #return(json.dumps(articles_json, indent=2, sort_keys=True))
 #print get_squarespace('https://blog.popitup.com')
 
-def get_payload(articles_json):#To Do: Update this
+def get_featured_article():
+  featured_title = 'Spring updates from Sonlet!'
+  featured_text = '''Our businesses change along with the seasons: people stop wearing sweaters and look for short sleeves and dresses, they spend less time on Facebook albums and more time on party pages.  We track all these trends and make sure that you can rely on Sonlet to support your business, even when things change.  So here are a few things that we think you'll love about Sonlet this Spring.'''
+  featured_image = 'https://wyattgrantham.com/marketing/Images/water_color_flowers.png'
+  featured_subject = None
+  featured_link = None
+  featured_ids = [73090,69622,122,505,755,230]
+  featured_article = {'title': featured_title, 'text': featured_text, 'image': featured_image, 'subject': featured_subject, 'link': featured_link, 'featured_ids': featured_ids}
+  return featured_article
+#print(get_featured_article())
+
+# This sorts the article IDs in date order as follows: 
+# 1: ascending order --> oldest article to newest article
+# 2: descending order --> newest article to oldest article
+# 3: random order --> shuffles the articles in random date order
+# The default setting is 2 (descending order)
+def sort_article_ids(articles_json, sort_type=2):
+  tuples_to_sort = []
+  for article in articles_json:
+    tuples_to_sort.append((article, articles_json[article]['datetime']))
+  sorted_ids = []
+  if sort_type == 1: #ascending order
+    sorted_tuples = sorted(tuples_to_sort, key=itemgetter(1))
+    for i in sorted_tuples: sorted_ids.append(i[0])
+  if sort_type == 2: #descending order
+    sorted_tuples = sorted(tuples_to_sort, key=itemgetter(1), reverse=True)
+    for i in sorted_tuples: sorted_ids.append(i[0])
+  if sort_type == 3: #random order
+    sorted_ids = random.sample(articles_json, len(articles_json))
+
+  return sorted_ids
+#print(sort_article_ids(['99176', 755, '87686', '87666', 742, 737, '87693', 718, 716, '79726', 701, 650, 612, '73090', 684, 595, 682, '70114', '69978', '69622', '63441', 585, 543, 533, 509, 505, 501, 492, 487, 475, 471, 462, 422, 397, 384, 355, 348, 337, 311, 301, 287, 260, 240, 230, 217, 211, 200, 187, 176, 164, 135, 131, 122, 111, 95, 89],1))
+
+def get_payload(articles_json, sort_type=2):
   root = {}
   data = {}
   root['data'] = data
+  data['featured_article'] = get_featured_article()
   data['articles'] = articles_json
   data['articles_count'] = len(articles_json)
-  data['article_ids'] = articles_json.keys()
+  data['article_ids'] = sort_article_ids(articles_json, sort_type)
   
   return root
   #print json.dumps(data, indent=2, sort_keys=True)
@@ -250,7 +314,7 @@ def send_event_to_cio(site_id, api_key, campaign_id, payload):
       
 def send_piu_newsletter():
   a = get_squarespace('https://blog.popitup.com')
-  b = get_payload(a)
+  b = get_payload(a,)
   #print json.dumps(b, sort_keys=True, indent=2)
   send_event_to_cio('0dfefb1081f03692b8ce', '9d368b1ddbe561236ab0', 9, b)
 
@@ -259,17 +323,15 @@ def send_sonlet_newsletter():
   b = get_headway('https://headwayapp.co/sonlet-updates')
   c = a.extend(b)
   d = get_articles_dict(a)
-  e = get_payload(d)
+  e = get_payload(d,2)
   #print json.dumps(e, indent=2)
   send_event_to_cio('6d30b69c3d9afe45835b', 'd3951fc08db29107a260', 31, e)
 
 #get_headway('https://headwayapp.co/sonlet-updates') #complete
-#get_wordpress('https://blog.sonlet.com')#complete To Do: Unicode isn't processing correctly in the email subject
-
+#get_wordpress('https://blog.sonlet.com')#complete
 #get_squarespace('https://blog.popitup.com/') #complete --> Doesnt currently use a JSON Dictionary, but given that it's more simple, it may not be needed at the moment.
-
 #get_payload() #complete
 #send_event_to_cio() #complete
 #send_piu_newsletter() #complete
-#send_sonlet_newsletter() #complete
+send_sonlet_newsletter() #complete
 
