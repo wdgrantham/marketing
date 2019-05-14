@@ -1,0 +1,54 @@
+<!--Attribute update next_newsletter -->
+
+{% assign newsletter_items_delivered = '65f0f,3737c,440f7,d39bd,78437,' %}
+  {% if trigger.featured_article.featured_ids %}
+    {% capture nids %}{{trigger.featured_aritcle.featured_ids | join: ',' }}{%endcapture%}
+  {% else %}
+    {%if customer.newsletter_items_delivered%}{% assign xids = newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
+    {%capture nids %}
+      {%assign blog_count = 0%}
+      {% for aid in trigger.article_ids %}
+        {% assign print = 'True' %}
+        {%for xid in xids %}
+          {% if aid == xid %}{%assign print = "False" %}{% endif %}
+        {%endfor%}
+        {% if print == "True" and blog_count < 4 %}{{aid}},{% assign blog_count = blog_count | plus: 1 %}{%endif%}
+      {%endfor%}
+    {% endcapture %}
+{%endif%}
+{{nids}}
+
+<!-- End attribute update next_newsletter -->
+
+
+<h3 style="text-align: center; font-size: 28px; font-weight: 500; color: #111; letter-spacing: 2px; line-height: 23px;">Here's what's new from PopItUp!</h3>
+<table>
+{% assign xids = customer.newsletter_items_delivered | split: "," %}
+{% for article in trigger.articles %}
+    {% assign print = 'True' %}
+    {% for xid in xids %}
+        {% if article.id == xid %}
+            {% assign print = 'False' %}
+        {%endif%}
+    {% endfor %}
+    {% if print == 'True' %}
+        <tr>
+            <td style="text-align: center; background-color: white; padding: 10px;">
+                <a href="{{article.link}}" style="text-align: center;">
+                    {% if article.images[0] %}
+                    <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                    {%endif%}
+                    <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 500; letter-spacing: 1.5px; line-height: 23px; font-size: 17px; text-transform: uppercase;">{{article.title}}</h5>
+                    {% if article.excerpt %}
+                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{article.excerpt}}</p>
+                    {% else %}
+                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{article.summary}}</p>
+                    {% endif %}
+                    <a class="cta" href="{{article.link}}" target="_blank" style="color: #111; font-size: 13px; font-weight: 400; letter-spacing: 1px; line-height: 22px;">Read more</a>
+                </a>
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+    {% endif %}
+{% endfor %}
+</table>

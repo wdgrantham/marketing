@@ -90,6 +90,7 @@ def get_headway(headway_url):
     soup = BeautifulSoup(str(article), features="html.parser")
     date_time = dt_2_e(str(soup.find('time')['datetime']))
     title = soup.h2.text
+    print title
     link = 'https://headwayapp.co' + str(soup.find('a')['href'])
     article_id = link.split('-')[-1]
     text = soup('p')
@@ -124,12 +125,12 @@ def get_wp_tags(blog_url):
   return tags_dict
 
 def get_articles_dict(articles_json):
-  a_ids = []
-  a_objects = []
-  for article in articles_json:
-    a_ids.append(article['id'])
-    a_objects.append(article)
-  return dict(zip(a_ids, a_objects))
+    a_ids = []
+    a_objects = []
+    for article in articles_json:
+        a_ids.append(article['id'])
+        a_objects.append(article)
+    return dict(zip(a_ids, a_objects))
 
 # Removes HTML or XML character references and entities from a text string.
 # @param text The HTML (or XML) source text.
@@ -238,14 +239,14 @@ def get_squarespace(blog_url):
 #print get_squarespace('https://blog.popitup.com')
 
 def get_featured_article():
-  featured_title = 'Spring updates from Sonlet!'
-  featured_text = '''Our businesses change along with the seasons: people stop wearing sweaters and look for short sleeves and dresses, they spend less time on Facebook albums and more time on party pages.  We track all these trends and make sure that you can rely on Sonlet to support your business, even when things change.  So here are a few things that we think you'll love about Sonlet this Spring.'''
-  featured_image = 'https://wyattgrantham.com/marketing/Images/water_color_flowers.png'
-  featured_subject = None
-  featured_link = None
-  featured_ids = [73090,69622,122,505,755,230]
-  featured_article = {'title': featured_title, 'text': featured_text, 'image': featured_image, 'subject': featured_subject, 'link': featured_link, 'featured_ids': featured_ids}
-  return featured_article
+    featured_title = None
+    featured_text = '''Our businesses change along with the seasons: people stash the warm sweaters and pull out their flowy dresses, they spend less time on Facebook albums and more time on party pages.  We track all these trends and make sure that you can rely on PopItUp to support your business, even when things change.  So here are a few things that we think you'll love about PopItUp this spring.'''
+    featured_image = 'https://wyattgrantham.com/marketing/Images/spring_updates_pop.png'
+    featured_subject = None
+    featured_link = None
+    featured_ids = None
+    featured_article = {'title': featured_title, 'text': featured_text, 'image': featured_image, 'subject': featured_subject, 'link': featured_link, 'featured_ids': featured_ids}
+    return featured_article
 #print(get_featured_article())
 
 # This sorts the article IDs in date order as follows: 
@@ -254,84 +255,85 @@ def get_featured_article():
 # 3: random order --> shuffles the articles in random date order
 # The default setting is 2 (descending order)
 def sort_article_ids(articles_json, sort_type=2):
-  tuples_to_sort = []
-  for article in articles_json:
-    tuples_to_sort.append((article, articles_json[article]['datetime']))
-  sorted_ids = []
-  if sort_type == 1: #ascending order
-    sorted_tuples = sorted(tuples_to_sort, key=itemgetter(1))
-    for i in sorted_tuples: sorted_ids.append(i[0])
-  if sort_type == 2: #descending order
-    sorted_tuples = sorted(tuples_to_sort, key=itemgetter(1), reverse=True)
-    for i in sorted_tuples: sorted_ids.append(i[0])
-  if sort_type == 3: #random order
-    sorted_ids = random.sample(articles_json, len(articles_json))
+    tuples_to_sort = []
+    for article in articles_json:
+        tuples_to_sort.append((article, articles_json[article]['datetime']))
+    sorted_ids = []
+    if sort_type == 1: #ascending order
+        sorted_tuples = sorted(tuples_to_sort, key=itemgetter(1))
+        for i in sorted_tuples: sorted_ids.append(i[0])
+    if sort_type == 2: #descending order
+        sorted_tuples = sorted(tuples_to_sort, key=itemgetter(1), reverse=True)
+        for i in sorted_tuples: sorted_ids.append(i[0])
+    if sort_type == 3: #random order
+        sorted_ids = random.sample(articles_json, len(articles_json))
 
-  return sorted_ids
+    return sorted_ids
 #print(sort_article_ids(['99176', 755, '87686', '87666', 742, 737, '87693', 718, 716, '79726', 701, 650, 612, '73090', 684, 595, 682, '70114', '69978', '69622', '63441', 585, 543, 533, 509, 505, 501, 492, 487, 475, 471, 462, 422, 397, 384, 355, 348, 337, 311, 301, 287, 260, 240, 230, 217, 211, 200, 187, 176, 164, 135, 131, 122, 111, 95, 89],1))
 
 def get_payload(articles_json, sort_type=2):
-  root = {}
-  data = {}
-  root['data'] = data
-  data['featured_article'] = get_featured_article()
-  data['articles'] = articles_json
-  data['articles_count'] = len(articles_json)
-  data['article_ids'] = sort_article_ids(articles_json, sort_type)
-  
-  return root
-  #print json.dumps(data, indent=2, sort_keys=True)
+    root = {}
+    data = {}
+    root['data'] = data
+    data['featured_article'] = get_featured_article()
+    data['articles'] = articles_json
+    data['articles_count'] = len(articles_json)
+    data['article_ids'] = sort_article_ids(articles_json, sort_type)
+
+    return root
+    #print json.dumps(data, indent=2, sort_keys=True)
 
 #Sends the email and the json object to the CIO API triggered broadcast
 def send_event_to_cio(site_id, api_key, campaign_id, payload):
-  # ShopTheRoe API credentials
-  #site_id = '6d30b69c3d9afe45835b'
-  #api_key = 'd3951fc08db29107a260'
-  # ShopTheRoeDEV API Credentials
-  #site_id = 'ecd4c1f87a7c225c8b15'
-  #api_key = 'de73ab4598fc76b789c8'
-  # PopItUp API credentials
-  #site_id = '0dfefb1081f03692b8ce'
-  #api_key = '9d368b1ddbe561236ab0'
-  
-  # Request data
-  # **NOTE** Replace ':id' with your API triggered campaign id in the 'url' string
-  auth = (site_id, api_key)
-  url = 'https://api.customer.io/v1/api/campaigns/' + str(campaign_id) + '/triggers'
-  print(url)
-  headers = {'Content-Type': 'application/json'}
-  payload = json.dumps(payload)
-  #print(payload)
-  
-  # Send POST request to trigger API triggered campaign
-  r = requests.post(url=url, auth=auth, headers=headers, data=payload)
+    # ShopTheRoe API credentials
+    #site_id = '6d30b69c3d9afe45835b'
+    #api_key = 'd3951fc08db29107a260'
+    # ShopTheRoeDEV API Credentials
+    #site_id = 'ecd4c1f87a7c225c8b15'
+    #api_key = 'de73ab4598fc76b789c8'
+    # PopItUp API credentials
+    #site_id = '0dfefb1081f03692b8ce'
+    #api_key = '9d368b1ddbe561236ab0'
 
-  # Check response status code. 200 is good, everything else is probably not good
-  if r.status_code == 200:
-      print("Success!")
-  else:
-      print("Error: {}".format(r.text))
-      
+    # Request data
+    # **NOTE** Replace ':id' with your API triggered campaign id in the 'url' string
+    auth = (site_id, api_key)
+    url = 'https://api.customer.io/v1/api/campaigns/' + str(campaign_id) + '/triggers'
+    print(url)
+    headers = {'Content-Type': 'application/json'}
+    payload = json.dumps(payload)
+    #print(payload)
+
+    # Send POST request to trigger API triggered campaign
+    r = requests.post(url=url, auth=auth, headers=headers, data=payload)
+
+    # Check response status code. 200 is good, everything else is probably not good
+    if r.status_code == 200:
+        print("Success!")
+    else:
+        print("Error: {}".format(r.text))
+
 def send_piu_newsletter():
-  a = get_squarespace('https://blog.popitup.com')
-  b = get_payload(a,)
-  #print json.dumps(b, sort_keys=True, indent=2)
-  send_event_to_cio('0dfefb1081f03692b8ce', '9d368b1ddbe561236ab0', 9, b)
+    a = get_squarespace('https://blog.popitup.com')
+    b = get_articles_dict(a)
+    c = get_payload(b,2)
+    #print json.dumps(c, sort_keys=True, indent=2)
+    send_event_to_cio('0dfefb1081f03692b8ce', '9d368b1ddbe561236ab0', 9, c)
 
 def send_sonlet_newsletter():
-  a = get_wordpress('https://blog.sonlet.com')
-  b = get_headway('https://headwayapp.co/sonlet-updates')
-  c = a.extend(b)
-  d = get_articles_dict(a)
-  e = get_payload(d,2)
-  #print json.dumps(e, indent=2)
-  send_event_to_cio('6d30b69c3d9afe45835b', 'd3951fc08db29107a260', 31, e)
+    a = get_wordpress('https://blog.sonlet.com')
+    b = get_headway('https://headwayapp.co/sonlet-updates')
+    c = a.extend(b)
+    d = get_articles_dict(a)
+    e = get_payload(d,2)
+    #print json.dumps(e, indent=2)
+    send_event_to_cio('6d30b69c3d9afe45835b', 'd3951fc08db29107a260', 31, e)
 
 #get_headway('https://headwayapp.co/sonlet-updates') #complete
 #get_wordpress('https://blog.sonlet.com')#complete
 #get_squarespace('https://blog.popitup.com/') #complete --> Doesnt currently use a JSON Dictionary, but given that it's more simple, it may not be needed at the moment.
 #get_payload() #complete
 #send_event_to_cio() #complete
-#send_piu_newsletter() #complete
-send_sonlet_newsletter() #complete
+send_piu_newsletter() #complete
+#send_sonlet_newsletter() #complete
 

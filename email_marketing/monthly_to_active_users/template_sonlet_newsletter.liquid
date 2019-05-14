@@ -79,7 +79,7 @@
 
 <!--Email subject -->
 
-{%capture s%}{{customer.next_newsletter | split: '~' | first | split: '|' | last }}{%endcapture%}{{trigger.articles.[s].title}}
+{% if trigger.featured_article.subject %}{{trigger.featured_article.subject}}{%else%} {%capture s%}{{customer.next_newsletter | split: '~' | first | split: '|' | last }}{%endcapture%}{{trigger.articles.[s].title}}{%endif%}
 <!--End Email subject -->
 
 <!--Email Pre Header-->
@@ -138,9 +138,6 @@
             </td>
         </tr>
         <tr><td>&nbsp;<br><br></td></tr>
-      {% if hw_print_count > 0 and forloop.last %}
-        </table>
-      {% endif %}
   {% endif %}
 {% endfor %}
 </table>
@@ -170,9 +167,6 @@
           </td>
         </tr>
         <tr><td>&nbsp;<br><br></td></tr>
-      {% if wp_print_count > 0 and forloop.last %}
-        </table>
-      {% endif %}
     {% endif %}
 {%endfor%}
 </table>
