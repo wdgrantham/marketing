@@ -1,0 +1,221 @@
+<html>
+  <style>
+    #payments_comp {
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-color: grey;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #payments_comp tr td, #payments_comp tr th {
+      border: solid;
+      border-width: 1px;
+      border-color: #111;
+      box-sizing: border-box;
+      padding: 5px;
+      margin: 0px;
+      text-align: center;
+      width: 120px;
+    }
+    #payments_comp tr th {
+      font-size: 1.2rem;
+    }
+    
+    #payments_comp tr td.checked {
+      font-size: 1.5rem;
+    }
+    
+    #payments_comp tr td:nth-child(odd), #payments_comp tr th:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+
+    #payments_comp tr:nth-child(5), #payments_comp tr:nth-child(5) td {
+     background-color: white;
+     font-size: .7rem;
+     }
+    
+    #rate_buttons {
+      text-align: center;
+      margin-bottom: 20px;
+      display: none;
+    }
+    
+    :root {
+      --display-rates-blessBtn: table-cell;
+      --display-rates-paypalBtn: none;
+      --display-rates-squareBtn: none;
+      --display-rates-etsyBtn: none;
+      --display-rates-shopifyBtn: none;
+      --display-rates-sonletBtn: table-cell;
+      --rates-button-color: white;
+    }
+    
+    @media only screen and (max-width: 768px) { 
+      
+      #payments_comp tr td, #payments_comp tr th {
+        background-color: #f2f2f2;
+      }
+
+      #payments_comp tr td:nth-child(2), #payments_comp tr th:nth-child(2) {
+        background-color: white;
+      }
+
+      #rate_buttons {
+        display: block;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      
+      .btn-group .btn:nth-of-type(1){
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+      
+      .btn-group .btn:last-of-type {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      .ratesBtn {
+        display: inline-block;
+        background-color: var(--rates-button-color);
+        padding: 9px 15px;
+        min-width: 20px;
+        color: #111;
+        font-size: 14px;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin-left: 0px;
+      }
+
+      #payments_comp tr td:nth-child(2), #payments_comp tr th:nth-child(2){
+        display: var(--display-rates-sonletBtn);
+      }
+
+      #payments_comp tr td:nth-child(3), #payments_comp tr th:nth-child(3){
+        display: var(--display-rates-blessBtn);
+      }
+
+      #payments_comp tr td:nth-child(4), #payments_comp tr th:nth-child(4){
+        display: var(--display-rates-paypalBtn);
+      }
+
+      #payments_comp tr td:nth-child(5), #payments_comp tr th:nth-child(5){
+        display: var(--display-rates-squareBtn);
+      }
+
+      #payments_comp tr td:nth-child(6), #payments_comp tr th:nth-child(6){
+        display: var(--display-rates-etsyBtn);
+      }
+
+      #payments_comp tr td:nth-child(7), #payments_comp tr th:nth-child(7) {
+        display: var(--display-rates-shopifyBtn);
+      }
+    }
+    
+  </style>
+  
+<div id="rate_buttons" class="btn-group">
+  <p>Pick a processor to compare rates:</p>
+  <button id="blessBtn" class="btn ratesBtn" style="background-color: #82dacc;">Bless</button><button id="paypalBtn" class="btn ratesBtn" >Paypal</button><button id="squareBtn" class="btn ratesBtn" >Square</button><button id="etsyBtn" class="btn ratesBtn" >Etsy</button><button id="shopifyBtn" class="btn ratesBtn" >Shopify</button>
+</div>
+  
+<table id="payments_comp">
+  <tr>
+    <th></th>
+    <th>Sonlet</th>
+    <th>Bless</th>
+    <th>Paypal</th>
+    <th>Square</th>
+    <th>Etsy</th>
+    <th>Shopify</th>
+  </tr>
+  <tr>
+    <td>Processing rate</td>
+    <td>2.89% + $0.25</td>
+    <td>3.45% + $0.15</td>
+    <td>2.9% + $0.30</td>
+    <td>2.9% + $0.30</td>
+    <td>3% + $0.25</td>
+    <td>2.9% + $0.30</td>
+  </tr>
+  <tr>
+    <td>Estimated fees <br>for $50 Sale</td>
+    <td>$1.70</td>
+    <td>$1.87</td>
+    <td>$1.75</td>
+    <td>$1.75</td>
+    <td>$1.75</td>
+    <td>$1.75</td>
+  </tr>
+  <tr>
+    <td>Lowest fees</td>
+    <td class="checked">✓</td>
+    <td>&mdash;</td>
+    <td>&mdash;</td>
+    <td>&mdash;</td>
+    <td>&mdash;</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr><td colspan="7"><small>All prices used in these tables are from the publicly advertised online sites of each company or a reputable publicly avalailable online forum as of 5/20/19.</small></td></tr>
+</table>
+  
+<script>
+        let btn_ids = ['blessBtn', 'paypalBtn', 'squareBtn', 'etsyBtn', 'shopifyBtn']
+        for (btn_id = 0; btn_id < btn_ids.length; btn_id++){
+          let btnElement = btn_ids[btn_id]
+          document.getElementById(btnElement).addEventListener("click", function() {changeDisplay(btnElement)});
+          //console.log(btnElement)
+        };
+          
+          function changeDisplay(btn_id) {
+            //console.log('You clicked ' + btn_id)
+            for (i = 0; i < btn_ids.length; i++){
+              let css_var = '--display-rates-' + btn_ids[i];
+              //console.log(css_var)
+              // Hide all the rates and turn all the buttons white
+              document.getElementById(btn_ids[i]).setAttribute('style', 'background-color: white');
+              document.documentElement.style.setProperty(css_var, 'none');
+              //alert(css_var)
+            };
+
+
+            // Display the rate of the plan clicked and turn the button green
+            let clicked_css_var = '--display-rates-' + btn_id;
+            document.getElementById(btn_id).setAttribute('style','background-color: #82dacc');
+            document.documentElement.style.setProperty(clicked_css_var, 'table-cell');
+
+          }
+</script>
+  
+<!-- Comment ->
+function wpb_hook_javascript_footer() {
+  if (is_single('817'))
+    ?>
+        <script>
+          let btn_ids = ['blessBtn', 'paypalBtn', 'squareBtn', 'etsyBtn', 'shopifyBtn']
+          for (btn_id = 0; btn_id < btn_ids.length; btn_id++){
+            let btnElement = btn_ids[btn_id];
+            document.getElementById(btnElement).addEventListener("click", function() {changeDisplay(btnElement)});
+          };
+
+            function changeDisplay(btn_id) {
+              for (i = 0; i < btn_ids.length; i++){
+                let css_var = '--display-rates-' + btn_ids[i];
+                // Hide all the rates and turn all the buttons white
+                document.getElementById(btn_ids[i]).setAttribute('style', 'background-color: white');
+                document.documentElement.style.setProperty(css_var, 'none');
+              };
+
+              // Display the rate of the plan clicked and turn the button green
+              let clicked_css_var = '--display-rates-' + btn_id;
+              document.getElementById(btn_id).setAttribute('style','background-color: #82dacc');
+              document.documentElement.style.setProperty(clicked_css_var, 'table-cell');
+            }
+        </script>
+    <?php
+}
+add_action('wp_footer', 'wpb_hook_javascript_footer');
+<!-- /Comment -->
+
+</html>
