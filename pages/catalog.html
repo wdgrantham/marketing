@@ -1,0 +1,379 @@
+<html>
+  
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!--The styles from STR Base-->
+  <link href="css/main.e2ed95bddb83.css" rel="stylesheet">
+  <link href="css/social.2ba491793da5.css" rel="stylesheet">
+  <link href="css/str-notify.df447194e205.css" rel="stylesheet">
+  <link href="css/loading.9102066dc4b1.css" rel="stylesheet">
+  <link href="css/typeahead.f865ad2b33ff.css" rel="stylesheet">
+  <link href="css/bootstrap-social.48379ffd5976.css" rel="stylesheet">
+  <link href="css/shared.a567905465fc.css" rel="stylesheet">
+  <link href="css/catalog.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link href="css/shops.css" rel="stylesheet">
+
+</head>
+<body> 
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12" id="the-nav-row">
+            <div class="navbar navbar-default navbar-fixed-top" id="the-nav-actions-row">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <div id="StrMobileNotifications"></div>
+                  <button id="sonlet-mobile-nav-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#str-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a href="/" class="visible-xs navbar-brand" id="sonlet-navbar-brand-mobile"></a>
+                  
+                    <div class="mobile-claim-count-area hidden-sm hidden-md hidden-lg claim-count-area-for-hiding" style="display:none;">
+                      <li class="visible-xs" id="sonlet-shopping-cart-mobile"><div data-reactroot="" class="dropdown " id="navcart-container"><button type="button" class="btn dropdown-toggle" id="sonlet-bag" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag" aria-hidden="true"></i><!-- react-text: 4 -->&nbsp;<!-- /react-text --><span class="badge claimed-count">0</span></button><div class="dropdown-menu scrollable-menu"><ul class="list-unstyled text-center"><li><h3>Your cart is empty.</h3></li></ul></div></div></li><!--/Sonlet shopping cart-->
+                    </div>
+                  
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="str-navbar-collapse">
+                  <a class="hidden-xs" href="/" id="the-nav-logo-anchor"></a>
+
+                  <ul class="nav navbar-nav nav-tabs" role="tablist" id="sonlet-nav-tabs">
+                    
+                      <li class="hidden-xs">
+                        <a href="#sonlet-shop-subnav-list" id="shop-nav-link" class="sonlet-nav-link" role="tab" data-toggle="tab">Shop</a>
+                      </li>
+                      <li class="hidden visible-xs dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="shop-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdownmargin" aria-labelledby="sell-menu-dropdown">
+                          <li><a href="/dashboard/shop/">Dashboard</a></li>
+                          <li><a href="/likes/">Liked Items</a></li>
+                          
+                            <li>
+                              <a data-route="home" href="/shops/">
+                                Browse shops
+                              </a>
+                            </li>
+                          
+                          
+                        </ul>
+                      </li>
+                      <li class="hidden-xs active">
+                        <a href="#sonlet-sell-subnav-list" id="sell-nav-link" class="sonlet-nav-link" role="tab" data-toggle="tab">Sell</a>
+                      </li>
+                      <li class="hidden visible-xs dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="sell-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sell <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdownmargin" aria-labelledby="sell-menu-dropdown">
+                          
+                            <li><a href="/dashboard/">Dashboard</a></li>
+                            <li><a href="/inventory/">Inventory</a></li>
+                            <li><a href="/inventory/listings/">Listings</a></li>
+                            <li><a href="/party/">Parties</a></li>
+                            <li><a href="/inventory/my_sales/">Sales</a></li>
+                            <li><a href="/shipping/">Shipping</a></li>
+                          
+                        </ul>
+                      </li>
+                      <li class="hidden-xs">
+                        <a href="#sonlet-social-subnav-list" id="social-nav-link" class="sonlet-nav-link" role="tab" data-toggle="tab">
+                          Social
+                        </a>
+                      </li>
+                      <li class="hidden visible-xs dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="social-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdownmargin" aria-labelledby="social-menu-dropdown">
+                          <li><a href="/social/">Social Feed</a></li>
+                          <li><a href="/u/wyatt@directangular.com/">Social Profile</a></li>
+                        </ul>
+                      </li>
+                      
+                        <li class="hidden-xs">
+                          <a href="#sonlet-shops-subnav-list" id="shops-nav-link" class="sonlet-nav-link" role="tab" data-toggle="tab">
+                            Sonlet Shops
+                          </a>
+                        </li>
+                        <li class="hidden visible-xs dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="shops-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sonlet Shops <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu dropdownmargin" aria-labelledby="social-menu-dropdown">
+                            <li>
+                              <a data-route="home" href="/shops/">
+                              Home
+                              </a>
+                            </li>
+                            <li>
+                              <a data-route="sales" href="/shops/_/sales/">
+                                Sales
+                              </a>
+                            </li>
+                            <li>
+                              <a data-route="purchased" href="/shops/_/purchased/">
+                                Purchased
+                              </a>
+                            </li>
+                            <li>
+                              <a data-route="browse" href="/shops/_/browse/">
+                                Browse
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      
+                    
+                    <li class="hidden-xs">
+                      <a href="#sonlet-resources-subnav-list" id="resources-nav-link" class="sonlet-nav-link" role="tab" data-toggle="tab">Resources</a>
+                    </li>
+                    <li class="hidden visible-xs dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="resources-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu dropdownmargin" aria-labelledby="resources-menu-dropdown">
+                        <li><a target="_blank" href="https://blog.sonlet.com/">Blog</a></li>
+                        <li><a target="_blank" href="https://support.sonlet.com/support/solutions">Knowledge base</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/groups/1758143684405628/"><i class="fa fa-facebook"></i> Users Group</a></li>
+                        <li><a href="/support/">Support</a></li>
+                        <li><a href="/apps/">Apps</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul class="nav navbar-nav navbar-right" id="sonlet-navbar-right">
+
+                    
+                      <li class="whatsnew hidden-xs">
+                      <span id="HW_badge_cont" class="HW_visible"><span id="HW_badge" data-count-unseen="" class="HW_softHidden"></span></span></li>
+                    
+                    
+                      <li id="StrNotifications"><div data-reactroot="" class="StrNotificationsRoot"><div class="strNotificationBubble"><span class="badge alert-info">1</span></div></div></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="the-user-menu-dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          wyatt@directangular.com <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdownmargin">
+                          <li class="col-xs-5 col-sm-12 col-md-12">
+                            <a href="/settings/general/">
+                              Settings
+                              
+                            </a>
+                          </li>
+                          <li class="col-xs-7 col-sm-12 col-md-12"><a href="/notifications/">
+                            <span class="badge alert-info"></span> Notifications</a>
+                          </li>
+
+                          
+                            <li class="col-xs-5 col-md-12"><a href="/customers/">Customers</a></li>
+                            <li class="col-xs-7 col-sm-12 col-md-12">
+                              <a target="_blank" href="https://headwayapp.co/sonlet-updates">What's New</a>
+                            </li>
+                            <li class="col-xs-7 col-sm-12 col-md-12"><a href="/roadmap/">Feature Requests</a></li>
+                            <li class="col-xs-5 col-sm-12 col-md-12"><a href="/status/">System Status</a></li>
+                            <li class="col-xs-5 col-sm-12 col-md-12"><a href="/settings/attributes/">Attributes</a></li>
+                          
+                          <li role="separator" class="divider col-xs-12"></li>
+                          
+                            <li class="col-xs-6 col-sm-12 col-md-12"><a href="/unicorn/">Admin</a></li>
+                          
+                          <li class="col-xs-6 col-sm-12 col-md-12"><a href="/accounts/logout/">Logout</a></li>
+                        </ul>
+                      </li>
+                    
+                  </ul>
+
+                  <!-- Sonlet subnavbar -->
+                  <div class="hidden-xs tab-content" id="sonlet-subnav">
+                    <ul class="nav navbar-nav sonlet-subnav-list tab-pane" role="tabpanel" id="sonlet-features-subnav-list">
+                      <li><a href="/#features">All features</a></li>
+                      <li><a href="/features/facebook-parties/">Facebook parties</a></li>
+                      <li><a href="/features/shipping-labels/">Shipping labels</a></li>
+                      <li><a href="/features/loyalty/">Customer loyalty rewards</a></li>
+                      <li><a href="/features/shops/">Sonlet Shops</a></li>
+                      
+                    </ul><!--Features subnavbar -->
+                    <ul class="nav navbar-nav sonlet-subnav-list tab-pane" role="tabpanel" id="sonlet-shop-subnav-list">
+                      <li>
+                        <a href="/dashboard/shop/">Dashboard</a>
+                      </li>
+                      <li>
+                        <a href="/likes/">Liked Items</a>
+                      </li>
+                      
+                        <li>
+                          <a data-route="home" href="/shops/">
+                          Browse shops
+                        </a>
+                        </li>
+                      
+                      
+                      
+                    </ul><!--Shop subnavbar -->
+
+                    <ul class="nav navbar-nav sonlet-subnav-list tab-pane active" role="tabpanel" id="sonlet-sell-subnav-list">
+                      
+                        <li class="active"><a href="/dashboard/">Home</a></li>
+                        <li><a href="/inventory/">Inventory</a></li>
+                        <li>
+                          <a href="/inventory/listings/">Listings
+                            <span class="badge">337</span>
+                          </a>
+                        </li>
+                        <li><a href="/party/">Parties</a></li>
+                        <li>
+                          <a href="/inventory/my_sales/">Sales
+                            <span class="badge">8</span>
+                          </a>
+                        </li>
+                        <li><a href="/shipping/">Shipping</a></li>
+                        
+                      
+
+                    </ul><!--Sell subnavbar -->
+
+                    <ul class="nav navbar-nav sonlet-subnav-list tab-pane" role="tabpanel" id="sonlet-social-subnav-list">
+                      <li><a href="/social/">Social Feed</a></li>
+                      <li>
+                        <a href="/u/wyatt@directangular.com/">Social Profile</a>
+                      </li>
+                      
+                    </ul><!--Social subnavbar -->
+
+                    
+                      <ul class="nav navbar-nav sonlet-subnav-list tab-pane" role="tabpanel" id="sonlet-shops-subnav-list">
+                        <li>
+                          <a data-route="home" href="/shops/">
+                            Home
+                          </a>
+                        </li>
+                        <li>
+                          <a data-route="sales" href="/shops/_/sales/">
+                            Sales
+                          </a>
+                        </li>
+                        <li>
+                          <a data-route="purchased" href="/shops/_/purchased/">
+                            Purchased
+                          </a>
+                        </li>
+                        <li>
+                          <a data-route="browse" href="/shops/_/browse/">
+                            Browse
+                          </a>
+                        </li>
+                        
+                      </ul><!--Shops subnavbar -->
+                    
+
+                    <ul class="nav navbar-nav sonlet-subnav-list tab-pane" role="tabpanel" id="sonlet-resources-subnav-list">
+                      <li><a target="_blank" href="https://blog.sonlet.com/">Blog</a></li>
+                      <li><a target="_blank" href="https://support.sonlet.com/support/solutions">Knowledge base</a></li>
+                      <li><a target="_blank" href="https://www.facebook.com/groups/1758143684405628/">
+                        <i class="fa fa-facebook"></i> Users Group</a>
+                      </li>
+                      <li><a href="/support/">Support</a></li>
+                      <li><a href="/apps/">Apps</a></li>
+                      
+                    </ul><!--Resources subnavbar -->
+
+                    
+                      <ul class="nav navbar-nav navbar-right claim-count-area-for-hiding" id="sonlet-claimed-items" style="display:none;">
+                        <!--Sonlet shopping cart-->
+                        <li class="hidden-xs" id="sonlet-shopping-cart"><div data-reactroot="" class="dropdown " id="navcart-container"><button type="button" class="btn dropdown-toggle" id="sonlet-bag" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-bag" aria-hidden="true"></i><!-- react-text: 4 -->&nbsp;<!-- /react-text --><span class="badge claimed-count">0</span></button><div class="dropdown-menu scrollable-menu"><ul class="list-unstyled text-center"><li><h3>Your cart is empty.</h3></li></ul></div></div></li><!--/Sonlet shopping cart-->
+                      </ul>
+                    
+                  </div><!--/Sonlet subnavbar -->
+                </div><!-- /#str-navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </div>
+          </div><!-- /#the-nav-row -->
+        </div>
+      </div>   
+  <main class="Main--contentSidebar">
+    <article class="Main__content">
+      <nav class="Main--contentNav">
+    <ul>
+      <a>Tops</a>
+      <a>Dresses</a>
+      <a>Kimonos</a>
+      <a>Sweaters</a>
+      <a>Sunglasses</a>
+      <a>Tees</a>
+      <a>More <span class="caret"></span></a>
+    </ul>
+
+  </nav>
+      <section>
+        <h1 class="see-big">Valentines Favorites</h1>
+        <p class="see-big">A little love just for you on that special day</p>
+        <div class="products-container">
+          <h1>Valentines Favorites</h1>
+          <div class="product"><img src="/Images/red_dress.jpg"></div>
+          <div class="product"><img src="/Images/black_dress.jpg"></div>
+          <div class="product"><img src="/Images/maitaiwholesale-plus-tops-plum-floral-short-sleeve-top-plus-size-4127446663234_1024x1024_484645c7-2b71-447f-a6b3-29710d0315f0_400x.jpg"></div>
+          <div class="product"><img src="/Images/basic_ruffle.jpg"></div>
+          <div class="product"><img src="/Images/lace_kimono.jpg"></div>
+          <div class="product"><img src="/Images/ice_kimono.jpg"></div>
+
+        </div>
+        <div class="buttons-group">
+            <a class="button" href="#">Tops →</a>
+            <a class="button" href="#">Dresses →</a>
+            <a class="button" href="#">Kimonos →</a>
+        </div>
+      </section>
+      
+      <section>
+        <h1 class="see-big">Sweater Weather</h1>
+        <p class="see-big">Stay warm when the weather gets cold</p>
+        <div class="products-container">
+          <h1>Sweater Weather</h1>
+          <div class="product"><img src="/Images/yellow_sweater.jpg"></div>
+          <div class="product"><img src="/Images/gray_sweater.jpg"></div>
+          <div class="product"><img src="/Images/knit_cardigan.jpg"></div>
+          <div class="product"><img src="/Images/crochet_poncho.jpg"></div>
+          <div class="product"><img src="/Images/long_sweater.jpg"></div>
+          <div class="product"><img src="/Images/cozy_cardigan.jpg"></div>
+
+        </div>
+        <div class="buttons-group">
+            <a class="button" href="#">dark colors →</a>
+            <a class="button" href="#">Sweaters →</a>
+            <a class="button" href="#">long &amp; flowy →</a>
+        </div>
+      </section>
+
+      <section>
+        <h1 class="see-big">Just have fun</h1>
+        <p class="see-big">Cause life is too short</p>
+        <div class="products-container">
+          <h1>Just have fun</h1>
+          <div class="product"><img src="/Images/retro_glasses.jpg"></div>
+          <div class="product"><img src="/Images/marvin_tee.jpg"></div>
+          <div class="product"><img src="/Images/ww_dangle.jpg"></div>
+          <div class="product"><img src="/Images/harry_potter_charm.jpg"></div>
+          <div class="product"><img src="/Images/unicorn_glasses.jpg"></div>
+          <div class="product"><img src="/Images/arm_party.jpg"></div>
+
+        </div>
+        <div class="buttons-group">
+            <a class="button" href="#">sunglasses →</a>
+            <a class="button" href="#">jewelry →</a>
+            <a class="button" href="#">tees →</a>
+        </div>
+      </section>
+
+      <section></section>
+    
+    </article>
+    <aside class="Main__sidebar"><div class="InventoryCart"><div>Select products from the list.</div><div class="Loop Loop--products"></div></div></aside>
+  </main>
+</body>
+  
+
+</html>
+

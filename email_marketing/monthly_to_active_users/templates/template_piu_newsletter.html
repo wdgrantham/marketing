@@ -1,0 +1,51 @@
+{% extends "template_piu_newsletter_2.html" %}
+
+{% block content %}
+
+{% if featured_article %}
+<table>
+          <tr>
+            <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+                {% if featured_article.link %}<a href="{{ featured_article.link }}" style="text-align: center;">{%endif%}
+                    {% if featured_article.image %}
+                    <img src="{{ featured_article.image }}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 520px; object-fit: cover;">
+                    {%endif%}
+                    {% if featured_article.title %}
+                    <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 500; letter-spacing: 1.5px; line-height: 23px; font-size: 17px; text-transform: uppercase;">{{ featured_article.title }}</h5> {%endif%}
+                    {% if featured_article.text %}
+                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{ featured_article.text }}</p>
+                    {% endif %}
+                    {% if featured_article.link %}
+                    <a class="cta" href="{{featured_article.link}}" target="_blank" style="color: #111; font-size: 13px; font-weight: 400; letter-spacing: 1px; line-height: 22px;">Read more</a>
+                </a>{%endif%}
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+</table>
+{% endif%}
+
+<table>
+{% for article in articles %}
+    {% if loop.index == 1 %}
+        <h4 style="text-align: center; font-size: 28px; font-weight: 500; color: #111; letter-spacing: 2px; line-height: 23px;">The Latest from PopItUp!</h4>
+    {% endif %}
+    <tr>
+        <td style="text-align: center; background-color: white; padding: 10px;">
+            <a href="{{article.link}}" style="text-align: center;">
+                {% if article.images %}
+                <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 520px; object-fit: cover;">
+                {%endif%}
+                <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 500; letter-spacing: 1.5px; line-height: 23px; font-size: 17px; text-transform: uppercase;">{{article.title}}</h5>
+                {% if article.excerpt %}
+                <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{article.excerpt}}</p>
+                {% else %}
+                <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{article.summary}}</p>
+                {% endif %}
+                <a class="cta" href="{{article.link}}" target="_blank" style="color: #111; font-size: 13px; font-weight: 400; letter-spacing: 1px; line-height: 22px;">Read more</a>
+            </a>
+        </td>
+    </tr>
+    <tr><td>&nbsp;<br><br></td></tr>
+{% endfor %}
+</table>
+{% endblock %}

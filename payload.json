@@ -1,0 +1,1305 @@
+{'data': {
+  [
+    {
+      "datetime":'SomeDate',
+      "images": ['src1', 'src2', 'src3'],
+      "link": 'https://example.com/',
+      "summary": 'Somesummary',
+      "text": ['p1', 'p2', 'p3'],
+      "title": 'Title1',
+    },
+    {
+      "datetime":'SomeDate',
+      "images": ['src1', 'src2', 'src3'],
+      "summary": 'Somesummary',
+      "text": ['p1', 'p2', 'p3'],
+      "title": 'Title1',
+    },
+    {
+      "datetime":'SomeDate',
+      "images": ['src1', 'src2', 'src3'],
+      "summary": 'Somesummary',
+      "text": ['p1', 'p2', 'p3'],
+      "title": 'Title1',
+    },
+  ]
+}}
+
+[
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/748/revisions/759", 
+          "id": 759
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=748"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/748"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 6, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/748/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=748"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/758"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=748", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=748", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      2, 
+      3
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p>We&#8217;re so excited to announce that all our basic users will now be receiving fee-free shipping labels!\u00a0 That means that regardless of how many packages you send or who else you may use for shipping labels, Sonlet will always be your least expensive option for purchasing USPS shipping labels for your clothing boutique.</p>\n<p>The change will go into effective over the next few business days!!! No confusing options for add-ons, no label quotas, just free labels for everyone with a paid subscription on Sonlet.</p>\n<p>If you currently use Stamps.com, ShippingEasy, and Zensales for shipping labels, cancel your subscription, you just made an extra $20 per month!</p>\n<p>If you currently use our Unlimited Shipping Labels add-on, we&#8217;ll be updating your monthly subscription billing on your next billing cycle to reflect a reduced monthly charge.</p>\n<p>If you currently use our Pay Per Label add-on and you&#8217;re a basic user, then you&#8217;ll notice the $0.30 label fee has been removed.</p>\n"
+    }, 
+    "date": "2019-01-29T09:15:58", 
+    "date_gmt": "2019-01-29T17:15:58", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>We&#8217;re so excited to announce that all our basic users will now be receiving fee-free shipping labels!\u00a0 That means that regardless of how many packages you send or who else you may use for shipping labels, Sonlet will always be your least expensive option for purchasing USPS shipping labels for &hellip;</p>\n"
+    }, 
+    "featured_media": 758, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=748"
+    }, 
+    "id": 748, 
+    "link": "https://blog.sonlet.com/2019/01/fee-free-shipping-labels-for-basic-users.html", 
+    "meta": [], 
+    "modified": "2019-01-29T09:20:03", 
+    "modified_gmt": "2019-01-29T17:20:03", 
+    "ping_status": "open", 
+    "slug": "fee-free-shipping-labels-for-basic-users", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "Fee-FREE shipping labels for basic users"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/16"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/755/revisions/765", 
+          "id": 765
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=755"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/755"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 5, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/755/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=755"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/773"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=755", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=755", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 16, 
+    "categories": [
+      16, 
+      4
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p><span style=\"font-weight: 400;\">Have you been doing a lot of in-home pop-ups? Are you selling more items in person than you expected? One of the fastest and easiest ways Sonlet can help you with your inventory management for in-person sales is QR codes! QR codes allow you to quickly scan the item, and the system will then take you to the item in Sonlet where you can enter the customer information and move that item over to your Sales page. This way you can ensure you have an accurate and organized record of all of your sales. </span></p>\n<div style=\"position: relative; padding-bottom: 56.25%; height: 0;\"><iframe style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%;\" src=\"https://www.useloom.com/embed/e9f559b216aa454da552bbb40f5d0937\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></div>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">To print QR codes, first be sure your items are listed. Go to your Manual Listings page. It is easiest to print the labels by style.</span></p>\n<p><img class=\"\" src=\"https://lh3.googleusercontent.com/Dq8cddHRsPrtizOAym2_IpPalOEwlq3UUQdBoS_40_1KuJUCoGHjEg_yIvfyLm5cuk8TdWNmjYjZrpY2Bg-SW00aAax3rBJfjXi1hc0u0T1mfR44-S86IhXkpyIJL6Rl6j5SjiyF\" width=\"579\" height=\"290\" /></p>\n<p><span style=\"font-weight: 400;\">Select the items for which you would like to download QR codes. Scroll down and click Download QR Code Labels for Selected. </span></p>\n<p><img class=\"\" src=\"https://lh3.googleusercontent.com/2Zr7H7c1zhxIc2gPTZtcJs8qDZa-0w5ZmeoWpsIBCP_nUbmmCdi3V_IigFzB5Jsfh-oVShNDG7-x2vims4ZP3CziH4OuxePsJ6-siDi0cton-ctz5sLJix17Hfbrci9oEbbsIaFN\" width=\"564\" height=\"720\" /></p>\n<p><span style=\"font-weight: 400;\">You will be able to select which labels on the sheet you would like to print to. Click Download.</span></p>\n<p>Note: Labels are optimized for the Avery 18160 labels which you can buy <a href=\"http://bit.ly/strlabels\">here</a>.\u00a0 You can try to print to a different type of label, but you will need to adjust your printer settings accordingly.</p>\n<p><img class=\"\" src=\"https://lh3.googleusercontent.com/Cxo-eKycwQIz3bsjzDkDui5c-QSfJSUSEsVCZ_MMKAElO7HzU9BBIND7Rl4Yz_2kGNfAxMmzQ0Zdr43V12UCEPpoa6PcUM6UMVqmOyTwtcfZrr2iGLlf9d9w1mTsNeMVpxRy34-f\" width=\"543\" height=\"448\" /></p>\n<p><span style=\"font-weight: 400;\">A PDF file will be downloaded to your device. You can then print the labels. </span></p>\n<p><img class=\"\" src=\"https://lh5.googleusercontent.com/XyiJweVryNrmUjVLoF5RARrxkZx8zNsbaKnaVERUU9IN5CG3LaY7EXurNDWkqXg2V20fys8GM9spLx7Ah0JaRF8gdO3RnaeHQVsTsis_HthX59sx7VEQ-cqTD9NWYoeBL_Rcl8eB\" width=\"651\" height=\"137\" /></p>\n<p><span style=\"font-weight: 400;\">Note: </span><span style=\"font-weight: 400;\">All printers are different! \u00a0And they all require different settings to print labels correctly. If your QR codes are not printing correctly, you will probably have to play with your printer settings. Make sure you have unchecked the &#8220;Fit to Page&#8221; box. Check the paper size, and be sure it is set to 100%.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\">Be sure your items remain listed when scanning the labels. You can scan the labels using any QR reader mobile app. Once scanned, the system will take you to the Claim Page for this item in your Listings. You can then mark the item as Sold Outside of Sonlet.</span></p>\n<p><img class=\"\" src=\"https://lh3.googleusercontent.com/5oMI5igMw3hpieEb01XjNq2bD5rO48XJhdZx5o5BDBK3lZ1PZ-mIL0XIgD51lJ7rNAddImOLsUEj9gIywyaaNkLp9pxiUEH_goyHrGQAXF8esHQL0CXQ1VV8SkN6W3MWH1IacHL8\" width=\"631\" height=\"354\" /></p>\n<p><span style=\"font-weight: 400;\">Here you can add the item to a recent order, select a previous customer\u2019s information, or add the new customer information. This will move that item over to your Sales page, where you can then proceed to invoice and ship the order.</span></p>\n<p><img class=\"\" src=\"https://lh6.googleusercontent.com/CxcrQ2slW0RMBg7g971qo_b1RGOnTpCDz_9KmfiNnMEpuBp5UvbPSJnWIm6nR1-gJdK6Lfm36lJqedDrSz3x2qxSpHff06xGigPfdaFI70an1IS9dI_FtMWgpP3iHTXm51Pk2-dh\" width=\"633\" height=\"352\" /></p>\n"
+    }, 
+    "date": "2019-01-29T09:00:38", 
+    "date_gmt": "2019-01-29T17:00:38", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>Have you been doing a lot of in-home pop-ups? Are you selling more items in person than you expected? One of the fastest and easiest ways Sonlet can help you with your inventory management for in-person sales is QR codes! QR codes allow you to quickly scan the item, and &hellip;</p>\n"
+    }, 
+    "featured_media": 773, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=755"
+    }, 
+    "id": 755, 
+    "link": "https://blog.sonlet.com/2019/01/how-to-use-sonlet-qr-codes.html", 
+    "meta": [], 
+    "modified": "2019-01-29T12:53:40", 
+    "modified_gmt": "2019-01-29T20:53:40", 
+    "ping_status": "open", 
+    "slug": "how-to-use-sonlet-qr-codes", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "How to use Sonlet QR Codes"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/742/revisions/772", 
+          "id": 772
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=742"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/742"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 5, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/742/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=742"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=742", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=742", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      3
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p style=\"text-align: left;\">With the new year and the new postage rates coming into effect, we&#8217;ve gone to the trouble of weighing and calculating how much things are going to cost for shipping this year.\u00a0 Don&#8217;t want to pull out your scale to send that one-off-order? Pull out the weights and rates chart to look up the average and max weights by style. Lighter weight fabric?\u00a0 Use the Ave OZ column for the weight.\u00a0 Heavier fabric? Use the Max OZ weight.\u00a0 Just need a quick reference for planning your flat rate shipping costs this year? We&#8217;ve also included the rate by weight for First Class and the priority rates by box type on the second page.</p>\n<h3 style=\"text-align: center;\"><a href=\"https://blog.sonlet.com/wp-content/uploads/2019/01/LuLaRoe_Shipping_Guide_v2.pdf\" target=\"_blank\" rel=\"noopener\">Download the 2019 Shipping Guide</a></h3>\n<p>&nbsp;</p>\n<p style=\"text-align: center;\"><a href=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.46.16-AM.png\"><img class=\"alignnone size-full wp-image-768\" src=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.46.16-AM.png\" alt=\"\" width=\"604\" height=\"780\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.46.16-AM.png 604w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.46.16-AM-232x300.png 232w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.46.16-AM-440x568.png 440w\" sizes=\"(max-width: 604px) 100vw, 604px\" /></a></p>\n<p style=\"text-align: center;\"><a href=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.24-AM.png\"><img class=\"alignnone size-full wp-image-770\" src=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.24-AM.png\" alt=\"\" width=\"604\" height=\"778\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.24-AM.png 604w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.24-AM-233x300.png 233w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.24-AM-440x567.png 440w\" sizes=\"(max-width: 604px) 100vw, 604px\" /></a></p>\n<p style=\"text-align: center;\"><a href=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.44-AM.png\"><img class=\"alignnone size-full wp-image-769\" src=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.44-AM.png\" alt=\"\" width=\"605\" height=\"778\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.44-AM.png 605w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.44-AM-233x300.png 233w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-29-at-9.45.44-AM-440x566.png 440w\" sizes=\"(max-width: 605px) 100vw, 605px\" /></a></p>\n<h3 style=\"text-align: center;\"><a href=\"https://blog.sonlet.com/wp-content/uploads/2019/01/LuLaRoe_Shipping_Guide_v2.pdf\" target=\"_blank\" rel=\"noopener\">Download the 2019 Shipping Guide</a></h3>\n<p style=\"text-align: center;\">\n"
+    }, 
+    "date": "2019-01-25T12:19:20", 
+    "date_gmt": "2019-01-25T20:19:20", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>With the new year and the new postage rates coming into effect, we&#8217;ve gone to the trouble of weighing and calculating how much things are going to cost for shipping this year.\u00a0 Don&#8217;t want to pull out your scale to send that one-off-order? Pull out the weights and rates chart &hellip;</p>\n"
+    }, 
+    "featured_media": 0, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=742"
+    }, 
+    "id": 742, 
+    "link": "https://blog.sonlet.com/2019/01/2019-lularoe-shipping-weights-rates-guide.html", 
+    "meta": [], 
+    "modified": "2019-01-29T09:59:14", 
+    "modified_gmt": "2019-01-29T17:59:14", 
+    "ping_status": "open", 
+    "slug": "2019-lularoe-shipping-weights-rates-guide", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "2019 LuLaRoe Shipping Weights &#038; Rates Guide"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/737/revisions/740", 
+          "id": 740
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=737"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/737"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 1, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/737/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=737"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/738"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=737", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=737", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      2, 
+      3
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p>The USPS has announced a postage increase for 2019.\u00a0 Here&#8217;s a quick reference of the new rates that go into effect on January 27, 2019.</p>\n<p style=\"text-align: center;\"><a href=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-12.27.17-PM.png\"><img class=\"alignnone size-full wp-image-739\" src=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-12.27.17-PM.png\" alt=\"\" width=\"601\" height=\"1070\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-12.27.17-PM.png 601w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-12.27.17-PM-169x300.png 169w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-12.27.17-PM-575x1024.png 575w, https://blog.sonlet.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-08-at-12.27.17-PM-440x783.png 440w\" sizes=\"(max-width: 601px) 100vw, 601px\" /></a></p>\n<p>&nbsp;</p>\n<p>Are the first class rates showing on your Sonlet.com account more than these?\u00a0 <a href=\"https://sonlet.com/billing/addons/\">Upgrade to unlimited shipping labels</a> to get commercial plus postage rates.</p>\n<p>Did you know that Sonlet has the lowest advertised price for shipping labels? Compare Sonlet Shipping labels to Shipping Easy, ZenSales, and Stamps.com <a href=\"https://blog.sonlet.com/2018/05/unlimited-shipping-labels.html\">here</a>.</p>\n"
+    }, 
+    "date": "2019-01-08T12:46:42", 
+    "date_gmt": "2019-01-08T20:46:42", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>The USPS has announced a postage increase for 2019.\u00a0 Here&#8217;s a quick reference of the new rates that go into effect on January 27, 2019. &nbsp; Are the first class rates showing on your Sonlet.com account more than these?\u00a0 Upgrade to unlimited shipping labels to get commercial plus postage rates. &hellip;</p>\n"
+    }, 
+    "featured_media": 738, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=737"
+    }, 
+    "id": 737, 
+    "link": "https://blog.sonlet.com/2019/01/usps-postage-rate-increases-starting-jan-27-2019.html", 
+    "meta": [], 
+    "modified": "2019-01-25T12:04:36", 
+    "modified_gmt": "2019-01-25T20:04:36", 
+    "ping_status": "open", 
+    "slug": "usps-postage-rate-increases-starting-jan-27-2019", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "USPS Postage Rate Increases Starting Jan 27 2019"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/718/revisions/733", 
+          "id": 733
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=718"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/718"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 4, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/718/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=718"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/729"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=718", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=718", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      20
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p>One question that I get all the time from the people that know me (and know that I help run Sonlet) is &#8220;Can you really make money selling fashion online?&#8221;\u00a0 Usually, the people that ask me think they already know the answer&#8230; after all, everyone already knows that those <em>make millions selling online</em> links are just a big scam, right?!\u00a0 \u00a0I&#8217;m guessing that if you sell on Sonlet, or if you&#8217;re even mildly curious about the people that do, you&#8217;ve also asked the question.\u00a0 BUT the answer might surprise you&#8230;</p>\n<h5>How much do fashion stylists really make? Can you really make as much money as they claim?</h5>\n<div></div>\n<div>So I\u2019ll be straight with you, we have sellers of all sorts using Sonlet&#8230; some who don&#8217;t hardly sell at all and some that have made and continue to make fortunes selling fashion using Sonlet.\u00a0 My take away, if you really want to make it, the numbers show that it&#8217;s possible.\u00a0 Take a look:</div>\n<div></div>\n<blockquote>\n<div>FACT 1: The average Sonlet Retailer makes about $3,300 in revenue per month, which equates to about $1,000 in profit.</div>\n</blockquote>\n<div></div>\n<div>Now, I know that isn\u2019t enough for most families to live off, but for most Americans that\u2019s a good chunk of extra spending cash, especially for those that are just in this for the fun of selling fashion, plus all the social perks of having an excuse to get together with your favorite fashionistas.</div>\n<div></div>\n<div>Another thing to remember about the average\u2026 it\u2019s just that, an average\u2026 so how good can it really get? \u00a0Can you really make a fortune selling fashion online? Here again, the numbers are staggering:</div>\n<div></div>\n<blockquote>\n<div>FACT 2: The Top 10 sonlet users sell on average $93,000 and take 511 orders per month.</div>\n</blockquote>\n<div></div>\n<div>Just some simple math\u2026 that means they are making at least $30k per month in profit alone, and clearing more than $1m in business revenue per year. \u00a0So yes, you can make a million selling fashion from your home. (For the business gurus like me, there are many fast food and main stream retail franchises that don&#8217;t do that kind of revenue).</div>\n<div></div>\n<div>Here\u2019s some more fun stats about how much our Sonlet users make selling fashion every month:</div>\n<div></div>\n<div><a href=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-12.36.59-PM.png\"><img class=\"aligncenter wp-image-719 size-full\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-12.36.59-PM.png\" alt=\"\" width=\"508\" height=\"293\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-12.36.59-PM.png 508w, https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-12.36.59-PM-300x173.png 300w, https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-12.36.59-PM-440x254.png 440w\" sizes=\"(max-width: 508px) 100vw, 508px\" /></a></div>\n<div></div>\n<div>Now, is it all rainbows and roses? No.\u00a0 You can google it and find a thousand or more fashion retailers that have lost big, so don&#8217;t take this article as a guarantee of income.\u00a0 It&#8217;s not easy to start and run a business, and the statistics on the number of new businesses that fail is heartbreaking.\u00a0 I&#8217;ve started some businesses of my own that have gone down in flames, burning hundred dollar bills from my precious savings account as if they were tissue paper<sup><a href=\"#foot1\">1</a></sup>.\u00a0 But if we never tried anything out of fear of failing&#8230; <em>insert your favorite motivational quote here</em>.\u00a0 Seriously though, I&#8217;m really proud of our Sonlet users.\u00a0 Most of them run amazing businesses and make their customers really happy, and from our whole team at Sonlet, we love that our software, and our company, can play some small part in helping you be successful, however you personally define success.</div>\n<div></div>\n<div>If you&#8217;re interested in learning to sell fashion online, check out <a style=\"font-family: 'Clicker Script'; font-size: 1.5rem;\" href=\"https://sonlet.com/features/shops/\" target=\"_blank\" rel=\"noopener\">Sonlet Shops;</a>\u00a0you can get started for free and start selling fashion with zero upfront investment.</div>\n<div></div>\n<h4>Footnotes</h4>\n<div id=\"foot1\" style=\"font-size: .8rem;\">Note to the\u00a0U.S. Bureau of Engraving and Printing, this is just a metaphor&#8230; I didn&#8217;t actually burn money, though that would have taken much less time and caused far less emotional trauma than what actually happened. And for all those that may actually read this far down in the footnote, I&#8217;ve lost over 7 figures, not something I&#8217;m proud of, but perhaps the best money I&#8217;ve ever spent on my education.</div>\n"
+    }, 
+    "date": "2018-12-11T16:42:37", 
+    "date_gmt": "2018-12-12T00:42:37", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>One question that I get all the time from the people that know me (and know that I help run Sonlet) is &#8220;Can you really make money selling fashion online?&#8221;\u00a0 Usually, the people that ask me think they already know the answer&#8230; after all, everyone already knows that those make &hellip;</p>\n"
+    }, 
+    "featured_media": 729, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=718"
+    }, 
+    "id": 718, 
+    "link": "https://blog.sonlet.com/2018/12/how-much-do-sonlet-sellers-really-make.html", 
+    "meta": [], 
+    "modified": "2018-12-11T23:33:47", 
+    "modified_gmt": "2018-12-12T07:33:47", 
+    "ping_status": "open", 
+    "slug": "how-much-do-sonlet-sellers-really-make", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "How much do Sonlet sellers really make?"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/716/revisions/735", 
+          "id": 735
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=716"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/716"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 7, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/716/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=716"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/727"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=716", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=716", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      20
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p>Hey there my fabulous fashion friends! \u00a0So if you\u2019ve clicked and you&#8217;re reading then you\u2019re in for a treat, cause we\u2019re about to deep dive into some really cool data\u2026 We took a look at all of the orders on Sonlet between August 20 and September 20 to see what\u2019s really selling. \u00a0So here we go. \u00a0Don\u2019t see what you\u2019re looking for? No problem, just add a comment below, and I\u2019ll see if I can help (we don\u2019t discuss numbers of any individual sellers, but we are happy to share in aggregate some trends that might be helpful for running your business).</p>\n<div><strong>Before I deep dive some trends</strong>, you might want to check out another article I recently wrote&#8230; I honestly couldn&#8217;t write this one without doing the other one first&#8230; mostly because I always answer these questions in the same conversation.</div>\n<div><a style=\"padding: 10px; margin: 10px; display: block; background-color: #f2f2f2;\" href=\"https://blog.sonlet.com/2018/12/how-much-do-sonl\u2026lers-really-make.html\">How much do Sonlet Sellers really make?</a></div>\n<div>Okay, so you\u2019re already in business, and now you want to get to the juicy stuff\u2026 What styles are people really buying, what should you stock up on, and what should you drop out of your inventory?\u00a0 Let&#8217;s get started really high level&#8230; we have data on the inventory people sell on Sonlet.\u00a0 Here&#8217;s the overall break down:</div>\n<div><a href=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.27.34-PM.png\"><img class=\"size-full wp-image-724 aligncenter\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.27.34-PM.png\" alt=\"\" width=\"361\" height=\"373\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.27.34-PM.png 361w, https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.27.34-PM-290x300.png 290w\" sizes=\"(max-width: 361px) 100vw, 361px\" /></a>What can you do with this info?\u00a0 Well who knows&#8230;this includes everyone else&#8217;s data and can&#8217;t really be useful for your business, right? Kind of. There are all kinds of businesses and strategies out there, and there are some strategies where what I&#8217;m about to say doesn&#8217;t apply (like if you own the LuLaRoe Legging Store and only sell leggings, ignore what I&#8217;m about to say).\u00a0 These numbers are important for you to look at to gauge whether the sales of your boutique are matching the overall market demand&#8230; blah, blah blah.\u00a0 So cutting out the jargon, if you&#8217;re selling more bottoms than tops, then you&#8217;re probably missing out, and your customers are likely buying their tops from some other retailer.\u00a0 \u00a0Pull out more tops, or freshen up your tops inventory, and you&#8217;ll probably be able to sell more.\u00a0 The other thing to pay attention to is the &#8220;Average Price Per Unit&#8221;.\u00a0 Remember that&#8217;s an average, so don&#8217;t start marking up your T&#8217;s to $40, but keep in mind that shoppers on Sonlet are used to paying $38 for a top, and you can charge more for dresses.\u00a0 You might not need to discount leggings down to wholesale&#8230; on average they go for $23 on Sonlet.\u00a0 You might want to bookmark this page and then pop open your inventory page later, just to check what you&#8217;ve got in stock and see if you need to make some adjustments.</div>\n<div></div>\n<div>So let&#8217;s go a little deeper&#8230; of all the tops, what&#8217;s actually selling? Here you go&#8230; here are tops sales by size:</div>\n<div><a href=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.45.40-PM.png\"><img class=\"size-full wp-image-725 aligncenter\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.45.40-PM.png\" alt=\"\" width=\"240\" height=\"392\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.45.40-PM.png 240w, https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-3.45.40-PM-184x300.png 184w\" sizes=\"(max-width: 240px) 100vw, 240px\" /></a>My take away from this little chart is to find a way to photograph and showcase all your sizes. If you only model a size XS or XXS you could be turning off customers because it turns out that there are more 3XL&#8217;s selling than XS&#8217;s.\u00a0 Vice versa, if you&#8217;re always tailoring to the plus sizes, the Small&#8217;s and Medium&#8217;s make up 1/3\u00a0(34%) of the market.\u00a0 As I mentioned above, all of your friends might be small&#8217;s, and the fact that you only ever sell them doesn&#8217;t mean that you&#8217;ve done anything wrong, but as you expand your business, you now have a good idea of what a healthy break down of our sizes should look like.</div>\n<div></div>\n<div>Now just because I can, and I think many of you will find this useful&#8230; Here&#8217;s the break down of tops by style for our users selling LuLaRoe styles:</div>\n<div><a href=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-4.21.25-PM.png\"><img class=\"size-full wp-image-726 aligncenter\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-4.21.25-PM.png\" alt=\"\" width=\"418\" height=\"741\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-4.21.25-PM.png 418w, https://blog.sonlet.com/wp-content/uploads/2018/12/Screen-Shot-2018-12-11-at-4.21.25-PM-169x300.png 169w\" sizes=\"(max-width: 418px) 100vw, 418px\" /></a>I&#8217;m not going to try and deep dive exactly how to use this chart&#8230; It&#8217;s useful if you sell LuLaRoe styles and you&#8217;re not selling Irma&#8217;s, for example.\u00a0 Overall, I&#8217;d recommend that you take a look at your own sales history and see if it&#8217;s lining up with the overall trends. If not, you might be able to make some tweaks that will make a difference in the way you stock your boutique.</div>\n<div></div>\n<div>Find this information useful?\u00a0 Let me know in the comments below&#8230; we&#8217;ve got lots of more data like this, and we really would like to help.\u00a0 As I mentioned above, I&#8217;ll never share any specific information about a particular boutique, but we&#8217;d love to know what aggregate statistics we can provide that will be helpful for you in running your business.</div>\n"
+    }, 
+    "date": "2018-12-11T16:36:33", 
+    "date_gmt": "2018-12-12T00:36:33", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>Hey there my fabulous fashion friends! \u00a0So if you\u2019ve clicked and you&#8217;re reading then you\u2019re in for a treat, cause we\u2019re about to deep dive into some really cool data\u2026 We took a look at all of the orders on Sonlet between August 20 and September 20 to see what\u2019s &hellip;</p>\n"
+    }, 
+    "featured_media": 727, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=716"
+    }, 
+    "id": 716, 
+    "link": "https://blog.sonlet.com/2018/12/whats-selling-whats-not.html", 
+    "meta": [], 
+    "modified": "2018-12-11T23:38:53", 
+    "modified_gmt": "2018-12-12T07:38:53", 
+    "ping_status": "open", 
+    "slug": "whats-selling-whats-not", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "What&#8217;s selling &#038; what&#8217;s not?"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/707/revisions/730", 
+          "id": 730
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=707"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/707"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 8, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/707/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=707"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/711"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=707", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=707", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      2
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p>Okay my fashion friends\u2026 Yes, we\u2019re looking to hire, and yes, this is going to be one of the funnest positions that we\u2019ve ever filled!</p>\n<h5><strong>So who are we looking for?\u00a0\u00a0</strong></h5>\n<div>Have you ever seen <a href=\"https://www.youtube.com/channel/UC4HsumPi975_XPqpsU2tAqQ\">Dearly Bethany&#8217;s videos</a>? \u00a0We want this new person to create videos like Bethany, providing practical styling tips for the 1M+ shoppers that come to Sonlet to shop every month.\u00a0 The person that we hire will be an awesome stylist and good at social media.\u00a0 They&#8217;ll know how to create their own videos, from coming up with the ideas, writing the script, filming, editing, and publishing the completed video.\u00a0 They&#8217;ll also know how to use the content on multiple social platforms, like Youtube, Instagram, Facebook, Snapchat, and Twitter.</div>\n<div></div>\n<h5><b>What are the perks of the job?\u00a0</b></h5>\n<div>\n<ul class=\"Apple-dash-list\">\n<li>You get paid\u2026 We pay $15 &#8211; $20 per hour while you\u2019re making videos.</li>\n<li>We\u2019ll give you a budget and pay for the clothing that you demo and style for the videos.</li>\n<li>You\u2019ll set up your own Sonlet Shop, so as shoppers find you on social media that aren&#8217;t already linked to another consultant on Sonlet, you make commission from their purchases.</li>\n<li>As the number of followers on social grows and more Sonlet users rely on your awesome videos, we\u2019ll help you set up a studio in your home (buy a nice camera and backdrop) and hook you up with some folks to give you editing tips.</li>\n</ul>\n</div>\n<div></div>\n<h5><b>What\u2019s the schedule?</b></h5>\n<div>You get to pick your schedule. \u00a0We would love to see a video from you each week\u2026 so we can keep our shoppers engaged, but you can do it in the evenings after work, during the day while the kids are at school, or in the mornings before the rest of the family starts rolling. \u00a0It\u2019s entirely up to you.</div>\n<div></div>\n<h5><b>What kind of videos are you looking for?</b></h5>\n<div>\n<ul class=\"Apple-dash-list\">\n<li>Styling tips like how to pick outfits, how to look taller, how to find the perfect sweater for those jeans\u2026 the possibilities are endless.</li>\n</ul>\n<div>\n<ul class=\"Apple-dash-list\">\n<li>Sizing and buying guidelines\u2026 how certain brands fit, what to buy big or buy small, how fabrics wear over time, etc.\u00a0 The focus for most of the sizing videos will be for <a href=\"https://sonlet.com/features/shops/\">Sonlet Shops</a> brands and other brands carried on Sonlet that don&#8217;t already have clear sizing guidelines for shoppers.</li>\n</ul>\n<h5><b>How do I apply?</b></h5>\n<div>Okay this is the funnest part!\u00a0 To apply, we want to see your styling videos. \u00a0Create a video, upload it to a hosting site of your choice (YouTube, Vimeo, Facebook, etc.) and then post a link to it on <a href=\"https://sonlet.com/social/\">Sonlet Social</a> with your name, how long it took to make the video, and the hashtag <a href=\"https://sonlet.com/tag/sonletstylist/\">#sonletstylist</a>.\u00a0 Email the permalink to your post on Sonlet Social to contact@directangular.com with the subject &#8220;I want to be a Sonlet Stylist&#8221; to make sure that we see it.</div>\n</div>\n</div>\n<div></div>\n<div>Here are some guidelines for your videos:</div>\n<ul>\n<li>Pick a specific topic that clothing shoppers will find helpful.\u00a0 Something like, &#8220;How to look taller and slimmer in winter clothes&#8221; or &#8220;Outfits that work best with layers&#8221;.\u00a0 You can pick the topic, but don&#8217;t try to dress for every day of the year in one video.</li>\n<li>Give a brief intro of yourself and your topic.\u00a0 We (and our shoppers) want to get to know you, so we can trust you and your style guidelines. We also want to know why we should watch your video.</li>\n<li>Include three or four main style guidelines to structure your video such as &#8220;tips&#8221;, &#8220;strategies&#8221;, or &#8220;must knows&#8221; to ensure you have enough content to merit the audience spending time learning from you.\u00a0 This also makes it easy to reuse the video on Sonlet Social, Facebook, Instagram, Snap Chat, the Sonlet Blog, and in email marketing by splitting it up into smaller pieces of content.</li>\n<li>Show and tell.\u00a0 You should both explain your style as well as show your style in the video.\u00a0 Demonstrate what you do or what you&#8217;ve changed to make your style unique and explain how to avoid common pitfalls so that shoppers know exactly what your suggesting and whether your style suggestions can be adjusted or modified to fit their body type or their own style.</li>\n<li>Explain to the audience the types of clothing articles they need (like blouses, bottoms, jackets, etc.) and where they can purchase the items to style just like you.\u00a0 Bonus points if you are familiar with the <a href=\"https://sonlet.com/shops/shop-sonnie/\">Sonlet Shops</a> suppliers, LuLaRoe, Agnes &amp; Dora, etc. since our end objective is to help the shoppers on Sonlet find something for their style on Sonlet.</li>\n<li>End your video by letting your audience know where they can find out more information and the best way for them to give you feedback.</li>\n<li>Your video should be at least 3 minutes, and no longer that 10 &#8211; 12 minutes.</li>\n<li>Be genuine and have fun making your video!\u00a0 The job will be making awesome videos and being engaging for online clothing shoppers, and we want to find someone that our shoppers will love to learn from.</li>\n</ul>\n<div>\n<div>\n<h5><strong>How many people will be hired?</strong></h5>\n<div>We\u2019re planning to hire one person right away, and we\u2019ll be looking for more very soon (so keep the applications and the videos coming in).\u00a0 Our customers come in all shapes and sizes, from short &amp; petit, tall &amp; long, curvy, pear shaped (and every other shape), and we&#8217;re looking for experts for each body type and style.</div>\n</div>\n</div>\n"
+    }, 
+    "date": "2018-12-11T10:08:55", 
+    "date_gmt": "2018-12-11T18:08:55", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>Okay my fashion friends\u2026 Yes, we\u2019re looking to hire, and yes, this is going to be one of the funnest positions that we\u2019ve ever filled! So who are we looking for?\u00a0\u00a0 Have you ever seen Dearly Bethany&#8217;s videos? \u00a0We want this new person to create videos like Bethany, providing practical &hellip;</p>\n"
+    }, 
+    "featured_media": 711, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=707"
+    }, 
+    "id": 707, 
+    "link": "https://blog.sonlet.com/2018/12/now-hiring-social-media-stylist.html", 
+    "meta": [], 
+    "modified": "2018-12-11T23:26:20", 
+    "modified_gmt": "2018-12-12T07:26:20", 
+    "ping_status": "open", 
+    "slug": "now-hiring-social-media-stylist", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "Now Hiring!  Social Media Stylist"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/4"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/701/revisions/704", 
+          "id": 704
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=701"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/701"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 2, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/701/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=701"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/705"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=701", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=701", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 4, 
+    "categories": [
+      8
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p>Check out a detailed description of the new feature on headway <a href=\"https://headwayapp.co/sonlet-updates/post-to-groups-where-you%27re-not-an-admin-79726\">here</a>.</p>\n"
+    }, 
+    "date": "2018-11-13T12:16:21", 
+    "date_gmt": "2018-11-13T20:16:21", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>Check out a detailed description of the new feature on headway here.</p>\n"
+    }, 
+    "featured_media": 705, 
+    "format": "link", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=701"
+    }, 
+    "id": 701, 
+    "link": "https://blog.sonlet.com/2018/11/post-to-facebook-groups-where-youre-not-an-admin.html", 
+    "meta": [], 
+    "modified": "2018-11-13T12:18:39", 
+    "modified_gmt": "2018-11-13T20:18:39", 
+    "ping_status": "open", 
+    "slug": "post-to-facebook-groups-where-youre-not-an-admin", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "Post to Facebook Groups where you&#8217;re not an admin"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/3"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/694/revisions/697", 
+          "id": 697
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=694"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/694"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 4, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/694/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=694"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/699"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=694", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=694", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 3, 
+    "categories": [
+      2, 
+      8
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p style=\"text-align: center;\"><iframe src=\"https://www.youtube.com/embed/9zNISxJNcdQ\" width=\"560\" height=\"315\" frameborder=\"0\" allowfullscreen=\"allowfullscreen\"></iframe></p>\n<h4></h4>\n<ul data-brackets-id=\"7722\">\n<li data-brackets-id=\"7723\">7 suppliers confirmed for beta launch with thousands of products including women&#8217;s clothing, accessories, shoes, and officially licensed products from Disney, Star Wars, Venom, Harry Potter, Rolling Stones, Beatles, and more.</li>\n<li data-brackets-id=\"7724\">Setting up a Sonlet Shop will be about as easy as setting up a Facebook page. You&#8217;ll name it and add a cover photo. Products and product photos will be ready for you to select and add to the shop.</li>\n<li data-brackets-id=\"7725\">You can set up as many shops as you&#8217;d like, from themed shops to specific shops for customers, events, or private parties.</li>\n<li data-brackets-id=\"7726\">You&#8217;ll earn 30-35% of the retail price of the item.</li>\n<li data-brackets-id=\"7727\">Customers will pay right on Sonlet and commissions will be distributed directly to your bank account.</li>\n<li data-brackets-id=\"7728\">Shipping will be handled by the supplier.</li>\n<li data-brackets-id=\"7729\">Beta starts in the next few weeks. We&#8217;ll be slowly adding more sellers until mid November when we&#8217;ll have full availability in time for the busiest shopping (and selling) season of the year.</li>\n</ul>\n<h4>Read the full script</h4>\n<p><span style=\"font-weight: 400;\">Hey everyone! Just wanted to get you an update on Sonlet Shops. We\u2019ve been working really hard to get everything together and we are very excited to launch!</span></p>\n<p><span style=\"font-weight: 400;\">I\u2019m sure you want to know a little bit about what you can sell! Right now we have about 7 suppliers that are confirmed partners. We will be adding more and more, 3 more specifically in November. Each supplier includes thousands of unique items. We have the most beautiful women\u2019s clothing: dresses, shirts, pants, rompers, sweaters, all of that, and they are coming from the same suppliers that sell to big brand stores. And in addition to that, we also have athletic wear, shoes (From Sole Society which is a major supplier for Nordstrom!), handbags, hats, jewelry, and sunglasses. You\u2019ll be able to put together complete outfits, head to toe, pulling from all different suppliers. You can really make this your own shop, name it what you want, make it your style, sell whatever you choose. We also have officially licensed product. </span><span style=\"font-weight: 400;\">Now you each have the license to sell great clothing &amp; accessory product from Disney, Star Wars, upcoming movies like Venom, Harry Potter and your favorite musicians like Rolling Stones and the Beatles. </span></p>\n<p><span style=\"font-weight: 400;\">It\u2019s very easy to set up a Sonlet Shop. It will be just like setting up a Party Page except you don\u2019t have to take pictures or add inventory first. </span><span style=\"font-weight: 400;\">All of the items available to be added to a Sonlet Shop are already there. \u00a0If you\u2019ve never used Sonlet before, then setting up a Sonlet Shop is about as easy as setting up a Facebook page, where you name your shop, add a cover photo, and contact information, and add the products that you\u2019d like to offer in your Shop. </span></p>\n<p><span style=\"font-weight: 400;\">You can set up as many shops as you\u2019d like, they are meant to be light and easy to setup so that you can create themed shops or specific shops for events, customers, or parties. You can become a personal shopper for a customer and set up their own private shop full of clothing hand picked just for them. You could set up a shop that is Halloween specific. It\u2019s all up to you!</span></p>\n<p><span style=\"font-weight: 400;\">You\u2019ll earn 30%-35% of the retail price of the item. You\u2019ll also be able to clearly see how much commission is available for the sale of each item when you add an item to a Sonlet Shop. </span></p>\n<p><span style=\"font-weight: 400;\">Your customers will be able to pay with any credit or debit card right on Sonlet. \u00a0Sonlet will collect the funds and distribute your commission to your bank account. You don\u2019t have to invoice or collect any payment. That will all be done for you.</span></p>\n<p><span style=\"font-weight: 400;\">Something else that will be done for you is shipping. The order will go to the supplier, they will pull, package, and ship all from their warehouse. You won\u2019t even need to handle the inventory at all. </span></p>\n<p><span style=\"font-weight: 400;\">We\u2019ve created a simple and beautiful design for Shops that we think you\u2019ll love. </span></p>\n<p><span style=\"font-weight: 400;\">We\u2019ll start adding people to our Beta group in the next few weeks and will be slowly rolling it out to more users until about mid November when we will have full availability. </span></p>\n<p><span style=\"font-weight: 400;\">We are really happy with the way things are turning out and can\u2019t wait to launch. We are happy to answer any other questions you have, feel free to send an email! Thanks for watching!</span></p>\n"
+    }, 
+    "date": "2018-10-19T14:54:33", 
+    "date_gmt": "2018-10-19T21:54:33", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>7 suppliers confirmed for beta launch with thousands of products including women&#8217;s clothing, accessories, shoes, and officially licensed products from Disney, Star Wars, Venom, Harry Potter, Rolling Stones, Beatles, and more. Setting up a Sonlet Shop will be about as easy as setting up a Facebook page. You&#8217;ll name it &hellip;</p>\n"
+    }, 
+    "featured_media": 699, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=694"
+    }, 
+    "id": 694, 
+    "link": "https://blog.sonlet.com/2018/10/sonlet-shops-launch-update.html", 
+    "meta": [], 
+    "modified": "2018-10-22T09:15:50", 
+    "modified_gmt": "2018-10-22T16:15:50", 
+    "ping_status": "open", 
+    "slug": "sonlet-shops-launch-update", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "Sonlet Shops Launch Update"
+    }, 
+    "type": "post"
+  }, 
+  {
+    "_links": {
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/types/post"
+        }
+      ], 
+      "author": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/users/14"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "predecessor-version": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/650/revisions/681", 
+          "id": 681
+        }
+      ], 
+      "replies": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/comments?post=650"
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/650"
+        }
+      ], 
+      "version-history": [
+        {
+          "count": 7, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts/650/revisions"
+        }
+      ], 
+      "wp:attachment": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media?parent=650"
+        }
+      ], 
+      "wp:featuredmedia": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/media/662"
+        }
+      ], 
+      "wp:term": [
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/categories?post=650", 
+          "taxonomy": "category"
+        }, 
+        {
+          "embeddable": true, 
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags?post=650", 
+          "taxonomy": "post_tag"
+        }
+      ]
+    }, 
+    "author": 14, 
+    "categories": [
+      16
+    ], 
+    "comment_status": "open", 
+    "content": {
+      "protected": false, 
+      "rendered": "<p><span style=\"font-weight: 400;\">I love a \u201cjust right\u201d tool. Too often in social marketing and home-based businesses, developers try to sell tools that are overly robust and expensive for the needs of a small business, making them inaccessible and burdensome to all but the most elite sellers. One day I want to be there, but it\u2019s not happening if I blow my budget on tools I can barely use. Yet the alternatives of a diy approach or making something work that was originally designed for a different purpose prove time-consuming and usually less than ideal&#8211;the spreadsheets I could show you&#8230;I shudder at the time is let slip down that black hole of upkeep. When it comes to managing customer information and relationships, I\u2019ve tried several avenues and never ended up happy, so I just stuck with Facebook.\u00a0</span></p>\n<figure id=\"attachment_657\" style=\"width: 300px\" class=\"wp-caption alignleft\"><img class=\"wp-image-657 size-medium\" style=\"font-style: normal; font-weight: 400; font-size: 16px; font-family: Muli;\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281-300x300.png\" alt=\"\" width=\"300\" height=\"300\" srcset=\"https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281-300x300.png 300w, https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281-150x150.png 150w, https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281-768x768.png 768w, https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281-1024x1024.png 1024w, https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281-440x440.png 440w, https://blog.sonlet.com/wp-content/uploads/2018/10/IMG_5281.png 1300w\" sizes=\"(max-width: 300px) 100vw, 300px\" /><figcaption class=\"wp-caption-text\">Sammy Shout is ready to help you get started building relationships with customers.</figcaption></figure>\n<p><span style=\"font-weight: 400;\">Facebook and Facebook Messenger have both become better communication tools for business related communication, but they still lack a\u00a0</span><span style=\"font-weight: 400; text-indent: 0em;\">workflow and way to communicate away from their platform&#8211;which let\u2019s face it, is not under our control or working in our favor most of the time.</span><span style=\"font-weight: 400; text-indent: 0em;\">So when I was asked to test drive Shout I was curious&#8211;more than curious, actually. Happily, I found Shout to be my just right tool for keeping up with customer communication via Facebook or text in a format that makes it easy to keep track of conversations, groups, and private notes. I\u2019ll give you a run down of the primary features of Shout; I think you\u2019ll agree that these developers are working with direct sales businesses in mind.\u00a0</span></p>\n<p><span style=\"font-weight: 400;\"><br />\n</span><span style=\"font-weight: 400;\">Being responsive to customer questions and problems makes for great customer service, and Shout makes it easy. Shout works to make managing inbound messages smarter and more efficient in several ways. I connected my Facebook business page, so I will see all inbound messages from Facebook messenger, and Shout replies back through Facebook Messenger giving my customers a seamless experience. Of course I also have my Shout text message number, which gives a more personal avenue for my customers to connect with me. I love that I can say, \u201cText me anytime! Here\u2019s my number.\u201d Shout keeps all my messages from Facebook or text organized by topic with smart filters, so I can address like-topic messages together saving time, or prioritize my VIP customers.<br />\n</span></p>\n<p><a href=\"https://blog.sonlet.com/wp-content/uploads/2018/10/ShoutTemplateReply.gif\"><img class=\"wp-image-653 size-full aligncenter\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/10/ShoutTemplateReply.gif\" alt=\"\" width=\"1048\" height=\"616\" /></a></p>\n<p>I can create and use templates to avoid typing the same message over and over. And there\u2019s a super-slick Sonlet integration I\u2019ll talk more about later that makes dropping links a cinch. Once my customer\u2019s issue is resolved, I can mark threads as done and archive them. I love this feature with big heart eyes because the previous conversations are all easily accessible without the endless scroll to find the part of the convo I want. By far my favorite single feature is the conversation notes. In this field I can keep track of order numbers, tracking numbers, and any relevant information for that conversation to quickly reference. I\u2019m a huge fan of private notes; I use them in Sonlet a bunch and can see this feature getting a lot of mileage when resolving my customers\u2019 issues.</p>\n<p><span style=\"font-weight: 400;\">With Sonlet linked to my Shout account, I can quickly import all of my Sonlet customer data to Shout\u2019s contact list, which gives me an excellent list to start. I can access my items and party links to share to customers right in the message window. </span></p>\n<figure id=\"attachment_651\" style=\"width: 642px\" class=\"wp-caption aligncenter\"><img class=\"wp-image-651 size-full\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/10/ShoutSonletPartyMessage.gif\" alt=\"\" width=\"642\" height=\"628\" /><figcaption class=\"wp-caption-text\">Grabbing a Sonlet Party link to include in a message response is quick and easy.</figcaption></figure>\n<p>I don\u2019t have to go through all the steps to navigate, copy the link, and paste it over. It\u2019s just two clicks away in Shout.\u00a0<span style=\"font-weight: 400; text-indent: 0em;\">I can even drop in individual item claim links for a shopper who knows exactly what they\u2019re after. I can also send my shoppers a Sonlet rewards program sign up link. It\u2019s a slick and simple integration of the info I need quickly at hand when chatting with my customers. So when a customer messages me looking for a specific style and size in her favorite color, I can pull up my inventory directly in the Shout message field and navigate quickly to a thumbnail list of my items. Selecting a great match and dropping the link for my customer to view and claim is super simple. As much as I love tabbing around my 20K open tabs in my browser window (#kiddingnotkidding), this really makes it much faster.</span></p>\n<p>&nbsp;</p>\n<p><span style=\"font-weight: 400;\"><br />\n</span><span style=\"font-weight: 400;\">We all know how hard it is to break through the Facebook algorithm to reach our customers. Shout\u2019s text message service makes it so easy to send messages directly to my shoppers so they won\u2019t miss an event or promotion. I can send out quick messages about my business to keep my customers engaged and informed without having to compose lengthy newsletter-style emails&#8211;I seriously admire my friends who can pull this off, but it\u2019s not for me!\u00a0</span></p>\n<figure id=\"attachment_654\" style=\"width: 1152px\" class=\"wp-caption aligncenter\"><img class=\"wp-image-654 size-full\" src=\"https://blog.sonlet.com/wp-content/uploads/2018/10/ShoutGroupMessage.gif\" alt=\"\" width=\"1152\" height=\"616\" /><figcaption class=\"wp-caption-text\">Send the message to a group; reply to an individual for more personalized communication.</figcaption></figure>\n<p><span style=\"font-weight: 400;\">Customers can subscribe and receive the latest info on new inventory, hostess opportunities, sales, and more</span>.\u00a0<span style=\"text-indent: 0em;\">I can organize those topics into groups and add my contacts to the groups they are interested in. Nobody gets more messages than they want; everyone is happy! The best part is; if anyone replies to the group text, it comes in as an individual message.\u00a0</span><span style=\"text-indent: 0em;\">This saves time by sending the initial message once to a group, while allowing a personalized response to individuals (and avoids the dreaded \u201creply all\u201d option where everyone gets notifications constantly). Team leaders will find this feature helpful as well for sending team reminders about training opportunities and goal setting.\u00a0</span></p>\n<p><span style=\"font-weight: 400;\"><br />\n</span><span style=\"font-weight: 400;\">The features and functionality of Shout were clearly designed with my kind of business in mind. It has everything I need that I can\u2019t get elsewhere for a price I can manage, but not so much that I\u2019m not using what I\u2019m paying for&#8211;just right. The pricing isn\u2019t anything to stress about&#8211;I spend more in two Starbucks runs than it costs for a month of this useful and business-boosting platform. It integrates in all the right places, while also providing complete independence from the systems that I\u2019m not big enough to push through on my own. With Shout, I\u2019m ready to take my customer communication to a more productive, proactive, and more interactive level. I have my reply bots all charged up and ready to respond to keyword queries, and the Shout app is on my phone so I can respond quickly no matter where I am. So, drop me a text at 541-223-5856 if you have any questions about my review or if I can help you with anything further. Be sure to check out </span><a href=\"https://www.aboutshout.com/\"><span style=\"font-weight: 400;\">www.aboutshout.com/</span></a><span style=\"font-weight: 400;\"> for more details and to sign up.</span></p>\n<p>&nbsp;</p>\n"
+    }, 
+    "date": "2018-10-12T12:15:08", 
+    "date_gmt": "2018-10-12T19:15:08", 
+    "excerpt": {
+      "protected": false, 
+      "rendered": "<p>I love a \u201cjust right\u201d tool. Too often in social marketing and home-based businesses, developers try to sell tools that are overly robust and expensive for the needs of a small business, making them inaccessible and burdensome to all but the most elite sellers. One day I want to be &hellip;</p>\n"
+    }, 
+    "featured_media": 662, 
+    "format": "standard", 
+    "guid": {
+      "rendered": "https://blog.sonlet.com/?p=650"
+    }, 
+    "id": 650, 
+    "link": "https://blog.sonlet.com/2018/10/shout-a-just-right-tool-for-direct-sellers.html", 
+    "meta": [], 
+    "modified": "2018-10-12T17:20:22", 
+    "modified_gmt": "2018-10-13T00:20:22", 
+    "ping_status": "open", 
+    "slug": "shout-a-just-right-tool-for-direct-sellers", 
+    "status": "publish", 
+    "sticky": false, 
+    "tags": [], 
+    "template": "", 
+    "title": {
+      "rendered": "Shout: a &#8220;just right&#8221; tool for direct sellers"
+    }, 
+    "type": "post"
+  }
+]
+
+[
+  {
+    "count": 1, 
+    "name": "Live Streaming", 
+    "taxonomy": "post_tag", 
+    "id": 12, 
+    "meta": [], 
+    "link": "https://blog.sonlet.com/tag/live-streaming", 
+    "_links": {
+      "wp:post_type": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts?tags=12"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags/12"
+        }
+      ], 
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags"
+        }
+      ]
+    }, 
+    "slug": "live-streaming", 
+    "description": ""
+  }, 
+  {
+    "count": 1, 
+    "name": "New Feature", 
+    "taxonomy": "post_tag", 
+    "id": 9, 
+    "meta": [], 
+    "link": "https://blog.sonlet.com/tag/new-feature", 
+    "_links": {
+      "wp:post_type": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts?tags=9"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags/9"
+        }
+      ], 
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags"
+        }
+      ]
+    }, 
+    "slug": "new-feature", 
+    "description": ""
+  }, 
+  {
+    "count": 1, 
+    "name": "no newsletter", 
+    "taxonomy": "post_tag", 
+    "id": 21, 
+    "meta": [], 
+    "link": "https://blog.sonlet.com/tag/no-newsletter", 
+    "_links": {
+      "wp:post_type": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts?tags=21"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags/21"
+        }
+      ], 
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags"
+        }
+      ]
+    }, 
+    "slug": "no-newsletter", 
+    "description": ""
+  }, 
+  {
+    "count": 1, 
+    "name": "Rewards", 
+    "taxonomy": "post_tag", 
+    "id": 10, 
+    "meta": [], 
+    "link": "https://blog.sonlet.com/tag/rewards", 
+    "_links": {
+      "wp:post_type": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts?tags=10"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags/10"
+        }
+      ], 
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags"
+        }
+      ]
+    }, 
+    "slug": "rewards", 
+    "description": ""
+  }, 
+  {
+    "count": 1, 
+    "name": "Tips", 
+    "taxonomy": "post_tag", 
+    "id": 13, 
+    "meta": [], 
+    "link": "https://blog.sonlet.com/tag/tips", 
+    "_links": {
+      "wp:post_type": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/posts?tags=13"
+        }
+      ], 
+      "curies": [
+        {
+          "href": "https://api.w.org/{rel}", 
+          "name": "wp", 
+          "templated": true
+        }
+      ], 
+      "self": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags/13"
+        }
+      ], 
+      "about": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ], 
+      "collection": [
+        {
+          "href": "https://blog.sonlet.com/wp-json/wp/v2/tags"
+        }
+      ]
+    }, 
+    "slug": "tips", 
+    "description": ""
+  }
+]

@@ -29,7 +29,7 @@
       background-color: #f2f2f2;
     }
 
-    #payments_comp tr:nth-child(5), #payments_comp tr:nth-child(5) td {
+    #payments_comp tr:nth-child(7), #payments_comp tr:nth-child(7) td {
      background-color: white;
      font-size: .7rem;
      }
@@ -101,15 +101,7 @@
       }
 
       #payments_comp tr td:nth-child(5), #payments_comp tr th:nth-child(5){
-        display: var(--display-rates-squareBtn);
-      }
-
-      #payments_comp tr td:nth-child(6), #payments_comp tr th:nth-child(6){
         display: var(--display-rates-etsyBtn);
-      }
-
-      #payments_comp tr td:nth-child(7), #payments_comp tr th:nth-child(7) {
-        display: var(--display-rates-shopifyBtn);
       }
     }
     
@@ -117,7 +109,7 @@
   
 <div id="rate_buttons" class="btn-group">
   <p>Pick a processor to compare rates:</p>
-  <button id="blessBtn" class="btn ratesBtn" style="background-color: #82dacc;">Bless</button><button id="paypalBtn" class="btn ratesBtn" >Paypal</button><button id="squareBtn" class="btn ratesBtn" >Square</button><button id="etsyBtn" class="btn ratesBtn" >Etsy</button><button id="shopifyBtn" class="btn ratesBtn" >Shopify</button>
+  <button id="blessBtn" class="btn ratesBtn" style="background-color: #82dacc;">Bless</button><button id="paypalBtn" class="btn ratesBtn" >Paypal/Square/Shopify</button><button id="etsyBtn" class="btn ratesBtn" >Etsy</button>
 </div>
   
 <table id="payments_comp">
@@ -125,34 +117,40 @@
     <th></th>
     <th>Sonlet</th>
     <th>Bless</th>
-    <th>Paypal</th>
-    <th>Square</th>
+    <th>Paypal/Square/Shopify</th>
     <th>Etsy</th>
-    <th>Shopify</th>
   </tr>
   <tr>
     <td>Processing rate</td>
-    <td>2.89% + $0.25</td>
-    <td>3.45% + $0.15</td>
-    <td>2.9% + $0.30</td>
-    <td>2.9% + $0.30</td>
-    <td>3% + $0.25</td>
-    <td>2.9% + $0.30</td>
+    <td>2.89%</td>
+    <td>3.45%</td>
+    <td>2.9%</td>
+    <td>3%</td>
   </tr>
   <tr>
-    <td>Estimated fees <br>for $50 Sale</td>
+    <td>Transaction fee</td>
+    <td>$0.25</td>
+    <td>$0.15</td>
+    <td>$0.30</td>
+    <td>$0.25</td>
+  </tr>
+  <tr>
+    <td>Estimated fees<br>for $50 Sale</td>
     <td>$1.70</td>
     <td>$1.87</td>
     <td>$1.75</td>
     <td>$1.75</td>
-    <td>$1.75</td>
-    <td>$1.75</td>
+  </tr>
+  <tr>
+    <td>Estimated fees<br>for $3,000 Sales</td>
+    <td>$96.70</td>
+    <td>$109.50</td>
+    <td>$99.00</td>
+    <td>$100.00</td>
   </tr>
   <tr>
     <td>Lowest fees</td>
     <td class="checked">✓</td>
-    <td>&mdash;</td>
-    <td>&mdash;</td>
     <td>&mdash;</td>
     <td>&mdash;</td>
     <td>&mdash;</td>
@@ -161,7 +159,7 @@
 </table>
   
 <script>
-        let btn_ids = ['blessBtn', 'paypalBtn', 'squareBtn', 'etsyBtn', 'shopifyBtn']
+        let btn_ids = ['blessBtn', 'paypalBtn', 'etsyBtn']
         for (btn_id = 0; btn_id < btn_ids.length; btn_id++){
           let btnElement = btn_ids[btn_id]
           document.getElementById(btnElement).addEventListener("click", function() {changeDisplay(btnElement)});

@@ -14,59 +14,38 @@
 <body>
   <div id="email-container" style="width: 90%; max-width: 900px; margin: 0 auto; background-color: #ffffff;">
     <!--Header Image-->
-    <img style="border:0;display:block;height:auto;width:80%;max-width:600px; margin: 0 auto; margin-top: 20px; padding-top: 50px; padding-bottom: 10px;" alt="This week's Sonlet's Picks" src="{{trigger.hero_img_url}}">
-    <p style="font-family: 'Muli', sans-serif; font-size: 15px; padding-bottom: 50px; margin: 0 auto; text-align: center; max-width: 600px;">Add these products and many more to your risk-free Sonlet Shop included with your Sonlet subscription. These featured items are only available until {{trigger.ltr_date}}!</p>
+    <img style="border:0;display:block;height:auto;width:80%;max-width:600px; margin: 0 auto; margin-top: 20px; padding-top: 50px; padding-bottom: 0px;" alt="This week's Sonlet's Picks" src="{% if trigger.hero_img%}{{trigger.hero_img}}{%else%}https://wyattgrantham.com/marketing/Images/ss_hero_2_nd.png{%endif%}">
+    {% if trigger.ltr_date %}
+    <div style="margin: 0 auto; display: block; background-image: url(https://wyattgrantham.com/marketing/Images/ss_ltr_underline.png); height: 100px; background-repeat: no-repeat; background-size: contain; background-position: center; "><p style="font-family: 'Clicker Script', sans-serif; font-size: 35px; font-weight: 200;  margin: 0px; padding-left: 52%; padding-top: 25px;">{{trigger.ltr_date}}</p></div>
+    {%else%}<br><br>
+    {%endif%}
+    <p style="font-family: 'Muli', sans-serif; font-size: 15px; padding-bottom: 50px; margin: 0 auto; text-align: center; max-width: 90%;">Add these products and many more to your risk-free Sonlet Shop included with your Sonlet subscription. These featured items are only available until {{trigger.ltr_date}}!</p>
   
     <!--Product Picks-->
     <div style="margin:0 auto;min-width:320px;word-wrap:break-word;word-break:break-word; display: block;">
 
       <!--Product Group-->
       <div style="text-align:center;font-size:14px;line-height:21px;font-family: 'Muli',sans-serif; margin: 0 auto; max-width: 750px;">
+          
+          {% for product in trigger.products%}
         <!--Product 1-->
         <div class="product" style="margin-bottom: 20px; text-align: center; min-height: 240px; display: inline-block; width: 200px;">
-          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{trigger.name_product_1}}" src="{{trigger.img_product_1}}"></a>
-          <h3 style="margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{trigger.name_product_1}}</h3>
+          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{product.name}}" src="{{product.img}}"></a>
+          <h3 style="min-height: 46px; margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{product.name}}</h3>
           <a style="margin: 0 auto; text-align: center; border-radius:0;display:inline-block;font-size:11px;font-weight:bold;line-height:19px;padding:6px 12px;text-align:center;text-decoration:none!important;color:#000000!important;border:1px solid #000000;font-family: 'Muli',sans-serif; margin-bottom: 40px;" href="{{trigger.browse_shortlink}}" target="_blank">ADD TO SHOP</a>
         </div>
 
-        <!--Product 2-->
-        <div class="product" style="margin-bottom: 20px; text-align: center; min-height: 240px; display: inline-block; width: 200px;">
-          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{trigger.name_product_2}}" src="{{trigger.img_product_2}}"></a>
-          <h3 style="margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{trigger.name_product_2}}</h3>
-          <a style="margin: 0 auto; text-align: center; border-radius:0;display:inline-block;font-size:11px;font-weight:bold;line-height:19px;padding:6px 12px;text-align:center;text-decoration:none!important;color:#000000!important;border:1px solid #000000;font-family: 'Muli',sans-serif; margin-bottom: 40px;" href="{{trigger.browse_shortlink}}" target="_blank">ADD TO SHOP</a>
-        </div>
-      
-        <!--Product 3-->
-        <div class="product" style="margin-bottom: 20px; text-align: center; min-height: 240px; display: inline-block; width: 200px;">
-          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{trigger.name_product_3}}" src="{{trigger.img_product_3}}"></a>
-          <h3 style="margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{trigger.name_product_3}}</h3>
-          <a style="margin: 0 auto; text-align: center; border-radius:0;display:inline-block;font-size:11px;font-weight:bold;line-height:19px;padding:6px 12px;text-align:center;text-decoration:none!important;color:#000000!important;border:1px solid #000000;font-family: 'Muli',sans-serif; margin-bottom: 40px;" href="{{trigger.browse_shortlink}}" target="_blank">ADD TO SHOP</a>
-        </div>
-
-        <!--Product 4-->
-        <div class="product" style="margin-bottom: 20px; text-align: center; min-height: 240px; display: inline-block; width: 200px;">
-          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{trigger.name_product_4}}" src="{{trigger.img_product_4}}"></a>
-          <h3 style="margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{trigger.name_product_4}}</h3>
-          <a style="margin: 0 auto; text-align: center; border-radius:0;display:inline-block;font-size:11px;font-weight:bold;line-height:19px;padding:6px 12px;text-align:center;text-decoration:none!important;color:#000000!important;border:1px solid #000000;font-family: 'Muli',sans-serif; margin-bottom: 40px;" href="{{trigger.browse_shortlink}}" target="_blank">ADD TO SHOP</a>
-        </div>
-
-        <!--Product 5-->
-        <div class="product" style="margin-bottom: 20px; text-align: center; min-height: 240px; display: inline-block; width: 200px;">
-          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{trigger.name_product_5}}" src="{{trigger.img_product_5}}"></a>
-          <h3 style="margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{trigger.name_product_5}}</h3>
-          <a style="margin: 0 auto; text-align: center; border-radius:0;display:inline-block;font-size:11px;font-weight:bold;line-height:19px;padding:6px 12px;text-align:center;text-decoration:none!important;color:#000000!important;border:1px solid #000000;font-family: 'Muli',sans-serif; margin-bottom: 40px;" href="{{trigger.browse_shortlink}}" target="_blank">ADD TO SHOP</a>
-        </div>
-
-        <!--Product 6-->
-        <div class="product" style="margin-bottom: 20px; text-align: center; min-height: 240px; display: inline-block; width: 200px;">
-          <a href="{{trigger.browse_shortlink}}" target="_blank"><img style="border:0;display:block;height:auto;width:100%;max-width:480px;" alt="{{trigger.name_product_6}}" width="160" src="{{trigger.img_product_6}}"></a>
-          <h3 style="margin-top:0;margin-bottom:12px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold;">{{trigger.name_product_6}}</h3>
-          <a style="margin: 0 auto; text-align: center; border-radius:0;display:inline-block;font-size:11px;font-weight:bold;line-height:19px;padding:6px 12px;text-align:center;text-decoration:none!important;color:#000000!important;border:1px solid #000000;font-family: 'Muli',sans-serif;margin-bottom: 40px;" href="{{trigger.browse_shortlink}}" target="_blank">ADD TO SHOP</a>
-        </div>
+        {%endfor%}
         
         <!--Promo-->
-        <a style="text-align: center; margin: 0 auto;" href="{{trigger.browse_shortlink}}" target="_blank"><img src="{{trigger.img_promo}}"></a>
-        <p style="font-family: 'Muli', sans-serif; text-align: center; margin: 0 auto; display: block; font-size: 18px; max-width: 600px;">{{trigger.promo_html}}</p>
+        <a style="display: block; text-align: center; margin: 0 auto; background-image: url(https://wyattgrantham.com/marketing/Images/ss_cta.png); height: 104px; background-repeat: no-repeat; background-size: contain; background-position: center; font-size: 24px; text-decoration: none; font-weight: 900; color: black; padding-top: 35px; max-width: 90%;" href="{% if trigger.name_promo %}{{trigger.browse_shortlink}}{%else%}https://sonlet.com/features/shops/{%endif%}" target="_blank">{% if trigger.name_promo %}{{trigger.name_promo}}{%else%}Open an online boutique{%endif%}</a>
+        <p style="font-family: 'Muli', sans-serif; text-align: center; margin: 0 auto; display: block; font-size: 18px; max-width: 90%;">
+          {% if trigger.promo_html %}
+            {{trigger.promo_html}}
+          {%else%}
+            Earn up to 35% commissions.  NO tracking inventory, NO tracking orders, NO invoicing, NO shipping... Sonlet collects and distributes payment and suppliers dropship directly to your customers!
+          {%endif%}
+        </p>
         <br>
         <!--/Promo-->
       </div><!--/Product Group-->
@@ -74,12 +53,12 @@
     </div><!--/Product Picks-->
     <!--Training-->
     <div style="margin:0 auto; min-width: 280px;word-wrap:break-word;word-break:break-word; display: block; margin-left: 20px; margin-right: 20px; margin-bottom: 40px; margin-top: 50px; border-radius: 4px; text-align: center;">
-      <img src="{{trigger.img_training}}">
+      <img src="{% if trigger.img_training %}{{trigger.img_training}}{%else%}https://wyattgrantham.com/marketing/Images/ss_training.png{%endif%}">
       <br>
       <!--Training Video-->
-      <a href="{{trigger.training_url}}" target="_blank" style="margin: 0 auto; margin-bottom: 20px; margin-top: 20px; text-align: center; display: inline-block; width: 200px;font-family: 'Muli', sans-serif; text-decoration: none;">
-        <img style="border:0;display:block;height:auto;width:100%;max-width:320px;" alt="Link to How-to Video" src="{{trigger.img_training_video}}">
-        <h3 style="margin-left:20px;margin-right:20px;margin-top:0;margin-bottom:0px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold; font-family: 'Muli', sans-serif !important;">{{trigger.name_training_video}}</h3>
+      <a href="{%if trigger.training_url%}{{trigger.training_url}}{%else%}https://support.sonlet.com/support/solutions/articles/16000087859-how-to-setup-sonlet-shops{%endif%}" target="_blank" style="margin: 0 auto; margin-bottom: 20px; margin-top: 20px; text-align: center; display: inline-block; width: 200px;font-family: 'Muli', sans-serif; text-decoration: none;">
+        <img style="border:0;display:block;height:auto;width:100%;max-width:320px;" alt="Link to How-to Video" src="{%if trigger.img_training_video%}{{trigger.img_training_video}}{%else%}https://wyattgrantham.com/marketing/Images/how_to_ss.png{%endif%}">
+        <h3 style="margin-left:20px;margin-right:20px;margin-top:0;margin-bottom:0px;font-size:15px;line-height:23px;text-align:center; color: #000000;font-weight: bold; font-family: 'Muli', sans-serif !important;">{%if trigger.name_training_video%}{{trigger.name_training_video}}{%else%}HOW TO SETUP SONLET SHOPS (6:29){%endif%}</h3>
       </a>
       <a href="https://support.sonlet.com/support/solutions/16000060109" target="_blank" style="margin: 0 auto; margin-left:20px;margin-right:20px; margin-bottom: 20px; margin-top: 20px; padding-bottom:20px; text-align: center; display: block; font-family: 'Muli', sans-serif;  text-decoration: none;">View All Training</a>
     </div><!--/Training-->

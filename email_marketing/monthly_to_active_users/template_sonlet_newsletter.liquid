@@ -28,7 +28,7 @@
           
   {% assign newsletter_items_delivered = '716,26,694,99176' %}
   {% if trigger.featured_article.featured_ids %}
-    {% capture tids %}{{trigger.featured_aritcle.featured_ids | join: ',' }}{%endcapture%}
+    {% capture tids %}{{trigger.featured_article.featured_ids | join: ',' }}{%endcapture%}
   {% else %}
     {%if customer.newsletter_items_delivered%}{% assign xids = customer.newsletter_items_delivered | split: "," %}{%else%}{%assign xids = '' %}{%endif%}
     {%capture aids %}
@@ -69,7 +69,9 @@
         {%endif%}
       {%endfor%}
     {% endcapture %}
-    {% capture tids %}{{hids | split: ',' | sort | join: ',' }},{{aids | split: ',' | sort | join: ',' }}{%endcapture%}
+    {% capture hidsSize}{{hids | size}}{% endcapture %}
+    {% capture aidsSize}{{aids | size}}{% endcapture %}
+    {% capture tids %}{% if hidsSize > 0 %}{{hids | split: ',' | sort | join: ',' }}{% endif %}{% if aidsSize > 0 %},{{aids | split: ',' | sort | join: ',' }}{% endif %}{%endcapture%}
   {% endif %}
   {% capture s %}{{ tids | split: ',' | first }}{% endcapture %}
   {% capture p %}{{tids | split: ',' | size | minus: 1}}{% endcapture %}

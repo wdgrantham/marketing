@@ -1,34 +1,42 @@
-#from bs4 import BeautifulSoup
-#from selenium import webdriver
+# This Python file uses the following encoding: utf-8
+
+from bs4 import BeautifulSoup
+from selenium import webdriver
 import json
 import datetime
+import requests
 
 #shop_url = "https://sonlet.com/shops/march-14/" #usually Sonnie sends this each week
 #browse_shortlink = ""
 
-#To Do: get the products from the picks shop
+#Gets the product images and titles from the picks shop
 def get_picks(shop_url):
-  browser = webdriver.Chrome()#busted right here
+  browser = webdriver.Chrome()#Make sure that you have a chromewebdriver installed in the system path
   browser.get(shop_url)
   html = browser.page_source
-  soup = BeautifulSoup(html,'lxml')
-  a = soup.findAll('section')
-  #result will be to grab the 6 product titles and their
-  #respective images and add them to the dictionary or the
-  #json file or both
-  return html
-#print(get_picks('https://sonlet.com/shops/march-14/'))
+  soup = BeautifulSoup(html, features="html.parser")
+  products = soup.find_all('div', class_="Card--product")
+  products_json = []
+  for product in products:
+    soup = BeautifulSoup(str(product), features="html.parser")
+    name = soup.a.div.h6.text
+    img = soup.figure.img['src']
+    products_json.append({'name': name, 'img': img})
+  return json.dumps(products_json)
+#print(get_picks('https://sonlet.com/shops/mayberrys-featured/'))
 
-#To Do: Generate the image for the email
-#The work around to doing this is changinng the design of
-#the email to use a non-brand text for the LTR Date in the
-#hero image and using the highlight and underline as a
-#background image that can stay stable for both the images
-def create_images(ltr_date,name_promo)
-  hero_image = something
-  img_promo = somethingElse
+
+def get_json_payload(json_filename):
   
-
+  with open('json/' + str(json_filename),'r+') as json_file:
+    today = datetime.datetime.now().strftime("%y%m%d")
+    json_text = json_file.read()
+    json_object = eval(json_text)
+  
+  return json_object
+  #print(json_object)
+  
+#This function is no longer used now that the CIO API triggered campaigns are working
 def write_email(json_filename):
   #read in the html template for sonlet shops that contains liquid
   #statements to be replaced in this weeks email
@@ -60,5 +68,32 @@ def write_email(json_filename):
   
 #write_email('march_14.json')
 
-#To Do: Send the email and the json object to the CIO API triggered
-#email campaign
+#Sends the email and the json object to the CIO API triggered broadcast
+def send_event_to_cio(campaign_id, json_filename):
+  # ShopTheRoe API credentials
+  site_id = '6d30b69c3d9afe45835b'
+  api_key = 'd3951fc08db29107a260'
+  # ShopTheRoeDEV API Credentials
+  #site_id = 'ecd4c1f87a7c225c8b15'
+  #api_key = 'de73ab4598fc76b789c8'
+  
+  # Request data
+  # **NOTE** Replace ':id' with your API triggered campaign id in the 'url' string
+  auth = (site_id, api_key)
+  url = 'https://api.customer.io/v1/api/campaigns/' + str(campaign_id) + '/triggers'
+  print(url)
+  headers = {'Content-Type': 'application/json'}
+  payload = json.dumps(get_json_payload(json_filename))
+  #print(payload)
+  
+  # Send POST request to trigger API triggered campaign
+  r = requests.post(url=url, auth=auth, headers=headers, data=payload)
+
+  # Check response status code. 200 is good, everything else is probably not good
+  if r.status_code == 200:
+      print("Success!")
+  else:
+      print("Error: {}".format(r.text))
+      
+# campaign ID for ShopTheRoeDev is 12 & ShopTheRoe is 30 
+send_event_to_cio('30', 'april_25.json')

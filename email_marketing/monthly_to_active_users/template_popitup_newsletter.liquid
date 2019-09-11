@@ -1,4 +1,4 @@
-<!--Attribute update next_newsletter -->
+{% comment %}Attribute update next_newsletter{% endcomment %}
 
 {% assign newsletter_items_delivered = '65f0f,3737c,440f7,d39bd,78437,' %}
   {% if trigger.featured_article.featured_ids %}
@@ -18,37 +18,72 @@
 {%endif%}
 {{nids}}
 
-<!-- End attribute update next_newsletter -->
+{% comment %} /> End attribute update next_newsletter{% endcomment %}
+{% comment %}Email subject{% endcomment %}
+{%capture aid %}{{customer.next_newsletter | split: "," | first }}{%endcapture%}{{trigger.articles.[aid].title}}
+{%comment %}End email subject{%endcomment%}
 
+{%comment%}Email preheader{%endcomment%}
 
-<h3 style="text-align: center; font-size: 28px; font-weight: 500; color: #111; letter-spacing: 2px; line-height: 23px;">Here's what's new from PopItUp!</h3>
+Plus {{customer.next_newsletter | split: "," | size | minus: 1 }} more updates from PopItUp.
+
+{%comment%}End email preheader {%endcomment%}
+
+{% comment %}Email body{%endcomment%}
+{% assign next_newsletter = '4a37a,4be72,0ea0a,ef3b6,' | split: "," %}
+
+{% if trigger.featured_article %}
 <table>
-{% assign xids = customer.newsletter_items_delivered | split: "," %}
-{% for article in trigger.articles %}
-    {% assign print = 'True' %}
-    {% for xid in xids %}
-        {% if article.id == xid %}
-            {% assign print = 'False' %}
-        {%endif%}
-    {% endfor %}
-    {% if print == 'True' %}
+          <tr>
+            <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+                {% if trigger.featured_article.link %}<a href="{{trigger.featured_article.link}}" style="text-align: center;">{%endif%}
+                    {% if trigger.featured_article.image %}
+                    <img src="{{ trigger.featured_article.image }}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                    {%endif%}
+                    {% if trigger.featured_article.title %}
+                    <h2 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{ trigger.featured_article.title }}</h2> {%endif%}
+                    {% if trigger.featured_article.text %}
+                    <p style="text-align: center; font-size: 16px; color: black; font-style: italic; font-weight: 100;">{{ trigger.featured_article.text }}</p>
+                    {% endif %}
+                    {% if trigger.featured_article.link %}
+                    <a href="{{trigger.featured_article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+                </a>{%endif%}
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+</table>
+{% else %}
+
+<h4 style="text-align: center; font-size: 28px; font-weight: 500; color: #111; letter-spacing: 2px; line-height: 23px;">Here's what's new from PopItUp!</h4>
+
+{% endif%}
+
+<table>
+{% for aid in next_newsletter %}
         <tr>
             <td style="text-align: center; background-color: white; padding: 10px;">
-                <a href="{{article.link}}" style="text-align: center;">
-                    {% if article.images[0] %}
-                    <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
+                <a href="{{trigger.articles.[aid].link}}" style="text-align: center;">
+                    {% if trigger.articles.[aid].images %}
+                    <img src="{{trigger.articles.[aid].images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 250px; object-fit: cover;">
                     {%endif%}
-                    <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 500; letter-spacing: 1.5px; line-height: 23px; font-size: 17px; text-transform: uppercase;">{{article.title}}</h5>
-                    {% if article.excerpt %}
-                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{article.excerpt}}</p>
+                    <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 500; letter-spacing: 1.5px; line-height: 23px; font-size: 17px; text-transform: uppercase;">{{trigger.articles.[aid].title}}</h5>
+                    {% if trigger.articles.[aid].excerpt %}
+                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{trigger.articles.[aid].excerpt}}</p>
                     {% else %}
-                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{article.summary}}</p>
+                    <p style="text-align: center; font-size: 15px; color: #777; font-weight: 300;">{{trigger.articles.[aid].summary}}</p>
                     {% endif %}
-                    <a class="cta" href="{{article.link}}" target="_blank" style="color: #111; font-size: 13px; font-weight: 400; letter-spacing: 1px; line-height: 22px;">Read more</a>
+                    <a class="cta" href="{{trigger.articles.[aid].link}}" target="_blank" style="color: #111; font-size: 13px; font-weight: 400; letter-spacing: 1px; line-height: 22px;">Read more</a>
                 </a>
             </td>
         </tr>
         <tr><td>&nbsp;<br><br></td></tr>
-    {% endif %}
 {% endfor %}
 </table>
+
+{% comment %}End Email Body {%endcomment%}
+
+{% comment %}Attribute update: newsletter_items_delivered {%endcomment%}
+
+{% if customer.newsletter_items_delivered %}{{customer.newsletter_items_delivered}},{%endif%}{{customer.next_newsletter}}
+
+{% comment %}End Attribute update: newsletter_items_delivered {%endcomment%}

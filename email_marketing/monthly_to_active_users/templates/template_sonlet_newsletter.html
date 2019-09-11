@@ -1,0 +1,72 @@
+{% extends "template_sonlet_newsletter_gray.html" %}
+
+{% block content %}
+
+{% if featured_article %}
+<table>
+          <tr>
+            <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+                {% if featured_article.link %}<a href="{{trigger.featured_article.link}}" style="text-align: center;">{%endif%}
+                    {% if featured_article.image %}
+                    <img src="{{ trigger.featured_article.image }}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 528px; object-fit: cover;">
+                    {%endif%}
+                    {% if featured_article.title %}
+                    <h2 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{ featured_article.title }}</h2> {%endif%}
+                    {% if featured_article.text %}
+                    <p style="text-align: center; font-size: 16px; color: black; font-style: italic; font-weight: 100;">{{ featured_article.text }}</p>
+                    {% endif %}
+                    {% if featured_article.link %}
+                    <a href="{{featured_article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+                </a>{%endif%}
+            </td>
+        </tr>
+        <tr><td>&nbsp;<br><br></td></tr>
+          
+</table>
+{% endif%}
+
+<table>
+{% for article in hw_articles %}
+    {% if loop.index == 1 %}
+      <tr><td><h3 style="text-align: center; font-size: 26px; font-weight: 700; color: #111;">Features &amp; enhancements</h3></td></tr>
+    {% endif %}
+    <tr>
+        <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+            <a href="{{article.link}}" style="text-align: center;">
+                {% if article.images[0] %}
+                <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 528px; object-fit: cover;">
+                {%endif%}
+                <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{article.title}}</h5>
+                <p style="text-align: center; font-size: 16px; color: black;">{{article.summary}}</p>
+                <a href="{{article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+            </a>
+        </td>
+    </tr>
+    <tr><td>&nbsp;<br><br></td></tr>
+{% endfor %}
+</table>
+<table>
+{% for article in wp_articles %}
+    {% if loop.index == 1 %}
+      <tr><td><h3 style="text-align: center; font-size: 26px; font-weight: 700; color: #111;">From the Sonlet Blog</h3></td></tr>
+    {% endif %}
+    <tr>
+      <td style="text-align: center; background-color: white; padding: 10px; border-radius: 5px;">
+          <a href="{{article.link}}" style="text-align: center;">
+              {% if article.images[0] %}
+              <img src="{{article.images[0]}}" style="width: 100%; margin: 0 auto; text-align: center; max-height: 528px; object-fit: cover;">
+              {%endif%}
+              <h5 style="text-align: center; margin-top: 15px; color: #111; font-weight: 700;">{{article.title}}</h5>
+              {% if article.excerpt %}
+              <p style="text-align: center; font-size: 16px; color: black;">{{article.excerpt}}</p>
+              {% else %}
+              <p style="text-align: center; font-size: 16px; color: black;">{{article.summary}}</p>
+              {% endif %}
+              <a class="cta" href="{{article.link}}" target="_blank" style="color: #111; font-size: 14px; font-weight: 700;">Read more</a>
+          </a>
+      </td>
+    </tr>
+    <tr><td>&nbsp;<br><br></td></tr>
+{%endfor%}
+</table>
+{% endblock %}
