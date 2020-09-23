@@ -260,12 +260,12 @@ def get_featured_article(platform):
         featured_link = 'https://support.popitup.com/support/solutions/articles/16000096818-how-to-delete-or-rename-attributes-and-their-values'
         featured_ids = None #'ffaa5,fe8d5,f3d66'
     if platform == 'str':
-        featured_title = 'Check out the latest updates to Sonlet parties!' #'All the things you need to know about PopItUp'
-        featured_text = 'The last six weeks we\'ve dedicated our team to improving Sonlet party pages. We\'ve made it easier to find multis, easier to manage items, and easier to track shopping behavior. We hope these updates make managing your business easier!' #'The much awaited attribute editor is finished!  You can now rename and delete attributes and their values from the settings attributes page!'
+        featured_title = 'The Sonlet Retailer App is Here!' #'All the things you need to know about PopItUp'
+        featured_text = 'We\'re so excited to announce the new Sonlet Retailer apps is now available for your iPhone or Android device. Download it today.' #'The much awaited attribute editor is finished!  You can now rename and delete attributes and their values from the settings attributes page!'
         featured_image = None #'https://wyattgrantham.com/marketing/Images/attribute_editor.png'
-        featured_subject = 'Check out the latest updates to Sonlet parties!' #'All the things you need to know about PopItUp'
-        featured_link = None #'https://support.popitup.com/support/solutions/articles/16000096818-how-to-delete-or-rename-attributes-and-their-values'
-        featured_ids = '113977,115364,113979,115357,113983,114782,217,122' #'ffaa5,fe8d5,f3d66'
+        featured_subject = 'The Sonlet Retailer App is Here!' #'All the things you need to know about PopItUp'
+        featured_link = 'https://apps.apple.com/us/app/sonlet-retailer/id1530627124'
+        featured_ids = None #'113977,115364,113979,115357,113983,114782,217,122' #'ffaa5,fe8d5,f3d66'
     
     featured_article = {
       'title': featured_title,

@@ -1,0 +1,20 @@
+Hey everyone! We're really excited to announce enhanced quantity support on Sonlet, especially after so many of you have asked for this for so long.  As a quick summary, in the past, we limited quantity support to a single quantity per item, so if you you had three (3) items of the same style and size, your inventory and listings records would have three (3) separate items with a quantity of 1.  Now, you can add multiple quantities per item, so instead of seeing three items with a quantity of 1, you'll now see 1 item with a quantity of three (3)!
+
+Here's what's been updated and how this could impact your work flow:
+
+- Add quantities from the Add inventory page [1].  Now you'll be able to store multiple quantities with each Style / Size combination, rather than creating separate items with a quantity of one (1).
+- Quantity column. A new quantity column has been added on the Inventory [2] and Listings [3] pages.
+- New "Show items with Zero Quantity" button on Inventory and Listings pages.  Just click the button to display the items that have been sold and have a quantity of 0.  Select items and remove your photos from Facebook from here or from the Sales page.
+- Claim button. Most of you won't notice much of a change here, this works almost the same as before, except, as mentioned above, instead of their only being 1 item available to claim for each style / size combo, now there may be many, so the claim button will stay visible as long as there are items in stock (quantity > 0). If customers want to claim more than 1 item, they just need to click the claim button multiple times.
+- Done Shopping and Sales page, no change. The Done Shopping [4] and Sales page [5] still function just a before, with 1 click of the claim button equal to 1 item added to the cart and 1 picture card in the order on the sales page. This makes it easy for customers to see how many they have in their cart and for you to see how many of each item has been claimed.  For example, if you have three (3) of an item in stock, and a customer wants to claim all three (3) of the items, the customer will need to click the claim button three times. For each claim, one card will be displayed of the item in the customer's cart and on the order in seller's sales page. You and the customer, will not see 1 item with a quantity of 3 on the sales page and in the cart.
+- Facebook posting. Sonlet posts one (1) picture to Facebook for each style / size item. For example, if you have an item in stock with a quantity of five (5) Sonlet will post 1 picture to Facebook (not 5 pictures).  The claim link and item on Sonlet will stay active until the item is sold out (quantity = 0).
+- Comment selling. Comment selling works the same as claim links, and exactly as you'd expect.  When you refresh sold comments from the Sold Comments page [6], you'll be able to select an item and mark it as "Sold Outside of Sonlet".
+- Sold Outside of Sonlet. When you mark an item as "Sold Outside of Sonlet", it will work exactly as you'd expect, by decrementing the quantity by 1.  If there are more items available, you'll be able to sell the other items by a sold comment, a claim-link, or on a party page.  If you sell multiple of the same item to a customer, you'll need to mark the item as "Sold Outside of Sonlet" multiple times.  (Don't forget the "Select recent order" shortcut from that page, it speeds this process up quite a bit.)
+- Deleting items.  Once you've sold an item, you will not be able to delete it because this will also delete the record of the sale.  Once the item is sold out, Sonlet will automatically hide the item in your listings and inventory page, and you can remove the facebook photos just like you usually do.  If you insist on wanting to delete the item (not recommended), you'll need to refund payments, cancel the sale, and then delete the item.
+
+[1] https://sonlet.com/inventory/add/
+[2] https://sonlet.com/inventory/
+[3] https://sonlet.com/inventory/listings/
+[4] https://sonlet.com/done_shopping/
+[5] https://sonlet.com/inventory/my_sales/
+[6] https://sonlet.com/inventory/listings/sold_comments/
